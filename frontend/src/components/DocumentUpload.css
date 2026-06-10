@@ -1,0 +1,36 @@
+.upload-area {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.upload-area input[type="file"] {
+  display: none;
+}
+
+.upload-area label {
+  display: inline-block;
+  padding: 0.65rem 1.25rem;
+  background: #fff;
+  border: 2px dashed #0066cc;
+  border-radius: 0.5rem;
+  color: #0066cc;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: background 0.15s;
+  width: fit-content;
+}
+
+.upload-area label:hover:not(.disabled) {
+  background: #e6f0ff;
+}
+
+.upload-area label.disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.upload-message {
+  font-size: 0.85rem;
+  color: #444;
+}
