@@ -29,3 +29,17 @@ def chat_completion(system_prompt: str, user_message: str) -> str:
         temperature=0.0,
     )
     return response.choices[0].message.content
+
+
+def chat_with_tools(messages: list[dict], tools: list[dict]) -> object:
+    """Chat completion with OpenAI function calling (tool use)."""
+    client     = get_client()
+    deployment = os.environ["AZURE_OPENAI_CHAT_DEPLOYMENT"]
+    response   = client.chat.completions.create(
+        model=deployment,
+        messages=messages,
+        tools=tools,
+        tool_choice="auto",
+        temperature=0.0,
+    )
+    return response.choices[0]
