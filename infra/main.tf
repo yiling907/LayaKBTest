@@ -110,6 +110,7 @@ resource "azurerm_linux_function_app" "main" {
     AZURE_COSMOS_KEY                    = azurerm_cosmosdb_account.main.primary_key
     AZURE_COSMOS_DATABASE               = azurerm_cosmosdb_sql_database.main.name
     AZURE_COSMOS_CONTAINER              = azurerm_cosmosdb_sql_container.documents.name
+    FUNCTION_APP_URL = "https://func-layakbtest-dev-gq5c1y.azurewebsites.net"
   }
 
   tags = local.tags
