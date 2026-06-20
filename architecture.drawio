@@ -1,0 +1,154 @@
+<mxfile host="app.diagrams.net" modified="2026-06-11T00:00:00.000Z" agent="Claude Code" version="21.0.0" type="device">
+  <diagram id="layakbtest-arch" name="LayaKBTest Architecture">
+    <mxGraphModel dx="1422" dy="762" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1654" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+
+        <!-- ── Resource Group boundary ── -->
+        <mxCell id="rg" value="rg-layakbtest-dev  |  Germany West Central"
+          style="points=[[0,0],[0.25,0],[0.5,0],[0.75,0],[1,0],[1,0.25],[1,0.5],[1,0.75],[1,1],[0.75,1],[0.5,1],[0.25,1],[0,1],[0,0.75],[0,0.5],[0,0.25]];shape=mxgraph.azure2.resource_groups;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#0078D4;dashed=1;verticalAlign=top;align=center;fontSize=13;fontStyle=1;spacingTop=10;"
+          vertex="1" parent="1">
+          <mxGeometry x="270" y="40" width="1310" height="920" as="geometry" />
+        </mxCell>
+
+        <!-- ══════════════ OUTSIDE AZURE ══════════════ -->
+
+        <!-- User -->
+        <mxCell id="user" value="User"
+          style="shape=mxgraph.azure2.users;sketch=0;html=1;fillColor=#0078D4;strokeColor=none;verticalLabelPosition=bottom;verticalAlign=top;align=center;fontSize=12;"
+          vertex="1" parent="1">
+          <mxGeometry x="50" y="460" width="65" height="65" as="geometry" />
+        </mxCell>
+
+        <!-- React Frontend (outside Azure) -->
+        <mxCell id="frontend" value="React Frontend&#xa;(SPA)"
+          style="shape=mxgraph.azure2.app_service;sketch=0;html=1;fillColor=#0078D4;strokeColor=none;verticalLabelPosition=bottom;verticalAlign=top;align=center;fontSize=12;"
+          vertex="1" parent="1">
+          <mxGeometry x="168" y="450" width="65" height="65" as="geometry" />
+        </mxCell>
+
+        <!-- ══════════════ INSIDE RESOURCE GROUP ══════════════ -->
+
+        <!-- Application Insights (monitoring, top-center) -->
+        <mxCell id="appinsights" value="Application Insights"
+          style="shape=mxgraph.azure2.application_insights;sketch=0;html=1;fillColor=#0078D4;strokeColor=none;verticalLabelPosition=bottom;verticalAlign=top;align=center;fontSize=12;"
+          vertex="1" parent="1">
+          <mxGeometry x="550" y="110" width="65" height="65" as="geometry" />
+        </mxCell>
+
+        <!-- App Service Plan (Consumption) -->
+        <mxCell id="asp" value="App Service Plan&#xa;(Consumption Y1)"
+          style="shape=mxgraph.azure2.app_service_plans;sketch=0;html=1;fillColor=#0078D4;strokeColor=none;verticalLabelPosition=bottom;verticalAlign=top;align=center;fontSize=12;"
+          vertex="1" parent="1">
+          <mxGeometry x="380" y="290" width="65" height="65" as="geometry" />
+        </mxCell>
+
+        <!-- Azure Function App (central hub) -->
+        <mxCell id="funcapp" value="Azure Function App&#xa;(Python 3.12)"
+          style="shape=mxgraph.azure2.function_apps;sketch=0;html=1;fillColor=#0078D4;strokeColor=none;verticalLabelPosition=bottom;verticalAlign=top;align=center;fontSize=12;"
+          vertex="1" parent="1">
+          <mxGeometry x="550" y="460" width="65" height="65" as="geometry" />
+        </mxCell>
+
+        <!-- Storage Account (bottom-left) -->
+        <mxCell id="storage" value="Storage Account&#xa;(documents container)"
+          style="shape=mxgraph.azure2.storage_accounts;sketch=0;html=1;fillColor=#0078D4;strokeColor=none;verticalLabelPosition=bottom;verticalAlign=top;align=center;fontSize=12;"
+          vertex="1" parent="1">
+          <mxGeometry x="550" y="740" width="65" height="65" as="geometry" />
+        </mxCell>
+
+        <!-- Azure AI Search (top-right) -->
+        <mxCell id="search" value="Azure AI Search&#xa;(knowledge-base index)"
+          style="shape=mxgraph.azure2.search_services;sketch=0;html=1;fillColor=#0078D4;strokeColor=none;verticalLabelPosition=bottom;verticalAlign=top;align=center;fontSize=12;"
+          vertex="1" parent="1">
+          <mxGeometry x="1080" y="110" width="65" height="65" as="geometry" />
+        </mxCell>
+
+        <!-- Azure OpenAI (right-center) -->
+        <mxCell id="openai" value="Azure OpenAI&#xa;gpt-4.1 + ada-002"
+          style="shape=mxgraph.azure2.cognitive_services;sketch=0;html=1;fillColor=#0078D4;strokeColor=none;verticalLabelPosition=bottom;verticalAlign=top;align=center;fontSize=12;"
+          vertex="1" parent="1">
+          <mxGeometry x="1080" y="460" width="65" height="65" as="geometry" />
+        </mxCell>
+
+        <!-- OpenAI: gpt-4.1 deployment -->
+        <mxCell id="gpt41" value="gpt-4.1&#xa;(GlobalStandard)"
+          style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=11;align=center;"
+          vertex="1" parent="1">
+          <mxGeometry x="1200" y="430" width="140" height="40" as="geometry" />
+        </mxCell>
+
+        <!-- OpenAI: ada-002 deployment -->
+        <mxCell id="ada002" value="text-embedding-ada-002&#xa;(GlobalStandard)"
+          style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=11;align=center;"
+          vertex="1" parent="1">
+          <mxGeometry x="1200" y="490" width="140" height="40" as="geometry" />
+        </mxCell>
+
+        <!-- Cosmos DB (bottom-right) -->
+        <mxCell id="cosmos" value="Cosmos DB&#xa;(document metadata)"
+          style="shape=mxgraph.azure2.cosmos_db;sketch=0;html=1;fillColor=#0078D4;strokeColor=none;verticalLabelPosition=bottom;verticalAlign=top;align=center;fontSize=12;"
+          vertex="1" parent="1">
+          <mxGeometry x="1080" y="740" width="65" height="65" as="geometry" />
+        </mxCell>
+
+        <!-- ══════════════ EDGES ══════════════ -->
+
+        <!-- User → React -->
+        <mxCell id="e1" value="" style="edgeStyle=orthogonalEdgeStyle;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" edge="1" source="user" target="frontend" parent="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <!-- React → Function App (HTTP/REST) -->
+        <mxCell id="e2" value="HTTP/REST" style="edgeStyle=orthogonalEdgeStyle;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;fontStyle=0;fontSize=11;" edge="1" source="frontend" target="funcapp" parent="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <!-- App Service Plan → Function App (hosts) -->
+        <mxCell id="e3" value="hosts" style="edgeStyle=orthogonalEdgeStyle;html=1;dashed=1;strokeColor=#888888;fontSize=11;" edge="1" source="asp" target="funcapp" parent="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <!-- Function App → Application Insights (telemetry) -->
+        <mxCell id="e4" value="telemetry" style="edgeStyle=orthogonalEdgeStyle;html=1;dashed=1;strokeColor=#666666;fontSize=11;" edge="1" source="funcapp" target="appinsights" parent="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <!-- Function App → AI Search -->
+        <mxCell id="e5" value="query / index" style="edgeStyle=orthogonalEdgeStyle;html=1;fontSize=11;" edge="1" source="funcapp" target="search" parent="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <!-- Function App → Azure OpenAI -->
+        <mxCell id="e6" value="embed / chat" style="edgeStyle=orthogonalEdgeStyle;html=1;fontSize=11;" edge="1" source="funcapp" target="openai" parent="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <!-- OpenAI → deployments -->
+        <mxCell id="e6a" value="" style="edgeStyle=orthogonalEdgeStyle;html=1;dashed=1;strokeColor=#d6b656;exitX=1;exitY=0.35;exitDx=0;exitDy=0;" edge="1" source="openai" target="gpt41" parent="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e6b" value="" style="edgeStyle=orthogonalEdgeStyle;html=1;dashed=1;strokeColor=#d6b656;exitX=1;exitY=0.65;exitDx=0;exitDy=0;" edge="1" source="openai" target="ada002" parent="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <!-- Function App → Cosmos DB -->
+        <mxCell id="e7" value="read/write metadata" style="edgeStyle=orthogonalEdgeStyle;html=1;fontSize=11;" edge="1" source="funcapp" target="cosmos" parent="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <!-- Function App → Storage -->
+        <mxCell id="e8" value="upload / read docs" style="edgeStyle=orthogonalEdgeStyle;html=1;fontSize=11;" edge="1" source="funcapp" target="storage" parent="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <!-- Storage → AI Search (document indexing) -->
+        <mxCell id="e9" value="index documents" style="edgeStyle=orthogonalEdgeStyle;html=1;dashed=1;strokeColor=#00AA44;fontSize=11;" edge="1" source="storage" target="search" parent="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
