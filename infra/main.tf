@@ -44,76 +44,138 @@ resource "azurerm_storage_container" "documents" {
 }
 
 # ---------------------------------------------------------------------------
-# App Service Plan (Consumption / Serverless)
+# Azure Container Registry
 # ---------------------------------------------------------------------------
 
-resource "azurerm_service_plan" "main" {
-  name                = "asp-${local.name_suffix}"
+resource "azurerm_container_registry" "main" {
+  name                = "cr${var.project_name}${random_string.suffix.result}"
   resource_group_name = azurerm_resource_group.main.name
   location            = azurerm_resource_group.main.location
-  os_type             = "Linux"
-  sku_name            = "Y1"  # Consumption plan
+  sku                 = "Basic"
+  admin_enabled       = true
   tags                = local.tags
 }
 
 # ---------------------------------------------------------------------------
-# Application Insights
+# Container Apps (FastAPI backend)
 # ---------------------------------------------------------------------------
 
-resource "azurerm_application_insights" "main" {
-  name                = "appi-${local.name_suffix}"
+resource "azurerm_log_analytics_workspace" "main" {
+  name                = "log-${local.name_suffix}"
   resource_group_name = azurerm_resource_group.main.name
   location            = azurerm_resource_group.main.location
-  application_type    = "web"
+  sku                 = "PerGB2018"
+  retention_in_days   = 30
   tags                = local.tags
 }
 
-# ---------------------------------------------------------------------------
-# Azure Function App  (Python 3.14)
-# ---------------------------------------------------------------------------
-
-resource "azurerm_linux_function_app" "main" {
-  name                       = "func-${local.name_suffix}-${random_string.suffix.result}"
+resource "azurerm_container_app_environment" "main" {
+  name                       = "cae-${local.name_suffix}"
   resource_group_name        = azurerm_resource_group.main.name
   location                   = azurerm_resource_group.main.location
-  service_plan_id            = azurerm_service_plan.main.id
-  storage_account_name       = azurerm_storage_account.main.name
-  storage_account_access_key = azurerm_storage_account.main.primary_access_key
+  log_analytics_workspace_id = azurerm_log_analytics_workspace.main.id
+  tags                       = local.tags
+}
 
-  identity {
-    type = "SystemAssigned"
+resource "azurerm_container_app" "api" {
+  name                         = "ca-${local.name_suffix}"
+  resource_group_name          = azurerm_resource_group.main.name
+  container_app_environment_id = azurerm_container_app_environment.main.id
+  revision_mode                = "Single"
+  tags                         = local.tags
+
+  registry {
+    server               = azurerm_container_registry.main.login_server
+    username             = azurerm_container_registry.main.admin_username
+    password_secret_name = "acr-password"
   }
 
-  site_config {
-    application_stack {
-      python_version = "3.12"  # Use 3.12 until 3.14 is GA on Azure Functions
+  secret {
+    name  = "acr-password"
+    value = azurerm_container_registry.main.admin_password
+  }
+
+  template {
+    container {
+      name   = "fastapi"
+      image  = "${azurerm_container_registry.main.login_server}/layakb-api:latest"
+      cpu    = 0.25
+      memory = "0.5Gi"
+
+      env {
+        name  = "AZURE_STORAGE_CONNECTION_STRING"
+        value = azurerm_storage_account.main.primary_connection_string
+      }
+      env {
+        name  = "AZURE_STORAGE_CONTAINER_NAME"
+        value = azurerm_storage_container.documents.name
+      }
+      env {
+        name  = "AZURE_SEARCH_ENDPOINT"
+        value = "https://${azurerm_search_service.main.name}.search.windows.net"
+      }
+      env {
+        name  = "AZURE_SEARCH_API_KEY"
+        value = azurerm_search_service.main.primary_key
+      }
+      env {
+        name  = "AZURE_SEARCH_INDEX_NAME"
+        value = "knowledge-base"
+      }
+      env {
+        name  = "AZURE_COSMOS_ENDPOINT"
+        value = azurerm_cosmosdb_account.main.endpoint
+      }
+      env {
+        name  = "AZURE_COSMOS_KEY"
+        value = azurerm_cosmosdb_account.main.primary_key
+      }
+      env {
+        name  = "AZURE_COSMOS_DATABASE"
+        value = azurerm_cosmosdb_sql_database.main.name
+      }
+      env {
+        name  = "AZURE_COSMOS_CONTAINER"
+        value = azurerm_cosmosdb_sql_container.documents.name
+      }
+      env {
+        name  = "ARK_API_KEY"
+        value = var.ark_api_key
+      }
+      env {
+        name  = "ARK_BASE_URL"
+        value = var.ark_base_url
+      }
+      env {
+        name  = "ARK_CHAT_MODEL"
+        value = var.ark_chat_model
+      }
+      env {
+        name  = "ARK_EMBEDDING_MODEL"
+        value = var.ark_embedding_model
+      }
+      env {
+        name  = "ARK_EMBEDDING_BASE_URL"
+        value = var.ark_embedding_base_url
+      }
+      env {
+        name  = "API_BASE_URL"
+        value = "https://ca-${local.name_suffix}.${azurerm_container_app_environment.main.default_domain}"
+      }
     }
-    cors {
-      allowed_origins = ["*"]
+
+    min_replicas = 0
+    max_replicas = 1
+  }
+
+  ingress {
+    external_enabled = true
+    target_port      = 8000
+    traffic_weight {
+      percentage      = 100
+      latest_revision = true
     }
   }
-
-  app_settings = {
-    FUNCTIONS_WORKER_RUNTIME            = "python"
-    APPINSIGHTS_INSTRUMENTATIONKEY      = azurerm_application_insights.main.instrumentation_key
-    AZURE_STORAGE_CONNECTION_STRING     = azurerm_storage_account.main.primary_connection_string
-    AZURE_STORAGE_CONTAINER_NAME        = azurerm_storage_container.documents.name
-    AZURE_SEARCH_ENDPOINT               = "https://${azurerm_search_service.main.name}.search.windows.net"
-    AZURE_SEARCH_API_KEY                = azurerm_search_service.main.primary_key
-    AZURE_SEARCH_INDEX_NAME             = "knowledge-base"
-    AZURE_OPENAI_ENDPOINT               = azurerm_cognitive_account.openai.endpoint
-    AZURE_OPENAI_API_KEY                = azurerm_cognitive_account.openai.primary_access_key
-    AZURE_OPENAI_API_VERSION            = "2024-02-01"
-    AZURE_OPENAI_EMBEDDING_DEPLOYMENT   = "text-embedding-ada-002"
-    AZURE_OPENAI_CHAT_DEPLOYMENT        = "gpt-4o"
-    AZURE_COSMOS_ENDPOINT               = azurerm_cosmosdb_account.main.endpoint
-    AZURE_COSMOS_KEY                    = azurerm_cosmosdb_account.main.primary_key
-    AZURE_COSMOS_DATABASE               = azurerm_cosmosdb_sql_database.main.name
-    AZURE_COSMOS_CONTAINER              = azurerm_cosmosdb_sql_container.documents.name
-    FUNCTION_APP_URL = "https://func-layakbtest-dev-gq5c1y.azurewebsites.net"
-  }
-
-  tags = local.tags
 }
 
 # ---------------------------------------------------------------------------
@@ -126,51 +188,6 @@ resource "azurerm_search_service" "main" {
   location            = azurerm_resource_group.main.location
   sku                 = var.search_sku
   tags                = local.tags
-}
-
-# ---------------------------------------------------------------------------
-# Azure OpenAI
-# ---------------------------------------------------------------------------
-
-resource "azurerm_cognitive_account" "openai" {
-  name                = "oai-${local.name_suffix}-${random_string.suffix.result}"
-  resource_group_name = azurerm_resource_group.main.name
-  location            = azurerm_resource_group.main.location
-  kind                = "OpenAI"
-  sku_name            = var.openai_sku
-  tags                = local.tags
-}
-
-resource "azurerm_cognitive_deployment" "embedding" {
-  name                 = "text-embedding-ada-002"
-  cognitive_account_id = azurerm_cognitive_account.openai.id
-
-  model {
-    format  = "OpenAI"
-    name    = "text-embedding-ada-002"
-    version = "2"
-  }
-
-  sku {
-    name     = "Standard"
-    capacity = 1
-  }
-}
-
-resource "azurerm_cognitive_deployment" "chat" {
-  name                 = "gpt-4o"
-  cognitive_account_id = azurerm_cognitive_account.openai.id
-
-  model {
-    format  = "OpenAI"
-    name    = "gpt-4o"
-    version = "2024-05-13"
-  }
-
-  sku {
-    name     = "Standard"
-    capacity = 1
-  }
 }
 
 # ---------------------------------------------------------------------------
@@ -212,4 +229,17 @@ resource "azurerm_cosmosdb_sql_container" "documents" {
   account_name        = azurerm_cosmosdb_account.main.name
   database_name       = azurerm_cosmosdb_sql_database.main.name
   partition_key_paths = ["/id"]
+}
+
+# ---------------------------------------------------------------------------
+# Azure Static Web Apps (React frontend)
+# ---------------------------------------------------------------------------
+
+resource "azurerm_static_web_app" "frontend" {
+  name                = "swa-${local.name_suffix}"
+  resource_group_name = azurerm_resource_group.main.name
+  location            = "eastus2"
+  sku_tier            = "Free"
+  sku_size            = "Free"
+  tags                = local.tags
 }
