@@ -9,7 +9,6 @@ from azure.search.documents.indexes.models import (
     OcrSkill,
     MergeSkill,
     SplitSkill,
-    AzureOpenAIEmbeddingSkill,
     WebApiSkill,
     InputFieldMappingEntry,
     OutputFieldMappingEntry,
@@ -107,21 +106,10 @@ def _create_excel_skillset(client: SearchIndexerClient, func_url: str):
                 OutputFieldMappingEntry(name="textItems", target_name="chunks"),
             ],
         ),
-        # ④ Embed each chunk
-        AzureOpenAIEmbeddingSkill(
-            name="excel-embed",
-            context="/document/excel_rows/*/chunks/*",
-            resource_uri=os.environ["AZURE_OPENAI_ENDPOINT"],
-            deployment_id=os.environ["AZURE_OPENAI_EMBEDDING_DEPLOYMENT"],
-            model_name="text-embedding-ada-002",
-            api_key=os.environ["AZURE_OPENAI_API_KEY"],
-            inputs=[InputFieldMappingEntry(name="text", source="/document/excel_rows/*/chunks/*")],
-            outputs=[OutputFieldMappingEntry(name="embedding", target_name="content_vector")],
-        ),
     ]
     client.create_or_update_skillset(SearchIndexerSkillset(
         name="excel-skillset",
-        description="Excel → row parse → clean → split → embed",
+        description="Excel → row parse → clean → split",
         skills=skills,
     ))
 
@@ -176,21 +164,10 @@ def _create_document_skillset(client: SearchIndexerClient, func_url: str):
             inputs=[InputFieldMappingEntry(name="text", source="/document/cleaned_content")],
             outputs=[OutputFieldMappingEntry(name="textItems", target_name="chunks")],
         ),
-        # ⑤ Embed each chunk
-        AzureOpenAIEmbeddingSkill(
-            name="doc-embed",
-            context="/document/chunks/*",
-            resource_uri=os.environ["AZURE_OPENAI_ENDPOINT"],
-            deployment_id=os.environ["AZURE_OPENAI_EMBEDDING_DEPLOYMENT"],
-            model_name="text-embedding-ada-002",
-            api_key=os.environ["AZURE_OPENAI_API_KEY"],
-            inputs=[InputFieldMappingEntry(name="text", source="/document/chunks/*")],
-            outputs=[OutputFieldMappingEntry(name="embedding", target_name="content_vector")],
-        ),
     ]
     client.create_or_update_skillset(SearchIndexerSkillset(
         name="document-skillset",
-        description="PDF/Word/Image → OCR → merge → clean → split → embed",
+        description="PDF/Word/Image → OCR → merge → clean → split",
         skills=skills,
     ))
 

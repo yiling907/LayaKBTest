@@ -1,0 +1,9 @@
+__pycache__/
+*.pyc
+*.pyo
+.env
+local.settings.json
+.pytest_cache/
+tests/
+host.json
+*.example

@@ -18,7 +18,7 @@ from azure.search.documents.indexes.models import (
 from azure.search.documents.models import VectorizedQuery, QueryType
 from azure.core.credentials import AzureKeyCredential
 
-VECTOR_DIMENSIONS = 1536  # text-embedding-ada-002
+VECTOR_DIMENSIONS = 2048  # doubao-embedding-vision-241215
 
 
 def _credential():
