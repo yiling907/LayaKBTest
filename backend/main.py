@@ -7,10 +7,11 @@ import uuid
 from dotenv import load_dotenv
 load_dotenv(os.path.join(os.path.dirname(__file__), "..", ".env"))
 
-from fastapi import FastAPI, File, UploadFile, HTTPException
+from fastapi import FastAPI, File, UploadFile, HTTPException, BackgroundTasks
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import JSONResponse
 from pydantic import BaseModel
+from typing import List
 
 from shared import blob_client, search_client, openai_client, cosmos_client
 
@@ -91,44 +92,90 @@ def health():
 
 
 # ---------------------------------------------------------------------------
-# Ingest a document
+# Ingest helpers
+# ---------------------------------------------------------------------------
+
+def _index_document(doc_id: str, file_name: str, raw_bytes: bytes):
+    """Background task: embed and index a document already uploaded to blob."""
+    try:
+        text = _extract_text(file_name, raw_bytes)
+        chunks = _chunk_text(text)
+
+        search_client.ensure_index()
+
+        search_docs = []
+        for i, chunk in enumerate(chunks):
+            vector = openai_client.get_embedding(chunk)
+            search_docs.append({
+                "id": f"{doc_id}_{i}",
+                "document_id": doc_id,
+                "source_file_name": file_name,
+                "content": chunk,
+                "content_vector": vector,
+            })
+        search_client.upsert_chunks(search_docs)
+
+        cosmos_client.update_document_status(doc_id, status="indexed", chunks=len(chunks))
+        logger.info("Indexed document %s (%d chunks)", file_name, len(chunks))
+    except Exception:
+        logger.exception("Failed to index document %s", file_name)
+        cosmos_client.update_document_status(doc_id, status="failed")
+
+
+# ---------------------------------------------------------------------------
+# Ingest a single document (async)
 # ---------------------------------------------------------------------------
 
 @app.post("/api/ingest")
-async def ingest(file: UploadFile = File(...)):
+async def ingest(background_tasks: BackgroundTasks, file: UploadFile = File(...)):
     doc_id = str(uuid.uuid4())
     file_name = file.filename or f"{doc_id}.bin"
     raw_bytes = await file.read()
 
     blob_client.upload_document(file_name, raw_bytes)
-    text = _extract_text(file_name, raw_bytes)
-    chunks = _chunk_text(text)
-
-    search_client.ensure_index()
-
-    search_docs = []
-    for i, chunk in enumerate(chunks):
-        vector = openai_client.get_embedding(chunk)
-        search_docs.append({
-            "id": f"{doc_id}_{i}",
-            "document_id": doc_id,
-            "source_file_name": file_name,
-            "content": chunk,
-            "content_vector": vector,
-        })
-    search_client.upsert_chunks(search_docs)
 
     metadata = {
         "id": doc_id,
         "name": file_name,
         "size": len(raw_bytes),
-        "chunks": len(chunks),
-        "status": "indexed",
+        "chunks": 0,
+        "status": "processing",
     }
     cosmos_client.save_document_metadata(metadata)
 
-    logger.info("Ingested document %s (%d chunks)", file_name, len(chunks))
+    background_tasks.add_task(_index_document, doc_id, file_name, raw_bytes)
+
+    logger.info("Accepted document %s for async indexing", file_name)
     return JSONResponse(content=metadata)
+
+
+# ---------------------------------------------------------------------------
+# Batch ingest (async)
+# ---------------------------------------------------------------------------
+
+@app.post("/api/ingest/batch")
+async def ingest_batch(background_tasks: BackgroundTasks, files: List[UploadFile] = File(...)):
+    results = []
+    for file in files:
+        doc_id = str(uuid.uuid4())
+        file_name = file.filename or f"{doc_id}.bin"
+        raw_bytes = await file.read()
+
+        blob_client.upload_document(file_name, raw_bytes)
+
+        metadata = {
+            "id": doc_id,
+            "name": file_name,
+            "size": len(raw_bytes),
+            "chunks": 0,
+            "status": "processing",
+        }
+        cosmos_client.save_document_metadata(metadata)
+        background_tasks.add_task(_index_document, doc_id, file_name, raw_bytes)
+        results.append(metadata)
+        logger.info("Accepted document %s for async indexing", file_name)
+
+    return JSONResponse(content={"documents": results})
 
 
 # ---------------------------------------------------------------------------

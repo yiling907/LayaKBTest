@@ -24,6 +24,15 @@ def get_document_metadata(doc_id: str) -> dict | None:
         return None
 
 
+def update_document_status(doc_id: str, status: str, chunks: int = None):
+    container = _get_container()
+    item = container.read_item(item=doc_id, partition_key=doc_id)
+    item["status"] = status
+    if chunks is not None:
+        item["chunks"] = chunks
+    container.upsert_item(item)
+
+
 def list_documents() -> list[dict]:
     container = _get_container()
     return list(container.query_items(

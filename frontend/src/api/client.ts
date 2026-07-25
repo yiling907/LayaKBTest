@@ -36,5 +36,11 @@ export const ingestDocument = (file: File) => {
   return api.post<IngestResponse>('/ingest', form)
 }
 
+export const ingestDocuments = (files: File[]) => {
+  const form = new FormData()
+  files.forEach(f => form.append('files', f))
+  return api.post<{ documents: IngestResponse[] }>('/ingest/batch', form)
+}
+
 export const listDocuments = () =>
   api.get<{ documents: Document[] }>('/documents')
