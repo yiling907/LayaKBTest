@@ -8,26 +8,45 @@
   display: none;
 }
 
-.upload-area label {
-  display: inline-block;
-  padding: 0.65rem 1.25rem;
+.drop-zone {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.3rem;
+  padding: 1.5rem 2rem;
   background: #fff;
-  border: 2px dashed #0066cc;
-  border-radius: 0.5rem;
-  color: #0066cc;
-  font-size: 0.95rem;
+  border: 2px dashed #0055b3;
+  border-radius: 0.6rem;
+  color: #0055b3;
+  font-size: 0.9rem;
   cursor: pointer;
-  transition: background 0.15s;
-  width: fit-content;
+  transition: background 0.15s, border-color 0.15s;
+  text-align: center;
 }
 
-.upload-area label:hover:not(.disabled) {
-  background: #e6f0ff;
+.drop-zone:hover:not(.disabled) {
+  background: #eef4ff;
 }
 
-.upload-area label.disabled {
+.drop-zone.drag-over {
+  background: #dceafe;
+  border-color: #003d87;
+}
+
+.drop-zone.disabled {
   opacity: 0.6;
   cursor: not-allowed;
+}
+
+.upload-icon {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.upload-hint {
+  font-size: 0.75rem;
+  color: #888;
 }
 
 .upload-message {
