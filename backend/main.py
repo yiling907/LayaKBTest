@@ -13,7 +13,7 @@ from fastapi.responses import JSONResponse
 from pydantic import BaseModel
 from typing import List
 
-from shared import blob_client, search_client, openai_client, cosmos_client
+from shared import blob_client, search_client, openai_client, cosmos_client, user_client
 
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
@@ -231,6 +231,7 @@ async def ingest_batch(background_tasks: BackgroundTasks, files: List[UploadFile
 
 class QueryRequest(BaseModel):
     question: str
+    user_id: str | None = None
 
 
 @app.post("/api/query")
@@ -242,14 +243,39 @@ def query(body: QueryRequest):
     query_vector = openai_client.get_embedding(question)
     hits = search_client.vector_search(query_vector, top_k=5)
 
-    context = "\n\n---\n\n".join(
+    kb_context = "\n\n---\n\n".join(
         f"[{h['source_file_name']}]\n{h['content']}" for h in hits
     )
-    user_message = f"Context:\n{context}\n\nQuestion: {question}"
-    answer = openai_client.chat_completion(SYSTEM_PROMPT, user_message)
 
+    user_context = ""
+    if body.user_id:
+        user_context = user_client.build_user_context(body.user_id)
+
+    if user_context:
+        user_message = (
+            f"Customer context:\n{user_context}\n\n"
+            f"Knowledge base context:\n{kb_context}\n\n"
+            f"Question: {question}"
+        )
+    else:
+        user_message = f"Context:\n{kb_context}\n\nQuestion: {question}"
+
+    answer = openai_client.chat_completion(SYSTEM_PROMPT, user_message)
     sources = [{"document": h["source_file_name"], "chunk": h["content"][:300]} for h in hits]
     return {"answer": answer, "sources": sources}
+
+
+@app.get("/api/users")
+def list_users():
+    return {"users": user_client.list_users()}
+
+
+@app.get("/api/users/{user_id}")
+def get_user(user_id: str):
+    user = user_client.get_user_by_id(user_id)
+    if not user:
+        raise HTTPException(status_code=404, detail="User not found")
+    return user
 
 
 # ---------------------------------------------------------------------------

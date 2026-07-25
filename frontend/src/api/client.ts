@@ -27,8 +27,23 @@ export interface Document {
 
 export const healthCheck = () => api.get<{ status: string }>('/health')
 
-export const queryKB = (question: string) =>
-  api.post<QueryResponse>('/query', { question })
+export interface UserSummary {
+  id: string
+  name: string
+  email: string
+  age: number
+  active_policies: { policy_number: string; product: string; type: string }[]
+  open_claims: number
+}
+
+export const queryKB = (question: string, user_id?: string) =>
+  api.post<QueryResponse>('/query', { question, user_id: user_id || null })
+
+export const listUsers = () =>
+  api.get<{ users: UserSummary[] }>('/users')
+
+export const getUser = (id: string) =>
+  api.get<Record<string, unknown>>(`/users/${id}`)
 
 export const ingestDocument = (file: File) => {
   const form = new FormData()

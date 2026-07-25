@@ -1,0 +1,6847 @@
+[
+  {
+    "id": "USR001",
+    "name": "Liam Ryan",
+    "gender": "M",
+    "date_of_birth": "1970-12-26",
+    "age": 55,
+    "email": "liam.ryan@email.ie",
+    "phone": "+353 84 267 8573",
+    "address": {
+      "line1": "98 Castle Drive",
+      "city": "Limerick",
+      "postcode": "D04",
+      "country": "Ireland"
+    },
+    "pre_existing_conditions": [
+      "Heart Condition"
+    ],
+    "policies": [
+      {
+        "policy_number": "TRV-2026-100010",
+        "product": "Laya Healthcare Medicare Travel Insurance",
+        "type": "travel",
+        "trip_type": "annual",
+        "version": "post-nov-2025",
+        "start_date": "2026-03-07",
+        "end_date": "2027-03-07",
+        "status": "active",
+        "excess": 200,
+        "covered_destinations": [
+          "Europe"
+        ],
+        "premium_paid": 299.4
+      },
+      {
+        "policy_number": "TRV-2025-100011",
+        "product": "Laya Healthcare Medicare Travel Insurance",
+        "type": "travel",
+        "trip_type": "annual",
+        "version": "pre-nov-2025",
+        "start_date": "2025-06-14",
+        "end_date": "2026-06-14",
+        "status": "cancelled",
+        "excess": 50,
+        "covered_destinations": [
+          "USA",
+          "Caribbean"
+        ],
+        "premium_paid": 452.33
+      },
+      {
+        "policy_number": "TRV-2025-100012",
+        "product": "Single & Annual Multi-Trip Travel Insurance",
+        "type": "travel",
+        "trip_type": "single",
+        "version": "pre-nov-2025",
+        "start_date": "2025-08-21",
+        "end_date": "2025-09-08",
+        "status": "active",
+        "excess": 150,
+        "covered_destinations": [
+          "USA"
+        ],
+        "premium_paid": 256.93
+      }
+    ],
+    "claims": [
+      {
+        "claim_id": "CLM-2026-00020",
+        "policy_number": "TRV-2026-100010",
+        "date": "2026-03-31",
+        "type": "Personal Accident",
+        "amount_claimed": 1923.1,
+        "amount_paid": 0.0,
+        "status": "pending",
+        "description": "Baggage Loss during trip to Canada."
+      },
+      {
+        "claim_id": "CLM-2026-00021",
+        "policy_number": "TRV-2026-100010",
+        "date": "2026-03-18",
+        "type": "Flight Delay",
+        "amount_claimed": 3702.71,
+        "amount_paid": 3662.89,
+        "status": "settled",
+        "description": "Medical Emergency during trip to Australia."
+      },
+      {
+        "claim_id": "CLM-2026-00022",
+        "policy_number": "TRV-2025-100011",
+        "date": "2026-04-26",
+        "type": "Personal Accident",
+        "amount_claimed": 4450.17,
+        "amount_paid": 0.0,
+        "status": "pending",
+        "description": "Trip Cancellation during trip to Asia."
+      },
+      {
+        "claim_id": "CLM-2025-00023",
+        "policy_number": "TRV-2025-100011",
+        "date": "2025-07-19",
+        "type": "Medical Emergency",
+        "amount_claimed": 419.96,
+        "amount_paid": 381.84,
+        "status": "settled",
+        "description": "Trip Cancellation during trip to Canada."
+      },
+      {
+        "claim_id": "CLM-2025-00024",
+        "policy_number": "TRV-2025-100011",
+        "date": "2025-08-04",
+        "type": "Emergency Repatriation",
+        "amount_claimed": 2024.61,
+        "amount_paid": 0.0,
+        "status": "rejected",
+        "description": "Baggage Loss during trip to USA."
+      },
+      {
+        "claim_id": "CLM-2025-00025",
+        "policy_number": "TRV-2025-100012",
+        "date": "2025-08-29",
+        "type": "Trip Cancellation",
+        "amount_claimed": 3568.74,
+        "amount_paid": 3010.78,
+        "status": "settled",
+        "description": "Personal Accident during trip to Asia."
+      }
+    ]
+  },
+  {
+    "id": "USR002",
+    "name": "Brian Kelly",
+    "gender": "M",
+    "date_of_birth": "1970-04-10",
+    "age": 56,
+    "email": "brian.kelly@email.ie",
+    "phone": "+353 87 710 2040",
+    "address": {
+      "line1": "99 High Street",
+      "city": "Dublin",
+      "postcode": "T12",
+      "country": "Ireland"
+    },
+    "pre_existing_conditions": [
+      "None"
+    ],
+    "policies": [
+      {
+        "policy_number": "TRV-2026-100020",
+        "product": "Single & Annual Multi-Trip Travel Insurance",
+        "type": "travel",
+        "trip_type": "single",
+        "version": "post-nov-2025",
+        "start_date": "2026-03-18",
+        "end_date": "2026-04-08",
+        "status": "expired",
+        "excess": 100,
+        "covered_destinations": [
+          "Caribbean",
+          "Asia"
+        ],
+        "premium_paid": 190.57
+      },
+      {
+        "policy_number": "TRV-2025-100021",
+        "product": "Single & Annual Multi-Trip Travel Insurance",
+        "type": "travel",
+        "trip_type": "single",
+        "version": "pre-nov-2025",
+        "start_date": "2025-10-05",
+        "end_date": "2025-10-23",
+        "status": "active",
+        "excess": 200,
+        "covered_destinations": [
+          "Australia",
+          "Caribbean"
+        ],
+        "premium_paid": 360.27
+      }
+    ],
+    "claims": [
+      {
+        "claim_id": "CLM-2026-00040",
+        "policy_number": "TRV-2026-100020",
+        "date": "2026-04-03",
+        "type": "Trip Cancellation",
+        "amount_claimed": 2568.88,
+        "amount_paid": 2426.16,
+        "status": "settled",
+        "description": "Emergency Repatriation during trip to USA."
+      }
+    ]
+  },
+  {
+    "id": "USR003",
+    "name": "Aoibhin Ryan",
+    "gender": "F",
+    "date_of_birth": "2003-07-24",
+    "age": 23,
+    "email": "aoibhin.ryan@email.ie",
+    "phone": "+353 86 600 1319",
+    "address": {
+      "line1": "29 River Lane",
+      "city": "Tralee",
+      "postcode": "D01",
+      "country": "Ireland"
+    },
+    "pre_existing_conditions": [
+      "Diabetes Type 2"
+    ],
+    "policies": [
+      {
+        "policy_number": "CHE-2026-200030",
+        "product": "Car Hire Excess Insurance Annual Multi-Trip with CDW and SLI",
+        "type": "car_hire",
+        "trip_type": "annual",
+        "version": "post-nov-2025",
+        "start_date": "2026-03-02",
+        "end_date": "2027-03-02",
+        "status": "active",
+        "excess": 1000,
+        "covered_destinations": [
+          "Europe"
+        ],
+        "premium_paid": 162.98
+      },
+      {
+        "policy_number": "TRV-2026-100031",
+        "product": "Single & Annual Multi-Trip Travel Insurance",
+        "type": "travel",
+        "trip_type": "single",
+        "version": "post-nov-2025",
+        "start_date": "2026-01-19",
+        "end_date": "2026-01-26",
+        "status": "active",
+        "excess": 100,
+        "covered_destinations": [
+          "Australia"
+        ],
+        "premium_paid": 585.38
+      },
+      {
+        "policy_number": "CHE-2026-200032",
+        "product": "Car Hire Excess Insurance Annual Multi-Trip",
+        "type": "car_hire",
+        "trip_type": "annual",
+        "version": "post-nov-2025",
+        "start_date": "2026-04-24",
+        "end_date": "2027-04-24",
+        "status": "active",
+        "excess": 750,
+        "covered_destinations": [
+          "Australia"
+        ],
+        "premium_paid": 64.45
+      }
+    ],
+    "claims": []
+  },
+  {
+    "id": "USR004",
+    "name": "Conor Byrne",
+    "gender": "M",
+    "date_of_birth": "1999-05-21",
+    "age": 27,
+    "email": "conor.byrne@email.ie",
+    "phone": "+353 81 334 2104",
+    "address": {
+      "line1": "9 River Lane",
+      "city": "Ennis",
+      "postcode": "D02",
+      "country": "Ireland"
+    },
+    "pre_existing_conditions": [
+      "None"
+    ],
+    "policies": [
+      {
+        "policy_number": "CHE-2026-200040",
+        "product": "Car Hire Excess Insurance Single Trip",
+        "type": "car_hire",
+        "trip_type": "single",
+        "version": "post-nov-2025",
+        "start_date": "2026-02-28",
+        "end_date": "2026-03-19",
+        "status": "active",
+        "excess": 750,
+        "covered_destinations": [
+          "Australia"
+        ],
+        "premium_paid": 60.54
+      }
+    ],
+    "claims": [
+      {
+        "claim_id": "CLM-2026-00080",
+        "policy_number": "CHE-2026-200040",
+        "date": "2026-03-19",
+        "type": "Theft of Vehicle",
+        "amount_claimed": 2231.06,
+        "amount_paid": 2167.62,
+        "status": "settled",
+        "description": "Third Party Liability during trip to Caribbean."
+      },
+      {
+        "claim_id": "CLM-2026-00081",
+        "policy_number": "CHE-2026-200040",
+        "date": "2026-03-11",
+        "type": "Vehicle Damage",
+        "amount_claimed": 2302.88,
+        "amount_paid": 0.0,
+        "status": "rejected",
+        "description": "Theft of Vehicle during trip to USA."
+      },
+      {
+        "claim_id": "CLM-2026-00082",
+        "policy_number": "CHE-2026-200040",
+        "date": "2026-03-02",
+        "type": "Vehicle Damage",
+        "amount_claimed": 1822.81,
+        "amount_paid": 1522.73,
+        "status": "settled",
+        "description": "Vehicle Damage during trip to Asia."
+      }
+    ]
+  },
+  {
+    "id": "USR005",
+    "name": "Ronan Doherty",
+    "gender": "M",
+    "date_of_birth": "1969-08-11",
+    "age": 56,
+    "email": "ronan.doherty@email.ie",
+    "phone": "+353 89 777 8973",
+    "address": {
+      "line1": "40 Park Avenue",
+      "city": "Tralee",
+      "postcode": "D04",
+      "country": "Ireland"
+    },
+    "pre_existing_conditions": [
+      "Diabetes Type 2"
+    ],
+    "policies": [
+      {
+        "policy_number": "CHE-2026-200050",
+        "product": "Car Hire Excess Insurance Annual Multi-Trip with CDW and SLI",
+        "type": "car_hire",
+        "trip_type": "annual",
+        "version": "post-nov-2025",
+        "start_date": "2026-03-23",
+        "end_date": "2027-03-23",
+        "status": "active",
+        "excess": 1500,
+        "covered_destinations": [
+          "Canada"
+        ],
+        "premium_paid": 78.88
+      },
+      {
+        "policy_number": "TRV-2025-100051",
+        "product": "Single & Annual Multi-Trip Travel Insurance",
+        "type": "travel",
+        "trip_type": "single",
+        "version": "pre-nov-2025",
+        "start_date": "2025-07-20",
+        "end_date": "2025-08-06",
+        "status": "active",
+        "excess": 150,
+        "covered_destinations": [
+          "Caribbean",
+          "Asia"
+        ],
+        "premium_paid": 264.23
+      },
+      {
+        "policy_number": "TRV-2025-100052",
+        "product": "Laya Healthcare Medicare Travel Insurance",
+        "type": "travel",
+        "trip_type": "annual",
+        "version": "pre-nov-2025",
+        "start_date": "2025-07-21",
+        "end_date": "2026-07-21",
+        "status": "active",
+        "excess": 150,
+        "covered_destinations": [
+          "USA"
+        ],
+        "premium_paid": 458.67
+      }
+    ],
+    "claims": [
+      {
+        "claim_id": "CLM-2026-00100",
+        "policy_number": "CHE-2026-200050",
+        "date": "2026-04-09",
+        "type": "Windscreen Damage",
+        "amount_claimed": 2225.03,
+        "amount_paid": 0.0,
+        "status": "pending",
+        "description": "Theft of Vehicle during trip to Canada."
+      },
+      {
+        "claim_id": "CLM-2026-00101",
+        "policy_number": "CHE-2026-200050",
+        "date": "2026-07-19",
+        "type": "Vehicle Damage",
+        "amount_claimed": 561.85,
+        "amount_paid": 348.48,
+        "status": "settled",
+        "description": "Vehicle Damage during trip to Canada."
+      },
+      {
+        "claim_id": "CLM-2026-00102",
+        "policy_number": "TRV-2025-100052",
+        "date": "2026-03-24",
+        "type": "Medical Emergency",
+        "amount_claimed": 1225.99,
+        "amount_paid": 0.0,
+        "status": "rejected",
+        "description": "Trip Cancellation during trip to Caribbean."
+      },
+      {
+        "claim_id": "CLM-2025-00103",
+        "policy_number": "TRV-2025-100052",
+        "date": "2025-07-22",
+        "type": "Flight Delay",
+        "amount_claimed": 4929.48,
+        "amount_paid": 0.0,
+        "status": "pending",
+        "description": "Baggage Loss during trip to Caribbean."
+      }
+    ]
+  },
+  {
+    "id": "USR006",
+    "name": "Conor Quinn",
+    "gender": "M",
+    "date_of_birth": "1993-01-01",
+    "age": 33,
+    "email": "conor.quinn@email.ie",
+    "phone": "+353 84 785 6147",
+    "address": {
+      "line1": "62 Castle Drive",
+      "city": "Tralee",
+      "postcode": "D01",
+      "country": "Ireland"
+    },
+    "pre_existing_conditions": [
+      "None"
+    ],
+    "policies": [
+      {
+        "policy_number": "TRV-2026-100060",
+        "product": "Single & Annual Multi-Trip Travel Insurance",
+        "type": "travel",
+        "trip_type": "single",
+        "version": "post-nov-2025",
+        "start_date": "2026-03-27",
+        "end_date": "2026-04-10",
+        "status": "cancelled",
+        "excess": 200,
+        "covered_destinations": [
+          "Europe"
+        ],
+        "premium_paid": 558.08
+      },
+      {
+        "policy_number": "TRV-2025-100061",
+        "product": "Single & Annual Multi-Trip Travel Insurance",
+        "type": "travel",
+        "trip_type": "single",
+        "version": "pre-nov-2025",
+        "start_date": "2025-07-06",
+        "end_date": "2025-07-22",
+        "status": "active",
+        "excess": 0,
+        "covered_destinations": [
+          "Caribbean"
+        ],
+        "premium_paid": 431.11
+      },
+      {
+        "policy_number": "CHE-2025-200062",
+        "product": "Car Hire Excess Insurance Annual Multi-Trip with CDW and SLI",
+        "type": "car_hire",
+        "trip_type": "annual",
+        "version": "pre-nov-2025",
+        "start_date": "2025-10-05",
+        "end_date": "2026-10-05",
+        "status": "active",
+        "excess": 500,
+        "covered_destinations": [
+          "Asia"
+        ],
+        "premium_paid": 139.1
+      }
+    ],
+    "claims": []
+  },
+  {
+    "id": "USR007",
+    "name": "Fionn Murray",
+    "gender": "M",
+    "date_of_birth": "1974-03-08",
+    "age": 52,
+    "email": "fionn.murray@email.ie",
+    "phone": "+353 89 600 5114",
+    "address": {
+      "line1": "14 Main Street",
+      "city": "Cork",
+      "postcode": "D01",
+      "country": "Ireland"
+    },
+    "pre_existing_conditions": [
+      "None"
+    ],
+    "policies": [
+      {
+        "policy_number": "TRV-2025-100070",
+        "product": "Laya Healthcare Medicare Travel Insurance",
+        "type": "travel",
+        "trip_type": "annual",
+        "version": "pre-nov-2025",
+        "start_date": "2025-07-22",
+        "end_date": "2026-07-22",
+        "status": "active",
+        "excess": 200,
+        "covered_destinations": [
+          "USA",
+          "Worldwide"
+        ],
+        "premium_paid": 190.84
+      },
+      {
+        "policy_number": "CHE-2025-200071",
+        "product": "Car Hire Excess Insurance Annual Multi-Trip",
+        "type": "car_hire",
+        "trip_type": "annual",
+        "version": "pre-nov-2025",
+        "start_date": "2025-10-24",
+        "end_date": "2026-10-24",
+        "status": "expired",
+        "excess": 750,
+        "covered_destinations": [
+          "Asia"
+        ],
+        "premium_paid": 110.11
+      }
+    ],
+    "claims": [
+      {
+        "claim_id": "CLM-2026-00140",
+        "policy_number": "TRV-2025-100070",
+        "date": "2026-04-18",
+        "type": "Emergency Repatriation",
+        "amount_claimed": 237.55,
+        "amount_paid": 0.0,
+        "status": "pending",
+        "description": "Medical Emergency during trip to USA."
+      },
+      {
+        "claim_id": "CLM-2025-00141",
+        "policy_number": "TRV-2025-100070",
+        "date": "2025-12-04",
+        "type": "Trip Cancellation",
+        "amount_claimed": 754.06,
+        "amount_paid": 676.37,
+        "status": "settled",
+        "description": "Baggage Loss during trip to Worldwide."
+      },
+      {
+        "claim_id": "CLM-2026-00142",
+        "policy_number": "TRV-2025-100070",
+        "date": "2026-05-27",
+        "type": "Trip Cancellation",
+        "amount_claimed": 1211.02,
+        "amount_paid": 0.0,
+        "status": "pending",
+        "description": "Emergency Repatriation during trip to Asia."
+      }
+    ]
+  },
+  {
+    "id": "USR008",
+    "name": "Ciara Murphy",
+    "gender": "F",
+    "date_of_birth": "1974-12-17",
+    "age": 51,
+    "email": "ciara.murphy@email.ie",
+    "phone": "+353 83 658 1590",
+    "address": {
+      "line1": "95 Green Way",
+      "city": "Galway",
+      "postcode": "D08",
+      "country": "Ireland"
+    },
+    "pre_existing_conditions": [
+      "Heart Condition"
+    ],
+    "policies": [
+      {
+        "policy_number": "CHE-2026-200080",
+        "product": "Car Hire Excess Insurance Annual Multi-Trip with CDW and SLI",
+        "type": "car_hire",
+        "trip_type": "annual",
+        "version": "post-nov-2025",
+        "start_date": "2026-05-28",
+        "end_date": "2027-05-28",
+        "status": "active",
+        "excess": 1500,
+        "covered_destinations": [
+          "Europe"
+        ],
+        "premium_paid": 129.75
+      }
+    ],
+    "claims": []
+  },
+  {
+    "id": "USR009",
+    "name": "Cathal Smith",
+    "gender": "M",
+    "date_of_birth": "1961-11-16",
+    "age": 64,
+    "email": "cathal.smith@email.ie",
+    "phone": "+353 83 342 3662",
+    "address": {
+      "line1": "46 High Street",
+      "city": "Waterford",
+      "postcode": "T12",
+      "country": "Ireland"
+    },
+    "pre_existing_conditions": [
+      "None"
+    ],
+    "policies": [
+      {
+        "policy_number": "CHE-2026-200090",
+        "product": "Car Hire Excess Insurance Single Trip",
+        "type": "car_hire",
+        "trip_type": "single",
+        "version": "post-nov-2025",
+        "start_date": "2026-05-16",
+        "end_date": "2026-05-26",
+        "status": "expired",
+        "excess": 500,
+        "covered_destinations": [
+          "Canada"
+        ],
+        "premium_paid": 96.59
+      }
+    ],
+    "claims": []
+  },
+  {
+    "id": "USR010",
+    "name": "Brian Gallagher",
+    "gender": "M",
+    "date_of_birth": "1995-12-26",
+    "age": 30,
+    "email": "brian.gallagher@email.ie",
+    "phone": "+353 88 458 6000",
+    "address": {
+      "line1": "59 Park Avenue",
+      "city": "Limerick",
+      "postcode": "D08",
+      "country": "Ireland"
+    },
+    "pre_existing_conditions": [
+      "None"
+    ],
+    "policies": [
+      {
+        "policy_number": "CHE-2025-200100",
+        "product": "Car Hire Excess Insurance Single Trip",
+        "type": "car_hire",
+        "trip_type": "single",
+        "version": "post-nov-2025",
+        "start_date": "2025-12-13",
+        "end_date": "2026-01-02",
+        "status": "active",
+        "excess": 500,
+        "covered_destinations": [
+          "USA"
+        ],
+        "premium_paid": 177.37
+      }
+    ],
+    "claims": []
+  },
+  {
+    "id": "USR011",
+    "name": "Kevin O'Neill",
+    "gender": "M",
+    "date_of_birth": "1972-06-30",
+    "age": 54,
+    "email": "kevin.oneill@email.ie",
+    "phone": "+353 86 512 5844",
+    "address": {
+      "line1": "142 Church Road",
+      "city": "Cork",
+      "postcode": "D08",
+      "country": "Ireland"
+    },
+    "pre_existing_conditions": [
+      "Asthma"
+    ],
+    "policies": [
+      {
+        "policy_number": "TRV-2026-100110",
+        "product": "Backpacker Travel Insurance",
+        "type": "travel",
+        "trip_type": "single",
+        "version": "post-nov-2025",
+        "start_date": "2026-05-14",
+        "end_date": "2026-06-03",
+        "status": "active",
+        "excess": 200,
+        "covered_destinations": [
+          "Europe"
+        ],
+        "premium_paid": 252.2
+      },
+      {
+        "policy_number": "TRV-2025-100111",
+        "product": "Backpacker Travel Insurance",
+        "type": "travel",
+        "trip_type": "single",
+        "version": "pre-nov-2025",
+        "start_date": "2025-06-20",
+        "end_date": "2025-06-28",
+        "status": "cancelled",
+        "excess": 200,
+        "covered_destinations": [
+          "Caribbean",
+          "Australia"
+        ],
+        "premium_paid": 305.97
+      }
+    ],
+    "claims": [
+      {
+        "claim_id": "CLM-2026-00220",
+        "policy_number": "TRV-2026-100110",
+        "date": "2026-05-20",
+        "type": "Medical Emergency",
+        "amount_claimed": 1422.67,
+        "amount_paid": 0.0,
+        "status": "rejected",
+        "description": "Personal Accident during trip to Canada."
+      },
+      {
+        "claim_id": "CLM-2026-00221",
+        "policy_number": "TRV-2026-100110",
+        "date": "2026-05-31",
+        "type": "Medical Emergency",
+        "amount_claimed": 3496.91,
+        "amount_paid": 2607.61,
+        "status": "settled",
+        "description": "Emergency Repatriation during trip to Worldwide."
+      },
+      {
+        "claim_id": "CLM-2026-00222",
+        "policy_number": "TRV-2026-100110",
+        "date": "2026-06-02",
+        "type": "Baggage Loss",
+        "amount_claimed": 1706.8,
+        "amount_paid": 1515.47,
+        "status": "settled",
+        "description": "Personal Accident during trip to Worldwide."
+      }
+    ]
+  },
+  {
+    "id": "USR012",
+    "name": "Sorcha O'Connor",
+    "gender": "F",
+    "date_of_birth": "1987-08-11",
+    "age": 38,
+    "email": "sorcha.oconnor@email.ie",
+    "phone": "+353 84 835 7291",
+    "address": {
+      "line1": "127 High Street",
+      "city": "Ennis",
+      "postcode": "D08",
+      "country": "Ireland"
+    },
+    "pre_existing_conditions": [
+      "Asthma"
+    ],
+    "policies": [
+      {
+        "policy_number": "TRV-2025-100120",
+        "product": "Single & Annual Multi-Trip Travel Insurance",
+        "type": "travel",
+        "trip_type": "single",
+        "version": "post-nov-2025",
+        "start_date": "2025-11-03",
+        "end_date": "2025-11-14",
+        "status": "expired",
+        "excess": 50,
+        "covered_destinations": [
+          "Caribbean",
+          "Canada"
+        ],
+        "premium_paid": 303.54
+      },
+      {
+        "policy_number": "TRV-2026-100121",
+        "product": "Laya Healthcare Medicare Travel Insurance",
+        "type": "travel",
+        "trip_type": "annual",
+        "version": "post-nov-2025",
+        "start_date": "2026-01-29",
+        "end_date": "2027-01-29",
+        "status": "active",
+        "excess": 0,
+        "covered_destinations": [
+          "Europe",
+          "USA"
+        ],
+        "premium_paid": 227.57
+      }
+    ],
+    "claims": [
+      {
+        "claim_id": "CLM-2025-00240",
+        "policy_number": "TRV-2025-100120",
+        "date": "2025-11-05",
+        "type": "Personal Accident",
+        "amount_claimed": 317.24,
+        "amount_paid": 315.2,
+        "status": "settled",
+        "description": "Medical Emergency during trip to Caribbean."
+      }
+    ]
+  },
+  {
+    "id": "USR013",
+    "name": "Liam Walsh",
+    "gender": "M",
+    "date_of_birth": "1994-12-01",
+    "age": 31,
+    "email": "liam.walsh@email.ie",
+    "phone": "+353 89 556 3607",
+    "address": {
+      "line1": "191 Mill Road",
+      "city": "Sligo",
+      "postcode": "D06",
+      "country": "Ireland"
+    },
+    "pre_existing_conditions": [
+      "None"
+    ],
+    "policies": [
+      {
+        "policy_number": "CHE-2026-200130",
+        "product": "Car Hire Excess Insurance Annual Multi-Trip with CDW and SLI",
+        "type": "car_hire",
+        "trip_type": "annual",
+        "version": "post-nov-2025",
+        "start_date": "2026-02-21",
+        "end_date": "2027-02-21",
+        "status": "active",
+        "excess": 1500,
+        "covered_destinations": [
+          "Canada"
+        ],
+        "premium_paid": 48.03
+      }
+    ],
+    "claims": [
+      {
+        "claim_id": "CLM-2026-00260",
+        "policy_number": "CHE-2026-200130",
+        "date": "2026-06-19",
+        "type": "Windscreen Damage",
+        "amount_claimed": 3404.37,
+        "amount_paid": 0.0,
+        "status": "pending",
+        "description": "Windscreen Damage during trip to Canada."
+      }
+    ]
+  },
+  {
+    "id": "USR014",
+    "name": "Caoimhe Ryan",
+    "gender": "F",
+    "date_of_birth": "1994-05-09",
+    "age": 32,
+    "email": "caoimhe.ryan@email.ie",
+    "phone": "+353 89 919 4613",
+    "address": {
+      "line1": "125 Park Avenue",
+      "city": "Tralee",
+      "postcode": "V94",
+      "country": "Ireland"
+    },
+    "pre_existing_conditions": [
+      "Diabetes Type 2"
+    ],
+    "policies": [
+      {
+        "policy_number": "TRV-2025-100140",
+        "product": "Backpacker Travel Insurance",
+        "type": "travel",
+        "trip_type": "single",
+        "version": "pre-nov-2025",
+        "start_date": "2025-07-10",
+        "end_date": "2025-07-28",
+        "status": "active",
+        "excess": 100,
+        "covered_destinations": [
+          "Worldwide",
+          "Australia"
+        ],
+        "premium_paid": 201.94
+      },
+      {
+        "policy_number": "TRV-2025-100141",
+        "product": "Single & Annual Multi-Trip Travel Insurance",
+        "type": "travel",
+        "trip_type": "single",
+        "version": "post-nov-2025",
+        "start_date": "2025-12-14",
+        "end_date": "2026-01-01",
+        "status": "expired",
+        "excess": 50,
+        "covered_destinations": [
+          "Caribbean"
+        ],
+        "premium_paid": 447.34
+      },
+      {
+        "policy_number": "TRV-2025-100142",
+        "product": "Backpacker Travel Insurance",
+        "type": "travel",
+        "trip_type": "single",
+        "version": "post-nov-2025",
+        "start_date": "2025-12-30",
+        "end_date": "2026-01-06",
+        "status": "active",
+        "excess": 50,
+        "covered_destinations": [
+          "Canada",
+          "Australia"
+        ],
+        "premium_paid": 513.1
+      }
+    ],
+    "claims": [
+      {
+        "claim_id": "CLM-2026-00280",
+        "policy_number": "TRV-2025-100142",
+        "date": "2026-01-04",
+        "type": "Flight Delay",
+        "amount_claimed": 1633.34,
+        "amount_paid": 0.0,
+        "status": "rejected",
+        "description": "Personal Accident during trip to Asia."
+      }
+    ]
+  },
+  {
+    "id": "USR015",
+    "name": "Emma Murphy",
+    "gender": "F",
+    "date_of_birth": "1977-06-11",
+    "age": 49,
+    "email": "emma.murphy@email.ie",
+    "phone": "+353 88 816 5198",
+    "address": {
+      "line1": "197 River Lane",
+      "city": "Kilkenny",
+      "postcode": "H91",
+      "country": "Ireland"
+    },
+    "pre_existing_conditions": [
+      "None"
+    ],
+    "policies": [
+      {
+        "policy_number": "TRV-2025-100150",
+        "product": "Backpacker Travel Insurance",
+        "type": "travel",
+        "trip_type": "single",
+        "version": "pre-nov-2025",
+        "start_date": "2025-08-05",
+        "end_date": "2025-08-21",
+        "status": "active",
+        "excess": 200,
+        "covered_destinations": [
+          "Australia",
+          "Canada"
+        ],
+        "premium_paid": 94.02
+      },
+      {
+        "policy_number": "TRV-2025-100151",
+        "product": "Backpacker Travel Insurance",
+        "type": "travel",
+        "trip_type": "single",
+        "version": "pre-nov-2025",
+        "start_date": "2025-08-09",
+        "end_date": "2025-08-29",
+        "status": "active",
+        "excess": 150,
+        "covered_destinations": [
+          "Caribbean",
+          "Worldwide"
+        ],
+        "premium_paid": 174.5
+      },
+      {
+        "policy_number": "TRV-2025-100152",
+        "product": "Backpacker Travel Insurance",
+        "type": "travel",
+        "trip_type": "single",
+        "version": "post-nov-2025",
+        "start_date": "2025-12-12",
+        "end_date": "2025-12-23",
+        "status": "active",
+        "excess": 150,
+        "covered_destinations": [
+          "Caribbean"
+        ],
+        "premium_paid": 211.18
+      }
+    ],
+    "claims": [
+      {
+        "claim_id": "CLM-2025-00300",
+        "policy_number": "TRV-2025-100151",
+        "date": "2025-08-16",
+        "type": "Trip Cancellation",
+        "amount_claimed": 3320.69,
+        "amount_paid": 2994.24,
+        "status": "settled",
+        "description": "Trip Cancellation during trip to Canada."
+      },
+      {
+        "claim_id": "CLM-2025-00301",
+        "policy_number": "TRV-2025-100151",
+        "date": "2025-08-09",
+        "type": "Emergency Repatriation",
+        "amount_claimed": 3182.41,
+        "amount_paid": 2070.12,
+        "status": "settled",
+        "description": "Medical Emergency during trip to Australia."
+      }
+    ]
+  },
+  {
+    "id": "USR016",
+    "name": "Niall O'Sullivan",
+    "gender": "M",
+    "date_of_birth": "1964-11-06",
+    "age": 61,
+    "email": "niall.osullivan@email.ie",
+    "phone": "+353 87 945 5397",
+    "address": {
+      "line1": "83 Park Avenue",
+      "city": "Ennis",
+      "postcode": "D01",
+      "country": "Ireland"
+    },
+    "pre_existing_conditions": [
+      "None"
+    ],
+    "policies": [
+      {
+        "policy_number": "TRV-2025-100160",
+        "product": "Backpacker Travel Insurance",
+        "type": "travel",
+        "trip_type": "single",
+        "version": "post-nov-2025",
+        "start_date": "2025-12-21",
+        "end_date": "2026-01-08",
+        "status": "active",
+        "excess": 50,
+        "covered_destinations": [
+          "Europe"
+        ],
+        "premium_paid": 119.52
+      },
+      {
+        "policy_number": "CHE-2025-200161",
+        "product": "Car Hire Excess Insurance Annual Multi-Trip with CDW and SLI",
+        "type": "car_hire",
+        "trip_type": "annual",
+        "version": "pre-nov-2025",
+        "start_date": "2025-08-01",
+        "end_date": "2026-08-01",
+        "status": "active",
+        "excess": 500,
+        "covered_destinations": [
+          "Asia"
+        ],
+        "premium_paid": 95.55
+      }
+    ],
+    "claims": [
+      {
+        "claim_id": "CLM-2025-00320",
+        "policy_number": "TRV-2025-100160",
+        "date": "2025-12-31",
+        "type": "Flight Delay",
+        "amount_claimed": 260.73,
+        "amount_paid": 0.0,
+        "status": "rejected",
+        "description": "Medical Emergency during trip to Caribbean."
+      },
+      {
+        "claim_id": "CLM-2026-00321",
+        "policy_number": "TRV-2025-100160",
+        "date": "2026-01-01",
+        "type": "Emergency Repatriation",
+        "amount_claimed": 3250.81,
+        "amount_paid": 0.0,
+        "status": "rejected",
+        "description": "Trip Cancellation during trip to Caribbean."
+      },
+      {
+        "claim_id": "CLM-2025-00322",
+        "policy_number": "TRV-2025-100160",
+        "date": "2025-12-26",
+        "type": "Personal Accident",
+        "amount_claimed": 3722.22,
+        "amount_paid": 0.0,
+        "status": "pending",
+        "description": "Personal Accident during trip to Canada."
+      }
+    ]
+  },
+  {
+    "id": "USR017",
+    "name": "Laura Byrne",
+    "gender": "F",
+    "date_of_birth": "1993-08-30",
+    "age": 32,
+    "email": "laura.byrne@email.ie",
+    "phone": "+353 89 452 7971",
+    "address": {
+      "line1": "191 Station Road",
+      "city": "Drogheda",
+      "postcode": "F91",
+      "country": "Ireland"
+    },
+    "pre_existing_conditions": [
+      "Hypertension"
+    ],
+    "policies": [
+      {
+        "policy_number": "TRV-2025-100170",
+        "product": "Backpacker Travel Insurance",
+        "type": "travel",
+        "trip_type": "single",
+        "version": "pre-nov-2025",
+        "start_date": "2025-06-15",
+        "end_date": "2025-06-29",
+        "status": "active",
+        "excess": 100,
+        "covered_destinations": [
+          "Worldwide"
+        ],
+        "premium_paid": 174.56
+      },
+      {
+        "policy_number": "TRV-2026-100171",
+        "product": "Laya Healthcare Medicare Travel Insurance",
+        "type": "travel",
+        "trip_type": "annual",
+        "version": "post-nov-2025",
+        "start_date": "2026-05-26",
+        "end_date": "2027-05-26",
+        "status": "active",
+        "excess": 200,
+        "covered_destinations": [
+          "Europe"
+        ],
+        "premium_paid": 85.28
+      },
+      {
+        "policy_number": "CHE-2026-200172",
+        "product": "Car Hire Excess Insurance Annual Multi-Trip",
+        "type": "car_hire",
+        "trip_type": "annual",
+        "version": "post-nov-2025",
+        "start_date": "2026-03-12",
+        "end_date": "2027-03-12",
+        "status": "expired",
+        "excess": 750,
+        "covered_destinations": [
+          "Asia"
+        ],
+        "premium_paid": 150.5
+      }
+    ],
+    "claims": [
+      {
+        "claim_id": "CLM-2026-00340",
+        "policy_number": "CHE-2026-200172",
+        "date": "2026-06-23",
+        "type": "Third Party Liability",
+        "amount_claimed": 3520.58,
+        "amount_paid": 0.0,
+        "status": "pending",
+        "description": "Windscreen Damage during trip to Australia."
+      }
+    ]
+  },
+  {
+    "id": "USR018",
+    "name": "Laura Ryan",
+    "gender": "F",
+    "date_of_birth": "1973-10-02",
+    "age": 52,
+    "email": "laura.ryan@email.ie",
+    "phone": "+353 85 580 8843",
+    "address": {
+      "line1": "113 River Lane",
+      "city": "Waterford",
+      "postcode": "D06",
+      "country": "Ireland"
+    },
+    "pre_existing_conditions": [
+      "None"
+    ],
+    "policies": [
+      {
+        "policy_number": "CHE-2025-200180",
+        "product": "Car Hire Excess Insurance Annual Multi-Trip",
+        "type": "car_hire",
+        "trip_type": "annual",
+        "version": "pre-nov-2025",
+        "start_date": "2025-08-01",
+        "end_date": "2026-08-01",
+        "status": "expired",
+        "excess": 750,
+        "covered_destinations": [
+          "Caribbean"
+        ],
+        "premium_paid": 70.65
+      }
+    ],
+    "claims": [
+      {
+        "claim_id": "CLM-2026-00360",
+        "policy_number": "CHE-2025-200180",
+        "date": "2026-04-26",
+        "type": "Third Party Liability",
+        "amount_claimed": 3064.6,
+        "amount_paid": 2859.43,
+        "status": "settled",
+        "description": "Theft of Vehicle during trip to Worldwide."
+      },
+      {
+        "claim_id": "CLM-2025-00361",
+        "policy_number": "CHE-2025-200180",
+        "date": "2025-10-31",
+        "type": "Vehicle Damage",
+        "amount_claimed": 1650.88,
+        "amount_paid": 1171.67,
+        "status": "settled",
+        "description": "Third Party Liability during trip to Asia."
+      },
+      {
+        "claim_id": "CLM-2025-00362",
+        "policy_number": "CHE-2025-200180",
+        "date": "2025-10-04",
+        "type": "Vehicle Damage",
+        "amount_claimed": 3261.77,
+        "amount_paid": 0.0,
+        "status": "rejected",
+        "description": "Vehicle Damage during trip to Australia."
+      }
+    ]
+  },
+  {
+    "id": "USR019",
+    "name": "Ronan Doherty",
+    "gender": "M",
+    "date_of_birth": "1965-02-12",
+    "age": 61,
+    "email": "ronan.doherty@email.ie",
+    "phone": "+353 85 682 1986",
+    "address": {
+      "line1": "157 Main Street",
+      "city": "Cork",
+      "postcode": "H91",
+      "country": "Ireland"
+    },
+    "pre_existing_conditions": [
+      "Asthma"
+    ],
+    "policies": [
+      {
+        "policy_number": "TRV-2026-100190",
+        "product": "Laya Healthcare Medicare Travel Insurance",
+        "type": "travel",
+        "trip_type": "annual",
+        "version": "post-nov-2025",
+        "start_date": "2026-05-18",
+        "end_date": "2027-05-18",
+        "status": "active",
+        "excess": 50,
+        "covered_destinations": [
+          "Europe",
+          "USA"
+        ],
+        "premium_paid": 157.58
+      },
+      {
+        "policy_number": "TRV-2026-100191",
+        "product": "Backpacker Travel Insurance",
+        "type": "travel",
+        "trip_type": "single",
+        "version": "post-nov-2025",
+        "start_date": "2026-04-07",
+        "end_date": "2026-04-23",
+        "status": "active",
+        "excess": 200,
+        "covered_destinations": [
+          "Caribbean",
+          "Canada"
+        ],
+        "premium_paid": 197.36
+      }
+    ],
+    "claims": []
+  },
+  {
+    "id": "USR020",
+    "name": "Ronan O'Brien",
+    "gender": "M",
+    "date_of_birth": "1967-01-17",
+    "age": 59,
+    "email": "ronan.obrien@email.ie",
+    "phone": "+353 82 161 3718",
+    "address": {
+      "line1": "79 Green Way",
+      "city": "Limerick",
+      "postcode": "D04",
+      "country": "Ireland"
+    },
+    "pre_existing_conditions": [
+      "None"
+    ],
+    "policies": [
+      {
+        "policy_number": "TRV-2025-100200",
+        "product": "Single & Annual Multi-Trip Travel Insurance",
+        "type": "travel",
+        "trip_type": "single",
+        "version": "post-nov-2025",
+        "start_date": "2025-12-27",
+        "end_date": "2026-01-10",
+        "status": "active",
+        "excess": 200,
+        "covered_destinations": [
+          "USA"
+        ],
+        "premium_paid": 324.35
+      },
+      {
+        "policy_number": "CHE-2026-200201",
+        "product": "Car Hire Excess Insurance Annual Multi-Trip with CDW and SLI",
+        "type": "car_hire",
+        "trip_type": "annual",
+        "version": "post-nov-2025",
+        "start_date": "2026-01-19",
+        "end_date": "2027-01-19",
+        "status": "active",
+        "excess": 500,
+        "covered_destinations": [
+          "Canada"
+        ],
+        "premium_paid": 149.98
+      },
+      {
+        "policy_number": "CHE-2026-200202",
+        "product": "Car Hire Excess Insurance Annual Multi-Trip with CDW and SLI",
+        "type": "car_hire",
+        "trip_type": "annual",
+        "version": "post-nov-2025",
+        "start_date": "2026-05-05",
+        "end_date": "2027-05-05",
+        "status": "expired",
+        "excess": 750,
+        "covered_destinations": [
+          "USA"
+        ],
+        "premium_paid": 108.02
+      }
+    ],
+    "claims": []
+  },
+  {
+    "id": "USR021",
+    "name": "Laura Walsh",
+    "gender": "F",
+    "date_of_birth": "1981-01-09",
+    "age": 45,
+    "email": "laura.walsh@email.ie",
+    "phone": "+353 83 581 9502",
+    "address": {
+      "line1": "167 Mill Road",
+      "city": "Waterford",
+      "postcode": "H91",
+      "country": "Ireland"
+    },
+    "pre_existing_conditions": [
+      "Diabetes Type 2"
+    ],
+    "policies": [
+      {
+        "policy_number": "TRV-2026-100210",
+        "product": "Backpacker Travel Insurance",
+        "type": "travel",
+        "trip_type": "single",
+        "version": "post-nov-2025",
+        "start_date": "2026-01-11",
+        "end_date": "2026-01-19",
+        "status": "cancelled",
+        "excess": 200,
+        "covered_destinations": [
+          "Asia",
+          "Worldwide"
+        ],
+        "premium_paid": 100.73
+      },
+      {
+        "policy_number": "TRV-2025-100211",
+        "product": "Single & Annual Multi-Trip Travel Insurance",
+        "type": "travel",
+        "trip_type": "single",
+        "version": "pre-nov-2025",
+        "start_date": "2025-09-26",
+        "end_date": "2025-10-13",
+        "status": "active",
+        "excess": 200,
+        "covered_destinations": [
+          "Canada"
+        ],
+        "premium_paid": 385.3
+      }
+    ],
+    "claims": []
+  },
+  {
+    "id": "USR022",
+    "name": "Donal Gallagher",
+    "gender": "M",
+    "date_of_birth": "1988-06-22",
+    "age": 38,
+    "email": "donal.gallagher@email.ie",
+    "phone": "+353 81 773 9889",
+    "address": {
+      "line1": "119 High Street",
+      "city": "Drogheda",
+      "postcode": "D02",
+      "country": "Ireland"
+    },
+    "pre_existing_conditions": [
+      "None"
+    ],
+    "policies": [
+      {
+        "policy_number": "TRV-2025-100220",
+        "product": "Backpacker Travel Insurance",
+        "type": "travel",
+        "trip_type": "single",
+        "version": "post-nov-2025",
+        "start_date": "2025-11-12",
+        "end_date": "2025-11-29",
+        "status": "expired",
+        "excess": 0,
+        "covered_destinations": [
+          "Caribbean",
+          "Asia"
+        ],
+        "premium_paid": 526.02
+      },
+      {
+        "policy_number": "TRV-2026-100221",
+        "product": "Backpacker Travel Insurance",
+        "type": "travel",
+        "trip_type": "single",
+        "version": "post-nov-2025",
+        "start_date": "2026-03-09",
+        "end_date": "2026-03-16",
+        "status": "expired",
+        "excess": 150,
+        "covered_destinations": [
+          "Worldwide",
+          "Europe"
+        ],
+        "premium_paid": 125.79
+      }
+    ],
+    "claims": []
+  },
+  {
+    "id": "USR023",
+    "name": "Fergus Doyle",
+    "gender": "M",
+    "date_of_birth": "1987-12-06",
+    "age": 38,
+    "email": "fergus.doyle@email.ie",
+    "phone": "+353 83 418 1224",
+    "address": {
+      "line1": "142 High Street",
+      "city": "Drogheda",
+      "postcode": "V94",
+      "country": "Ireland"
+    },
+    "pre_existing_conditions": [
+      "None"
+    ],
+    "policies": [
+      {
+        "policy_number": "TRV-2025-100230",
+        "product": "Laya Healthcare Medicare Travel Insurance",
+        "type": "travel",
+        "trip_type": "annual",
+        "version": "pre-nov-2025",
+        "start_date": "2025-08-07",
+        "end_date": "2026-08-07",
+        "status": "cancelled",
+        "excess": 150,
+        "covered_destinations": [
+          "Europe",
+          "Canada"
+        ],
+        "premium_paid": 538.04
+      }
+    ],
+    "claims": []
+  },
+  {
+    "id": "USR024",
+    "name": "Patrick Murray",
+    "gender": "M",
+    "date_of_birth": "2002-06-25",
+    "age": 24,
+    "email": "patrick.murray@email.ie",
+    "phone": "+353 86 665 9903",
+    "address": {
+      "line1": "97 Mill Road",
+      "city": "Cork",
+      "postcode": "D04",
+      "country": "Ireland"
+    },
+    "pre_existing_conditions": [
+      "Hypertension"
+    ],
+    "policies": [
+      {
+        "policy_number": "CHE-2026-200240",
+        "product": "Car Hire Excess Insurance Annual Multi-Trip",
+        "type": "car_hire",
+        "trip_type": "annual",
+        "version": "post-nov-2025",
+        "start_date": "2026-02-16",
+        "end_date": "2027-02-16",
+        "status": "active",
+        "excess": 1000,
+        "covered_destinations": [
+          "Caribbean"
+        ],
+        "premium_paid": 106.48
+      },
+      {
+        "policy_number": "TRV-2025-100241",
+        "product": "Laya Healthcare Medicare Travel Insurance",
+        "type": "travel",
+        "trip_type": "annual",
+        "version": "pre-nov-2025",
+        "start_date": "2025-08-14",
+        "end_date": "2026-08-14",
+        "status": "active",
+        "excess": 50,
+        "covered_destinations": [
+          "Canada"
+        ],
+        "premium_paid": 559.37
+      }
+    ],
+    "claims": [
+      {
+        "claim_id": "CLM-2026-00480",
+        "policy_number": "CHE-2026-200240",
+        "date": "2026-05-14",
+        "type": "Vehicle Damage",
+        "amount_claimed": 4684.39,
+        "amount_paid": 0.0,
+        "status": "pending",
+        "description": "Third Party Liability during trip to Asia."
+      },
+      {
+        "claim_id": "CLM-2026-00481",
+        "policy_number": "CHE-2026-200240",
+        "date": "2026-05-03",
+        "type": "Theft of Vehicle",
+        "amount_claimed": 4219.88,
+        "amount_paid": 0.0,
+        "status": "rejected",
+        "description": "Windscreen Damage during trip to Australia."
+      }
+    ]
+  },
+  {
+    "id": "USR025",
+    "name": "Darragh Quinn",
+    "gender": "M",
+    "date_of_birth": "1977-03-06",
+    "age": 49,
+    "email": "darragh.quinn@email.ie",
+    "phone": "+353 87 765 2315",
+    "address": {
+      "line1": "85 Station Road",
+      "city": "Limerick",
+      "postcode": "H91",
+      "country": "Ireland"
+    },
+    "pre_existing_conditions": [
+      "None"
+    ],
+    "policies": [
+      {
+        "policy_number": "TRV-2026-100250",
+        "product": "Backpacker Travel Insurance",
+        "type": "travel",
+        "trip_type": "single",
+        "version": "post-nov-2025",
+        "start_date": "2026-05-28",
+        "end_date": "2026-06-18",
+        "status": "active",
+        "excess": 150,
+        "covered_destinations": [
+          "Caribbean"
+        ],
+        "premium_paid": 280.76
+      }
+    ],
+    "claims": [
+      {
+        "claim_id": "CLM-2026-00500",
+        "policy_number": "TRV-2026-100250",
+        "date": "2026-06-07",
+        "type": "Medical Emergency",
+        "amount_claimed": 4374.56,
+        "amount_paid": 0.0,
+        "status": "rejected",
+        "description": "Personal Accident during trip to Caribbean."
+      },
+      {
+        "claim_id": "CLM-2026-00501",
+        "policy_number": "TRV-2026-100250",
+        "date": "2026-05-28",
+        "type": "Emergency Repatriation",
+        "amount_claimed": 3667.73,
+        "amount_paid": 0.0,
+        "status": "rejected",
+        "description": "Trip Cancellation during trip to Europe."
+      },
+      {
+        "claim_id": "CLM-2026-00502",
+        "policy_number": "TRV-2026-100250",
+        "date": "2026-06-12",
+        "type": "Baggage Loss",
+        "amount_claimed": 3951.32,
+        "amount_paid": 0.0,
+        "status": "pending",
+        "description": "Personal Accident during trip to Asia."
+      }
+    ]
+  },
+  {
+    "id": "USR026",
+    "name": "Emma Nolan",
+    "gender": "F",
+    "date_of_birth": "1961-08-11",
+    "age": 65,
+    "email": "emma.nolan@email.ie",
+    "phone": "+353 85 129 1753",
+    "address": {
+      "line1": "84 Oak Street",
+      "city": "Ennis",
+      "postcode": "D02",
+      "country": "Ireland"
+    },
+    "pre_existing_conditions": [
+      "Diabetes Type 2"
+    ],
+    "policies": [
+      {
+        "policy_number": "TRV-2025-100260",
+        "product": "Backpacker Travel Insurance",
+        "type": "travel",
+        "trip_type": "single",
+        "version": "pre-nov-2025",
+        "start_date": "2025-09-25",
+        "end_date": "2025-10-13",
+        "status": "active",
+        "excess": 0,
+        "covered_destinations": [
+          "Canada"
+        ],
+        "premium_paid": 305.67
+      }
+    ],
+    "claims": []
+  },
+  {
+    "id": "USR027",
+    "name": "Maeve Gallagher",
+    "gender": "F",
+    "date_of_birth": "1966-07-13",
+    "age": 60,
+    "email": "maeve.gallagher@email.ie",
+    "phone": "+353 85 793 9955",
+    "address": {
+      "line1": "41 Main Street",
+      "city": "Limerick",
+      "postcode": "X91",
+      "country": "Ireland"
+    },
+    "pre_existing_conditions": [
+      "None"
+    ],
+    "policies": [
+      {
+        "policy_number": "TRV-2025-100270",
+        "product": "Single & Annual Multi-Trip Travel Insurance",
+        "type": "travel",
+        "trip_type": "single",
+        "version": "pre-nov-2025",
+        "start_date": "2025-08-27",
+        "end_date": "2025-09-05",
+        "status": "active",
+        "excess": 0,
+        "covered_destinations": [
+          "Australia",
+          "Asia"
+        ],
+        "premium_paid": 396.94
+      },
+      {
+        "policy_number": "TRV-2025-100271",
+        "product": "Laya Healthcare Medicare Travel Insurance",
+        "type": "travel",
+        "trip_type": "annual",
+        "version": "pre-nov-2025",
+        "start_date": "2025-08-13",
+        "end_date": "2026-08-13",
+        "status": "active",
+        "excess": 150,
+        "covered_destinations": [
+          "Worldwide",
+          "Asia"
+        ],
+        "premium_paid": 411.71
+      }
+    ],
+    "claims": []
+  },
+  {
+    "id": "USR028",
+    "name": "Sadhbh O'Sullivan",
+    "gender": "F",
+    "date_of_birth": "1988-08-29",
+    "age": 37,
+    "email": "sadhbh.osullivan@email.ie",
+    "phone": "+353 81 720 9138",
+    "address": {
+      "line1": "74 Park Avenue",
+      "city": "Sligo",
+      "postcode": "D08",
+      "country": "Ireland"
+    },
+    "pre_existing_conditions": [
+      "None"
+    ],
+    "policies": [
+      {
+        "policy_number": "CHE-2025-200280",
+        "product": "Car Hire Excess Insurance Single Trip",
+        "type": "car_hire",
+        "trip_type": "single",
+        "version": "post-nov-2025",
+        "start_date": "2025-12-14",
+        "end_date": "2026-01-03",
+        "status": "active",
+        "excess": 1500,
+        "covered_destinations": [
+          "Australia"
+        ],
+        "premium_paid": 57.06
+      },
+      {
+        "policy_number": "TRV-2026-100281",
+        "product": "Backpacker Travel Insurance",
+        "type": "travel",
+        "trip_type": "single",
+        "version": "post-nov-2025",
+        "start_date": "2026-05-25",
+        "end_date": "2026-06-05",
+        "status": "cancelled",
+        "excess": 0,
+        "covered_destinations": [
+          "Worldwide",
+          "Europe"
+        ],
+        "premium_paid": 588.53
+      }
+    ],
+    "claims": []
+  },
+  {
+    "id": "USR029",
+    "name": "Caoimhe McCarthy",
+    "gender": "F",
+    "date_of_birth": "1987-11-07",
+    "age": 38,
+    "email": "caoimhe.mccarthy@email.ie",
+    "phone": "+353 86 192 7464",
+    "address": {
+      "line1": "4 Castle Drive",
+      "city": "Waterford",
+      "postcode": "D04",
+      "country": "Ireland"
+    },
+    "pre_existing_conditions": [
+      "Heart Condition"
+    ],
+    "policies": [
+      {
+        "policy_number": "TRV-2026-100290",
+        "product": "Laya Healthcare Medicare Travel Insurance",
+        "type": "travel",
+        "trip_type": "annual",
+        "version": "post-nov-2025",
+        "start_date": "2026-04-27",
+        "end_date": "2027-04-27",
+        "status": "active",
+        "excess": 100,
+        "covered_destinations": [
+          "Australia"
+        ],
+        "premium_paid": 490.08
+      },
+      {
+        "policy_number": "CHE-2025-200291",
+        "product": "Car Hire Excess Insurance Single Trip",
+        "type": "car_hire",
+        "trip_type": "single",
+        "version": "pre-nov-2025",
+        "start_date": "2025-10-30",
+        "end_date": "2025-11-11",
+        "status": "active",
+        "excess": 1500,
+        "covered_destinations": [
+          "Canada"
+        ],
+        "premium_paid": 68.1
+      },
+      {
+        "policy_number": "TRV-2026-100292",
+        "product": "Backpacker Travel Insurance",
+        "type": "travel",
+        "trip_type": "single",
+        "version": "post-nov-2025",
+        "start_date": "2026-02-27",
+        "end_date": "2026-03-14",
+        "status": "active",
+        "excess": 100,
+        "covered_destinations": [
+          "Canada",
+          "Caribbean"
+        ],
+        "premium_paid": 511.85
+      }
+    ],
+    "claims": [
+      {
+        "claim_id": "CLM-2025-00580",
+        "policy_number": "CHE-2025-200291",
+        "date": "2025-11-06",
+        "type": "Theft of Vehicle",
+        "amount_claimed": 4821.89,
+        "amount_paid": 4347.71,
+        "status": "settled",
+        "description": "Windscreen Damage during trip to Canada."
+      }
+    ]
+  },
+  {
+    "id": "USR030",
+    "name": "Oisin Doyle",
+    "gender": "M",
+    "date_of_birth": "1990-03-07",
+    "age": 36,
+    "email": "oisin.doyle@email.ie",
+    "phone": "+353 89 760 6876",
+    "address": {
+      "line1": "16 High Street",
+      "city": "Waterford",
+      "postcode": "F91",
+      "country": "Ireland"
+    },
+    "pre_existing_conditions": [
+      "Diabetes Type 2"
+    ],
+    "policies": [
+      {
+        "policy_number": "CHE-2025-200300",
+        "product": "Car Hire Excess Insurance Annual Multi-Trip",
+        "type": "car_hire",
+        "trip_type": "annual",
+        "version": "pre-nov-2025",
+        "start_date": "2025-07-26",
+        "end_date": "2026-07-26",
+        "status": "expired",
+        "excess": 750,
+        "covered_destinations": [
+          "Australia"
+        ],
+        "premium_paid": 115.44
+      },
+      {
+        "policy_number": "TRV-2025-100301",
+        "product": "Laya Healthcare Medicare Travel Insurance",
+        "type": "travel",
+        "trip_type": "annual",
+        "version": "pre-nov-2025",
+        "start_date": "2025-09-22",
+        "end_date": "2026-09-22",
+        "status": "active",
+        "excess": 150,
+        "covered_destinations": [
+          "Asia",
+          "Caribbean"
+        ],
+        "premium_paid": 552.88
+      }
+    ],
+    "claims": [
+      {
+        "claim_id": "CLM-2025-00600",
+        "policy_number": "CHE-2025-200300",
+        "date": "2025-12-28",
+        "type": "Theft of Vehicle",
+        "amount_claimed": 4980.45,
+        "amount_paid": 3181.89,
+        "status": "settled",
+        "description": "Windscreen Damage during trip to Caribbean."
+      },
+      {
+        "claim_id": "CLM-2026-00601",
+        "policy_number": "TRV-2025-100301",
+        "date": "2026-06-25",
+        "type": "Emergency Repatriation",
+        "amount_claimed": 2211.81,
+        "amount_paid": 2110.43,
+        "status": "settled",
+        "description": "Medical Emergency during trip to Canada."
+      },
+      {
+        "claim_id": "CLM-2026-00602",
+        "policy_number": "TRV-2025-100301",
+        "date": "2026-05-30",
+        "type": "Medical Emergency",
+        "amount_claimed": 3155.13,
+        "amount_paid": 0.0,
+        "status": "pending",
+        "description": "Emergency Repatriation during trip to Worldwide."
+      },
+      {
+        "claim_id": "CLM-2026-00603",
+        "policy_number": "TRV-2025-100301",
+        "date": "2026-01-11",
+        "type": "Medical Emergency",
+        "amount_claimed": 2328.24,
+        "amount_paid": 2193.62,
+        "status": "settled",
+        "description": "Emergency Repatriation during trip to Worldwide."
+      }
+    ]
+  },
+  {
+    "id": "USR031",
+    "name": "Patrick Murray",
+    "gender": "M",
+    "date_of_birth": "1964-02-10",
+    "age": 62,
+    "email": "patrick.murray@email.ie",
+    "phone": "+353 84 436 3417",
+    "address": {
+      "line1": "153 Oak Street",
+      "city": "Limerick",
+      "postcode": "F91",
+      "country": "Ireland"
+    },
+    "pre_existing_conditions": [
+      "Diabetes Type 2"
+    ],
+    "policies": [
+      {
+        "policy_number": "TRV-2025-100310",
+        "product": "Backpacker Travel Insurance",
+        "type": "travel",
+        "trip_type": "single",
+        "version": "pre-nov-2025",
+        "start_date": "2025-10-03",
+        "end_date": "2025-10-12",
+        "status": "active",
+        "excess": 200,
+        "covered_destinations": [
+          "Australia"
+        ],
+        "premium_paid": 186.71
+      }
+    ],
+    "claims": []
+  },
+  {
+    "id": "USR032",
+    "name": "Cian Nolan",
+    "gender": "M",
+    "date_of_birth": "1971-03-30",
+    "age": 55,
+    "email": "cian.nolan@email.ie",
+    "phone": "+353 87 201 2874",
+    "address": {
+      "line1": "168 Station Road",
+      "city": "Galway",
+      "postcode": "D02",
+      "country": "Ireland"
+    },
+    "pre_existing_conditions": [
+      "Asthma"
+    ],
+    "policies": [
+      {
+        "policy_number": "CHE-2025-200320",
+        "product": "Car Hire Excess Insurance Single Trip",
+        "type": "car_hire",
+        "trip_type": "single",
+        "version": "pre-nov-2025",
+        "start_date": "2025-06-08",
+        "end_date": "2025-06-20",
+        "status": "active",
+        "excess": 750,
+        "covered_destinations": [
+          "USA"
+        ],
+        "premium_paid": 134.22
+      },
+      {
+        "policy_number": "TRV-2026-100321",
+        "product": "Single & Annual Multi-Trip Travel Insurance",
+        "type": "travel",
+        "trip_type": "single",
+        "version": "post-nov-2025",
+        "start_date": "2026-01-02",
+        "end_date": "2026-01-17",
+        "status": "cancelled",
+        "excess": 0,
+        "covered_destinations": [
+          "Caribbean",
+          "Worldwide"
+        ],
+        "premium_paid": 467.75
+      },
+      {
+        "policy_number": "TRV-2026-100322",
+        "product": "Backpacker Travel Insurance",
+        "type": "travel",
+        "trip_type": "single",
+        "version": "post-nov-2025",
+        "start_date": "2026-02-13",
+        "end_date": "2026-02-23",
+        "status": "active",
+        "excess": 200,
+        "covered_destinations": [
+          "Caribbean",
+          "Asia"
+        ],
+        "premium_paid": 102.55
+      }
+    ],
+    "claims": [
+      {
+        "claim_id": "CLM-2025-00640",
+        "policy_number": "CHE-2025-200320",
+        "date": "2025-06-14",
+        "type": "Windscreen Damage",
+        "amount_claimed": 2246.11,
+        "amount_paid": 1788.15,
+        "status": "settled",
+        "description": "Vehicle Damage during trip to Europe."
+      },
+      {
+        "claim_id": "CLM-2025-00641",
+        "policy_number": "CHE-2025-200320",
+        "date": "2025-06-13",
+        "type": "Third Party Liability",
+        "amount_claimed": 3119.83,
+        "amount_paid": 2029.38,
+        "status": "settled",
+        "description": "Windscreen Damage during trip to Australia."
+      }
+    ]
+  },
+  {
+    "id": "USR033",
+    "name": "Laura Byrne",
+    "gender": "F",
+    "date_of_birth": "1978-07-24",
+    "age": 48,
+    "email": "laura.byrne@email.ie",
+    "phone": "+353 83 990 3347",
+    "address": {
+      "line1": "145 High Street",
+      "city": "Kilkenny",
+      "postcode": "V94",
+      "country": "Ireland"
+    },
+    "pre_existing_conditions": [
+      "None"
+    ],
+    "policies": [
+      {
+        "policy_number": "TRV-2025-100330",
+        "product": "Single & Annual Multi-Trip Travel Insurance",
+        "type": "travel",
+        "trip_type": "single",
+        "version": "post-nov-2025",
+        "start_date": "2025-11-08",
+        "end_date": "2025-11-21",
+        "status": "expired",
+        "excess": 100,
+        "covered_destinations": [
+          "USA",
+          "Asia"
+        ],
+        "premium_paid": 425.86
+      },
+      {
+        "policy_number": "TRV-2025-100331",
+        "product": "Single & Annual Multi-Trip Travel Insurance",
+        "type": "travel",
+        "trip_type": "single",
+        "version": "pre-nov-2025",
+        "start_date": "2025-07-18",
+        "end_date": "2025-07-31",
+        "status": "cancelled",
+        "excess": 0,
+        "covered_destinations": [
+          "Canada",
+          "USA"
+        ],
+        "premium_paid": 467.19
+      }
+    ],
+    "claims": [
+      {
+        "claim_id": "CLM-2025-00660",
+        "policy_number": "TRV-2025-100330",
+        "date": "2025-11-16",
+        "type": "Emergency Repatriation",
+        "amount_claimed": 1782.3,
+        "amount_paid": 1362.25,
+        "status": "settled",
+        "description": "Flight Delay during trip to Canada."
+      },
+      {
+        "claim_id": "CLM-2025-00661",
+        "policy_number": "TRV-2025-100330",
+        "date": "2025-11-19",
+        "type": "Personal Accident",
+        "amount_claimed": 446.94,
+        "amount_paid": 0.0,
+        "status": "pending",
+        "description": "Baggage Loss during trip to Worldwide."
+      },
+      {
+        "claim_id": "CLM-2025-00662",
+        "policy_number": "TRV-2025-100330",
+        "date": "2025-11-09",
+        "type": "Flight Delay",
+        "amount_claimed": 2974.01,
+        "amount_paid": 1968.47,
+        "status": "settled",
+        "description": "Trip Cancellation during trip to Canada."
+      },
+      {
+        "claim_id": "CLM-2025-00663",
+        "policy_number": "TRV-2025-100331",
+        "date": "2025-07-23",
+        "type": "Personal Accident",
+        "amount_claimed": 751.45,
+        "amount_paid": 0.0,
+        "status": "pending",
+        "description": "Trip Cancellation during trip to Canada."
+      },
+      {
+        "claim_id": "CLM-2025-00664",
+        "policy_number": "TRV-2025-100331",
+        "date": "2025-07-24",
+        "type": "Emergency Repatriation",
+        "amount_claimed": 4256.74,
+        "amount_paid": 3590.98,
+        "status": "settled",
+        "description": "Emergency Repatriation during trip to Worldwide."
+      },
+      {
+        "claim_id": "CLM-2025-00665",
+        "policy_number": "TRV-2025-100331",
+        "date": "2025-07-18",
+        "type": "Baggage Loss",
+        "amount_claimed": 1066.0,
+        "amount_paid": 0.0,
+        "status": "pending",
+        "description": "Baggage Loss during trip to Europe."
+      }
+    ]
+  },
+  {
+    "id": "USR034",
+    "name": "Liam O'Brien",
+    "gender": "M",
+    "date_of_birth": "1993-06-20",
+    "age": 33,
+    "email": "liam.obrien@email.ie",
+    "phone": "+353 82 107 9149",
+    "address": {
+      "line1": "192 High Street",
+      "city": "Tralee",
+      "postcode": "D06",
+      "country": "Ireland"
+    },
+    "pre_existing_conditions": [
+      "None"
+    ],
+    "policies": [
+      {
+        "policy_number": "TRV-2025-100340",
+        "product": "Backpacker Travel Insurance",
+        "type": "travel",
+        "trip_type": "single",
+        "version": "pre-nov-2025",
+        "start_date": "2025-08-20",
+        "end_date": "2025-09-01",
+        "status": "active",
+        "excess": 100,
+        "covered_destinations": [
+          "Europe"
+        ],
+        "premium_paid": 455.23
+      },
+      {
+        "policy_number": "TRV-2025-100341",
+        "product": "Laya Healthcare Medicare Travel Insurance",
+        "type": "travel",
+        "trip_type": "annual",
+        "version": "pre-nov-2025",
+        "start_date": "2025-06-26",
+        "end_date": "2026-06-26",
+        "status": "expired",
+        "excess": 100,
+        "covered_destinations": [
+          "Caribbean",
+          "Australia"
+        ],
+        "premium_paid": 310.42
+      }
+    ],
+    "claims": [
+      {
+        "claim_id": "CLM-2025-00680",
+        "policy_number": "TRV-2025-100341",
+        "date": "2025-08-23",
+        "type": "Emergency Repatriation",
+        "amount_claimed": 1856.83,
+        "amount_paid": 1324.47,
+        "status": "settled",
+        "description": "Personal Accident during trip to Caribbean."
+      },
+      {
+        "claim_id": "CLM-2026-00681",
+        "policy_number": "TRV-2025-100341",
+        "date": "2026-03-22",
+        "type": "Personal Accident",
+        "amount_claimed": 3402.24,
+        "amount_paid": 2341.45,
+        "status": "settled",
+        "description": "Medical Emergency during trip to Europe."
+      },
+      {
+        "claim_id": "CLM-2025-00682",
+        "policy_number": "TRV-2025-100341",
+        "date": "2025-10-08",
+        "type": "Baggage Loss",
+        "amount_claimed": 1646.81,
+        "amount_paid": 1493.56,
+        "status": "settled",
+        "description": "Baggage Loss during trip to Worldwide."
+      }
+    ]
+  },
+  {
+    "id": "USR035",
+    "name": "Kevin Nolan",
+    "gender": "M",
+    "date_of_birth": "1991-07-25",
+    "age": 35,
+    "email": "kevin.nolan@email.ie",
+    "phone": "+353 86 984 6179",
+    "address": {
+      "line1": "39 Mill Road",
+      "city": "Limerick",
+      "postcode": "X91",
+      "country": "Ireland"
+    },
+    "pre_existing_conditions": [
+      "None"
+    ],
+    "policies": [
+      {
+        "policy_number": "CHE-2025-200350",
+        "product": "Car Hire Excess Insurance Annual Multi-Trip",
+        "type": "car_hire",
+        "trip_type": "annual",
+        "version": "pre-nov-2025",
+        "start_date": "2025-07-07",
+        "end_date": "2026-07-07",
+        "status": "active",
+        "excess": 1500,
+        "covered_destinations": [
+          "Caribbean"
+        ],
+        "premium_paid": 177.88
+      },
+      {
+        "policy_number": "TRV-2025-100351",
+        "product": "Single & Annual Multi-Trip Travel Insurance",
+        "type": "travel",
+        "trip_type": "single",
+        "version": "post-nov-2025",
+        "start_date": "2025-11-08",
+        "end_date": "2025-11-24",
+        "status": "expired",
+        "excess": 150,
+        "covered_destinations": [
+          "Worldwide",
+          "Europe"
+        ],
+        "premium_paid": 378.17
+      },
+      {
+        "policy_number": "TRV-2025-100352",
+        "product": "Backpacker Travel Insurance",
+        "type": "travel",
+        "trip_type": "single",
+        "version": "pre-nov-2025",
+        "start_date": "2025-08-27",
+        "end_date": "2025-09-15",
+        "status": "active",
+        "excess": 200,
+        "covered_destinations": [
+          "Europe",
+          "Caribbean"
+        ],
+        "premium_paid": 319.25
+      }
+    ],
+    "claims": [
+      {
+        "claim_id": "CLM-2026-00700",
+        "policy_number": "CHE-2025-200350",
+        "date": "2026-01-28",
+        "type": "Third Party Liability",
+        "amount_claimed": 2715.02,
+        "amount_paid": 0.0,
+        "status": "rejected",
+        "description": "Third Party Liability during trip to USA."
+      },
+      {
+        "claim_id": "CLM-2025-00701",
+        "policy_number": "CHE-2025-200350",
+        "date": "2025-12-24",
+        "type": "Vehicle Damage",
+        "amount_claimed": 3939.77,
+        "amount_paid": 3168.34,
+        "status": "settled",
+        "description": "Theft of Vehicle during trip to Canada."
+      },
+      {
+        "claim_id": "CLM-2026-00702",
+        "policy_number": "CHE-2025-200350",
+        "date": "2026-01-01",
+        "type": "Theft of Vehicle",
+        "amount_claimed": 1885.28,
+        "amount_paid": 1309.34,
+        "status": "settled",
+        "description": "Third Party Liability during trip to USA."
+      },
+      {
+        "claim_id": "CLM-2025-00703",
+        "policy_number": "TRV-2025-100351",
+        "date": "2025-11-10",
+        "type": "Flight Delay",
+        "amount_claimed": 1050.3,
+        "amount_paid": 0.0,
+        "status": "rejected",
+        "description": "Personal Accident during trip to Canada."
+      }
+    ]
+  },
+  {
+    "id": "USR036",
+    "name": "Laura O'Sullivan",
+    "gender": "F",
+    "date_of_birth": "1995-09-21",
+    "age": 30,
+    "email": "laura.osullivan@email.ie",
+    "phone": "+353 82 729 9307",
+    "address": {
+      "line1": "99 Mill Road",
+      "city": "Waterford",
+      "postcode": "F91",
+      "country": "Ireland"
+    },
+    "pre_existing_conditions": [
+      "None"
+    ],
+    "policies": [
+      {
+        "policy_number": "TRV-2025-100360",
+        "product": "Single & Annual Multi-Trip Travel Insurance",
+        "type": "travel",
+        "trip_type": "single",
+        "version": "post-nov-2025",
+        "start_date": "2025-11-06",
+        "end_date": "2025-11-20",
+        "status": "active",
+        "excess": 150,
+        "covered_destinations": [
+          "Canada",
+          "Worldwide"
+        ],
+        "premium_paid": 99.56
+      }
+    ],
+    "claims": []
+  },
+  {
+    "id": "USR037",
+    "name": "Oisin Quinn",
+    "gender": "M",
+    "date_of_birth": "1989-03-28",
+    "age": 37,
+    "email": "oisin.quinn@email.ie",
+    "phone": "+353 83 709 2388",
+    "address": {
+      "line1": "80 Station Road",
+      "city": "Limerick",
+      "postcode": "T12",
+      "country": "Ireland"
+    },
+    "pre_existing_conditions": [
+      "None"
+    ],
+    "policies": [
+      {
+        "policy_number": "TRV-2025-100370",
+        "product": "Single & Annual Multi-Trip Travel Insurance",
+        "type": "travel",
+        "trip_type": "single",
+        "version": "pre-nov-2025",
+        "start_date": "2025-07-02",
+        "end_date": "2025-07-16",
+        "status": "cancelled",
+        "excess": 0,
+        "covered_destinations": [
+          "Asia",
+          "Europe"
+        ],
+        "premium_paid": 501.7
+      },
+      {
+        "policy_number": "TRV-2025-100371",
+        "product": "Single & Annual Multi-Trip Travel Insurance",
+        "type": "travel",
+        "trip_type": "single",
+        "version": "pre-nov-2025",
+        "start_date": "2025-10-05",
+        "end_date": "2025-10-23",
+        "status": "active",
+        "excess": 150,
+        "covered_destinations": [
+          "Worldwide"
+        ],
+        "premium_paid": 595.31
+      },
+      {
+        "policy_number": "CHE-2025-200372",
+        "product": "Car Hire Excess Insurance Annual Multi-Trip",
+        "type": "car_hire",
+        "trip_type": "annual",
+        "version": "post-nov-2025",
+        "start_date": "2025-12-27",
+        "end_date": "2026-12-27",
+        "status": "active",
+        "excess": 1000,
+        "covered_destinations": [
+          "Canada"
+        ],
+        "premium_paid": 148.62
+      }
+    ],
+    "claims": [
+      {
+        "claim_id": "CLM-2025-00740",
+        "policy_number": "TRV-2025-100371",
+        "date": "2025-10-08",
+        "type": "Baggage Loss",
+        "amount_claimed": 2878.22,
+        "amount_paid": 0.0,
+        "status": "rejected",
+        "description": "Baggage Loss during trip to Asia."
+      },
+      {
+        "claim_id": "CLM-2025-00741",
+        "policy_number": "TRV-2025-100371",
+        "date": "2025-10-09",
+        "type": "Baggage Loss",
+        "amount_claimed": 1800.14,
+        "amount_paid": 1740.19,
+        "status": "settled",
+        "description": "Emergency Repatriation during trip to Asia."
+      }
+    ]
+  },
+  {
+    "id": "USR038",
+    "name": "Aisling Kennedy",
+    "gender": "F",
+    "date_of_birth": "1964-03-11",
+    "age": 62,
+    "email": "aisling.kennedy@email.ie",
+    "phone": "+353 87 257 3658",
+    "address": {
+      "line1": "47 Green Way",
+      "city": "Sligo",
+      "postcode": "X91",
+      "country": "Ireland"
+    },
+    "pre_existing_conditions": [
+      "None"
+    ],
+    "policies": [
+      {
+        "policy_number": "TRV-2025-100380",
+        "product": "Backpacker Travel Insurance",
+        "type": "travel",
+        "trip_type": "single",
+        "version": "pre-nov-2025",
+        "start_date": "2025-09-01",
+        "end_date": "2025-09-11",
+        "status": "active",
+        "excess": 100,
+        "covered_destinations": [
+          "USA",
+          "Canada"
+        ],
+        "premium_paid": 572.79
+      },
+      {
+        "policy_number": "TRV-2025-100381",
+        "product": "Backpacker Travel Insurance",
+        "type": "travel",
+        "trip_type": "single",
+        "version": "pre-nov-2025",
+        "start_date": "2025-07-22",
+        "end_date": "2025-08-06",
+        "status": "active",
+        "excess": 200,
+        "covered_destinations": [
+          "Asia"
+        ],
+        "premium_paid": 514.26
+      }
+    ],
+    "claims": []
+  },
+  {
+    "id": "USR039",
+    "name": "Ciara Gallagher",
+    "gender": "F",
+    "date_of_birth": "1976-05-04",
+    "age": 50,
+    "email": "ciara.gallagher@email.ie",
+    "phone": "+353 86 127 7797",
+    "address": {
+      "line1": "14 High Street",
+      "city": "Limerick",
+      "postcode": "V94",
+      "country": "Ireland"
+    },
+    "pre_existing_conditions": [
+      "Heart Condition"
+    ],
+    "policies": [
+      {
+        "policy_number": "TRV-2026-100390",
+        "product": "Laya Healthcare Medicare Travel Insurance",
+        "type": "travel",
+        "trip_type": "annual",
+        "version": "post-nov-2025",
+        "start_date": "2026-01-16",
+        "end_date": "2027-01-16",
+        "status": "active",
+        "excess": 200,
+        "covered_destinations": [
+          "Canada",
+          "USA"
+        ],
+        "premium_paid": 204.37
+      },
+      {
+        "policy_number": "TRV-2026-100391",
+        "product": "Laya Healthcare Medicare Travel Insurance",
+        "type": "travel",
+        "trip_type": "annual",
+        "version": "post-nov-2025",
+        "start_date": "2026-01-12",
+        "end_date": "2027-01-12",
+        "status": "cancelled",
+        "excess": 100,
+        "covered_destinations": [
+          "USA",
+          "Canada"
+        ],
+        "premium_paid": 484.62
+      },
+      {
+        "policy_number": "TRV-2025-100392",
+        "product": "Backpacker Travel Insurance",
+        "type": "travel",
+        "trip_type": "single",
+        "version": "pre-nov-2025",
+        "start_date": "2025-06-27",
+        "end_date": "2025-07-14",
+        "status": "cancelled",
+        "excess": 150,
+        "covered_destinations": [
+          "Asia"
+        ],
+        "premium_paid": 534.54
+      }
+    ],
+    "claims": [
+      {
+        "claim_id": "CLM-2026-00780",
+        "policy_number": "TRV-2026-100391",
+        "date": "2026-03-22",
+        "type": "Medical Emergency",
+        "amount_claimed": 2356.73,
+        "amount_paid": 2197.46,
+        "status": "settled",
+        "description": "Trip Cancellation during trip to Canada."
+      }
+    ]
+  },
+  {
+    "id": "USR040",
+    "name": "Caoimhe Lynch",
+    "gender": "F",
+    "date_of_birth": "1963-08-30",
+    "age": 62,
+    "email": "caoimhe.lynch@email.ie",
+    "phone": "+353 88 812 3273",
+    "address": {
+      "line1": "195 Mill Road",
+      "city": "Kilkenny",
+      "postcode": "D06",
+      "country": "Ireland"
+    },
+    "pre_existing_conditions": [
+      "None"
+    ],
+    "policies": [
+      {
+        "policy_number": "TRV-2026-100400",
+        "product": "Single & Annual Multi-Trip Travel Insurance",
+        "type": "travel",
+        "trip_type": "single",
+        "version": "post-nov-2025",
+        "start_date": "2026-06-01",
+        "end_date": "2026-06-18",
+        "status": "active",
+        "excess": 100,
+        "covered_destinations": [
+          "Europe"
+        ],
+        "premium_paid": 491.52
+      }
+    ],
+    "claims": []
+  },
+  {
+    "id": "USR041",
+    "name": "Sean Murphy",
+    "gender": "M",
+    "date_of_birth": "1971-06-25",
+    "age": 55,
+    "email": "sean.murphy@email.ie",
+    "phone": "+353 87 934 9897",
+    "address": {
+      "line1": "122 Castle Drive",
+      "city": "Limerick",
+      "postcode": "D04",
+      "country": "Ireland"
+    },
+    "pre_existing_conditions": [
+      "None"
+    ],
+    "policies": [
+      {
+        "policy_number": "CHE-2026-200410",
+        "product": "Car Hire Excess Insurance Annual Multi-Trip with CDW and SLI",
+        "type": "car_hire",
+        "trip_type": "annual",
+        "version": "post-nov-2025",
+        "start_date": "2026-02-26",
+        "end_date": "2027-02-26",
+        "status": "active",
+        "excess": 1500,
+        "covered_destinations": [
+          "USA"
+        ],
+        "premium_paid": 57.79
+      },
+      {
+        "policy_number": "TRV-2025-100411",
+        "product": "Single & Annual Multi-Trip Travel Insurance",
+        "type": "travel",
+        "trip_type": "single",
+        "version": "pre-nov-2025",
+        "start_date": "2025-10-01",
+        "end_date": "2025-10-14",
+        "status": "expired",
+        "excess": 200,
+        "covered_destinations": [
+          "Canada"
+        ],
+        "premium_paid": 317.7
+      },
+      {
+        "policy_number": "TRV-2026-100412",
+        "product": "Single & Annual Multi-Trip Travel Insurance",
+        "type": "travel",
+        "trip_type": "single",
+        "version": "post-nov-2025",
+        "start_date": "2026-04-20",
+        "end_date": "2026-05-05",
+        "status": "expired",
+        "excess": 200,
+        "covered_destinations": [
+          "Worldwide"
+        ],
+        "premium_paid": 205.81
+      }
+    ],
+    "claims": [
+      {
+        "claim_id": "CLM-2026-00820",
+        "policy_number": "CHE-2026-200410",
+        "date": "2026-04-28",
+        "type": "Vehicle Damage",
+        "amount_claimed": 2939.19,
+        "amount_paid": 2544.6,
+        "status": "settled",
+        "description": "Third Party Liability during trip to Europe."
+      },
+      {
+        "claim_id": "CLM-2026-00821",
+        "policy_number": "CHE-2026-200410",
+        "date": "2026-07-10",
+        "type": "Windscreen Damage",
+        "amount_claimed": 2811.59,
+        "amount_paid": 2126.07,
+        "status": "settled",
+        "description": "Vehicle Damage during trip to Asia."
+      },
+      {
+        "claim_id": "CLM-2025-00822",
+        "policy_number": "TRV-2025-100411",
+        "date": "2025-10-05",
+        "type": "Medical Emergency",
+        "amount_claimed": 3787.12,
+        "amount_paid": 0.0,
+        "status": "pending",
+        "description": "Baggage Loss during trip to USA."
+      },
+      {
+        "claim_id": "CLM-2025-00823",
+        "policy_number": "TRV-2025-100411",
+        "date": "2025-10-12",
+        "type": "Emergency Repatriation",
+        "amount_claimed": 3354.1,
+        "amount_paid": 3047.54,
+        "status": "settled",
+        "description": "Baggage Loss during trip to USA."
+      },
+      {
+        "claim_id": "CLM-2026-00824",
+        "policy_number": "TRV-2026-100412",
+        "date": "2026-04-30",
+        "type": "Emergency Repatriation",
+        "amount_claimed": 4104.84,
+        "amount_paid": 3826.34,
+        "status": "settled",
+        "description": "Flight Delay during trip to Asia."
+      },
+      {
+        "claim_id": "CLM-2026-00825",
+        "policy_number": "TRV-2026-100412",
+        "date": "2026-05-05",
+        "type": "Flight Delay",
+        "amount_claimed": 3232.33,
+        "amount_paid": 2020.98,
+        "status": "settled",
+        "description": "Medical Emergency during trip to Worldwide."
+      },
+      {
+        "claim_id": "CLM-2026-00826",
+        "policy_number": "TRV-2026-100412",
+        "date": "2026-04-26",
+        "type": "Baggage Loss",
+        "amount_claimed": 410.27,
+        "amount_paid": 391.53,
+        "status": "settled",
+        "description": "Baggage Loss during trip to Australia."
+      }
+    ]
+  },
+  {
+    "id": "USR042",
+    "name": "Fionn Doyle",
+    "gender": "M",
+    "date_of_birth": "1998-09-03",
+    "age": 27,
+    "email": "fionn.doyle@email.ie",
+    "phone": "+353 86 557 1693",
+    "address": {
+      "line1": "187 River Lane",
+      "city": "Dublin",
+      "postcode": "T12",
+      "country": "Ireland"
+    },
+    "pre_existing_conditions": [
+      "None"
+    ],
+    "policies": [
+      {
+        "policy_number": "TRV-2026-100420",
+        "product": "Backpacker Travel Insurance",
+        "type": "travel",
+        "trip_type": "single",
+        "version": "post-nov-2025",
+        "start_date": "2026-01-10",
+        "end_date": "2026-01-31",
+        "status": "expired",
+        "excess": 150,
+        "covered_destinations": [
+          "Worldwide",
+          "USA"
+        ],
+        "premium_paid": 466.52
+      },
+      {
+        "policy_number": "TRV-2026-100421",
+        "product": "Backpacker Travel Insurance",
+        "type": "travel",
+        "trip_type": "single",
+        "version": "post-nov-2025",
+        "start_date": "2026-02-21",
+        "end_date": "2026-03-04",
+        "status": "cancelled",
+        "excess": 0,
+        "covered_destinations": [
+          "Caribbean"
+        ],
+        "premium_paid": 458.08
+      }
+    ],
+    "claims": [
+      {
+        "claim_id": "CLM-2026-00840",
+        "policy_number": "TRV-2026-100421",
+        "date": "2026-02-26",
+        "type": "Emergency Repatriation",
+        "amount_claimed": 692.47,
+        "amount_paid": 0.0,
+        "status": "pending",
+        "description": "Baggage Loss during trip to Worldwide."
+      },
+      {
+        "claim_id": "CLM-2026-00841",
+        "policy_number": "TRV-2026-100421",
+        "date": "2026-02-28",
+        "type": "Trip Cancellation",
+        "amount_claimed": 3092.58,
+        "amount_paid": 0.0,
+        "status": "rejected",
+        "description": "Emergency Repatriation during trip to Caribbean."
+      }
+    ]
+  },
+  {
+    "id": "USR043",
+    "name": "Roisin Kelly",
+    "gender": "F",
+    "date_of_birth": "1963-05-14",
+    "age": 63,
+    "email": "roisin.kelly@email.ie",
+    "phone": "+353 82 238 2213",
+    "address": {
+      "line1": "116 Church Road",
+      "city": "Sligo",
+      "postcode": "T12",
+      "country": "Ireland"
+    },
+    "pre_existing_conditions": [
+      "None"
+    ],
+    "policies": [
+      {
+        "policy_number": "CHE-2025-200430",
+        "product": "Car Hire Excess Insurance Annual Multi-Trip with CDW and SLI",
+        "type": "car_hire",
+        "trip_type": "annual",
+        "version": "pre-nov-2025",
+        "start_date": "2025-08-21",
+        "end_date": "2026-08-21",
+        "status": "expired",
+        "excess": 500,
+        "covered_destinations": [
+          "Asia"
+        ],
+        "premium_paid": 62.84
+      },
+      {
+        "policy_number": "CHE-2025-200431",
+        "product": "Car Hire Excess Insurance Single Trip",
+        "type": "car_hire",
+        "trip_type": "single",
+        "version": "pre-nov-2025",
+        "start_date": "2025-08-04",
+        "end_date": "2025-08-12",
+        "status": "active",
+        "excess": 750,
+        "covered_destinations": [
+          "Worldwide"
+        ],
+        "premium_paid": 164.56
+      },
+      {
+        "policy_number": "TRV-2025-100432",
+        "product": "Laya Healthcare Medicare Travel Insurance",
+        "type": "travel",
+        "trip_type": "annual",
+        "version": "pre-nov-2025",
+        "start_date": "2025-06-17",
+        "end_date": "2026-06-17",
+        "status": "active",
+        "excess": 50,
+        "covered_destinations": [
+          "Worldwide",
+          "Caribbean"
+        ],
+        "premium_paid": 433.11
+      }
+    ],
+    "claims": [
+      {
+        "claim_id": "CLM-2025-00860",
+        "policy_number": "TRV-2025-100432",
+        "date": "2025-11-06",
+        "type": "Trip Cancellation",
+        "amount_claimed": 1398.14,
+        "amount_paid": 853.38,
+        "status": "settled",
+        "description": "Flight Delay during trip to Australia."
+      },
+      {
+        "claim_id": "CLM-2026-00861",
+        "policy_number": "TRV-2025-100432",
+        "date": "2026-01-01",
+        "type": "Baggage Loss",
+        "amount_claimed": 4585.0,
+        "amount_paid": 3231.1,
+        "status": "settled",
+        "description": "Emergency Repatriation during trip to Caribbean."
+      },
+      {
+        "claim_id": "CLM-2025-00862",
+        "policy_number": "TRV-2025-100432",
+        "date": "2025-10-04",
+        "type": "Emergency Repatriation",
+        "amount_claimed": 4982.55,
+        "amount_paid": 0.0,
+        "status": "pending",
+        "description": "Flight Delay during trip to USA."
+      }
+    ]
+  },
+  {
+    "id": "USR044",
+    "name": "Brian Doyle",
+    "gender": "M",
+    "date_of_birth": "1991-10-30",
+    "age": 34,
+    "email": "brian.doyle@email.ie",
+    "phone": "+353 82 228 6194",
+    "address": {
+      "line1": "165 Main Street",
+      "city": "Cork",
+      "postcode": "X91",
+      "country": "Ireland"
+    },
+    "pre_existing_conditions": [
+      "None"
+    ],
+    "policies": [
+      {
+        "policy_number": "TRV-2025-100440",
+        "product": "Backpacker Travel Insurance",
+        "type": "travel",
+        "trip_type": "single",
+        "version": "pre-nov-2025",
+        "start_date": "2025-08-20",
+        "end_date": "2025-09-07",
+        "status": "active",
+        "excess": 50,
+        "covered_destinations": [
+          "Europe"
+        ],
+        "premium_paid": 492.72
+      },
+      {
+        "policy_number": "CHE-2026-200441",
+        "product": "Car Hire Excess Insurance Single Trip",
+        "type": "car_hire",
+        "trip_type": "single",
+        "version": "post-nov-2025",
+        "start_date": "2026-02-08",
+        "end_date": "2026-02-15",
+        "status": "active",
+        "excess": 1000,
+        "covered_destinations": [
+          "Caribbean"
+        ],
+        "premium_paid": 128.64
+      },
+      {
+        "policy_number": "CHE-2025-200442",
+        "product": "Car Hire Excess Insurance Annual Multi-Trip with CDW and SLI",
+        "type": "car_hire",
+        "trip_type": "annual",
+        "version": "pre-nov-2025",
+        "start_date": "2025-08-06",
+        "end_date": "2026-08-06",
+        "status": "active",
+        "excess": 500,
+        "covered_destinations": [
+          "Asia"
+        ],
+        "premium_paid": 50.52
+      }
+    ],
+    "claims": []
+  },
+  {
+    "id": "USR045",
+    "name": "Aoibhin Doyle",
+    "gender": "F",
+    "date_of_birth": "1965-10-03",
+    "age": 60,
+    "email": "aoibhin.doyle@email.ie",
+    "phone": "+353 84 750 5496",
+    "address": {
+      "line1": "33 Castle Drive",
+      "city": "Tralee",
+      "postcode": "F91",
+      "country": "Ireland"
+    },
+    "pre_existing_conditions": [
+      "None"
+    ],
+    "policies": [
+      {
+        "policy_number": "CHE-2026-200450",
+        "product": "Car Hire Excess Insurance Single Trip",
+        "type": "car_hire",
+        "trip_type": "single",
+        "version": "post-nov-2025",
+        "start_date": "2026-01-08",
+        "end_date": "2026-01-23",
+        "status": "expired",
+        "excess": 500,
+        "covered_destinations": [
+          "USA"
+        ],
+        "premium_paid": 173.02
+      }
+    ],
+    "claims": [
+      {
+        "claim_id": "CLM-2026-00900",
+        "policy_number": "CHE-2026-200450",
+        "date": "2026-01-18",
+        "type": "Third Party Liability",
+        "amount_claimed": 4686.74,
+        "amount_paid": 3460.73,
+        "status": "settled",
+        "description": "Vehicle Damage during trip to Worldwide."
+      }
+    ]
+  },
+  {
+    "id": "USR046",
+    "name": "Fergus O'Connor",
+    "gender": "M",
+    "date_of_birth": "1986-07-19",
+    "age": 40,
+    "email": "fergus.oconnor@email.ie",
+    "phone": "+353 85 766 4453",
+    "address": {
+      "line1": "197 Green Way",
+      "city": "Ennis",
+      "postcode": "D04",
+      "country": "Ireland"
+    },
+    "pre_existing_conditions": [
+      "None"
+    ],
+    "policies": [
+      {
+        "policy_number": "TRV-2026-100460",
+        "product": "Laya Healthcare Medicare Travel Insurance",
+        "type": "travel",
+        "trip_type": "annual",
+        "version": "post-nov-2025",
+        "start_date": "2026-04-06",
+        "end_date": "2027-04-06",
+        "status": "active",
+        "excess": 200,
+        "covered_destinations": [
+          "Europe"
+        ],
+        "premium_paid": 101.42
+      }
+    ],
+    "claims": []
+  },
+  {
+    "id": "USR047",
+    "name": "Tadhg Nolan",
+    "gender": "M",
+    "date_of_birth": "1972-12-28",
+    "age": 53,
+    "email": "tadhg.nolan@email.ie",
+    "phone": "+353 86 627 2739",
+    "address": {
+      "line1": "82 Park Avenue",
+      "city": "Waterford",
+      "postcode": "V94",
+      "country": "Ireland"
+    },
+    "pre_existing_conditions": [
+      "None"
+    ],
+    "policies": [
+      {
+        "policy_number": "CHE-2025-200470",
+        "product": "Car Hire Excess Insurance Annual Multi-Trip with CDW and SLI",
+        "type": "car_hire",
+        "trip_type": "annual",
+        "version": "post-nov-2025",
+        "start_date": "2025-12-25",
+        "end_date": "2026-12-25",
+        "status": "expired",
+        "excess": 1000,
+        "covered_destinations": [
+          "Europe"
+        ],
+        "premium_paid": 112.57
+      }
+    ],
+    "claims": [
+      {
+        "claim_id": "CLM-2026-00940",
+        "policy_number": "CHE-2025-200470",
+        "date": "2026-04-27",
+        "type": "Theft of Vehicle",
+        "amount_claimed": 2429.32,
+        "amount_paid": 0.0,
+        "status": "pending",
+        "description": "Third Party Liability during trip to Canada."
+      },
+      {
+        "claim_id": "CLM-2026-00941",
+        "policy_number": "CHE-2025-200470",
+        "date": "2026-06-26",
+        "type": "Windscreen Damage",
+        "amount_claimed": 1732.72,
+        "amount_paid": 0.0,
+        "status": "pending",
+        "description": "Theft of Vehicle during trip to Canada."
+      }
+    ]
+  },
+  {
+    "id": "USR048",
+    "name": "Ronan Murray",
+    "gender": "M",
+    "date_of_birth": "1971-02-13",
+    "age": 55,
+    "email": "ronan.murray@email.ie",
+    "phone": "+353 86 294 3610",
+    "address": {
+      "line1": "128 Station Road",
+      "city": "Galway",
+      "postcode": "D02",
+      "country": "Ireland"
+    },
+    "pre_existing_conditions": [
+      "None"
+    ],
+    "policies": [
+      {
+        "policy_number": "TRV-2026-100480",
+        "product": "Backpacker Travel Insurance",
+        "type": "travel",
+        "trip_type": "single",
+        "version": "post-nov-2025",
+        "start_date": "2026-04-12",
+        "end_date": "2026-04-25",
+        "status": "active",
+        "excess": 50,
+        "covered_destinations": [
+          "Canada"
+        ],
+        "premium_paid": 580.6
+      }
+    ],
+    "claims": []
+  },
+  {
+    "id": "USR049",
+    "name": "Grainne Doherty",
+    "gender": "F",
+    "date_of_birth": "1961-01-14",
+    "age": 65,
+    "email": "grainne.doherty@email.ie",
+    "phone": "+353 82 231 2584",
+    "address": {
+      "line1": "101 River Lane",
+      "city": "Cork",
+      "postcode": "H91",
+      "country": "Ireland"
+    },
+    "pre_existing_conditions": [
+      "Hypertension"
+    ],
+    "policies": [
+      {
+        "policy_number": "TRV-2025-100490",
+        "product": "Single & Annual Multi-Trip Travel Insurance",
+        "type": "travel",
+        "trip_type": "single",
+        "version": "pre-nov-2025",
+        "start_date": "2025-09-19",
+        "end_date": "2025-10-05",
+        "status": "expired",
+        "excess": 100,
+        "covered_destinations": [
+          "Caribbean",
+          "Australia"
+        ],
+        "premium_paid": 105.3
+      },
+      {
+        "policy_number": "TRV-2025-100491",
+        "product": "Single & Annual Multi-Trip Travel Insurance",
+        "type": "travel",
+        "trip_type": "single",
+        "version": "pre-nov-2025",
+        "start_date": "2025-07-26",
+        "end_date": "2025-08-08",
+        "status": "active",
+        "excess": 50,
+        "covered_destinations": [
+          "Canada",
+          "Caribbean"
+        ],
+        "premium_paid": 538.88
+      },
+      {
+        "policy_number": "TRV-2026-100492",
+        "product": "Single & Annual Multi-Trip Travel Insurance",
+        "type": "travel",
+        "trip_type": "single",
+        "version": "post-nov-2025",
+        "start_date": "2026-03-19",
+        "end_date": "2026-04-03",
+        "status": "cancelled",
+        "excess": 50,
+        "covered_destinations": [
+          "Europe",
+          "Caribbean"
+        ],
+        "premium_paid": 268.51
+      }
+    ],
+    "claims": []
+  },
+  {
+    "id": "USR050",
+    "name": "Aisling McCarthy",
+    "gender": "F",
+    "date_of_birth": "1987-01-09",
+    "age": 39,
+    "email": "aisling.mccarthy@email.ie",
+    "phone": "+353 84 838 1841",
+    "address": {
+      "line1": "150 Mill Road",
+      "city": "Tralee",
+      "postcode": "H91",
+      "country": "Ireland"
+    },
+    "pre_existing_conditions": [
+      "None"
+    ],
+    "policies": [
+      {
+        "policy_number": "TRV-2025-100500",
+        "product": "Single & Annual Multi-Trip Travel Insurance",
+        "type": "travel",
+        "trip_type": "single",
+        "version": "pre-nov-2025",
+        "start_date": "2025-08-10",
+        "end_date": "2025-08-28",
+        "status": "cancelled",
+        "excess": 100,
+        "covered_destinations": [
+          "USA",
+          "Australia"
+        ],
+        "premium_paid": 498.06
+      },
+      {
+        "policy_number": "TRV-2025-100501",
+        "product": "Laya Healthcare Medicare Travel Insurance",
+        "type": "travel",
+        "trip_type": "annual",
+        "version": "post-nov-2025",
+        "start_date": "2025-11-11",
+        "end_date": "2026-11-11",
+        "status": "cancelled",
+        "excess": 150,
+        "covered_destinations": [
+          "Australia",
+          "Worldwide"
+        ],
+        "premium_paid": 595.12
+      },
+      {
+        "policy_number": "CHE-2026-200502",
+        "product": "Car Hire Excess Insurance Annual Multi-Trip with CDW and SLI",
+        "type": "car_hire",
+        "trip_type": "annual",
+        "version": "post-nov-2025",
+        "start_date": "2026-02-06",
+        "end_date": "2027-02-06",
+        "status": "active",
+        "excess": 1000,
+        "covered_destinations": [
+          "Worldwide"
+        ],
+        "premium_paid": 115.98
+      }
+    ],
+    "claims": [
+      {
+        "claim_id": "CLM-2025-01000",
+        "policy_number": "TRV-2025-100500",
+        "date": "2025-08-23",
+        "type": "Baggage Loss",
+        "amount_claimed": 3001.77,
+        "amount_paid": 2517.78,
+        "status": "settled",
+        "description": "Emergency Repatriation during trip to Canada."
+      }
+    ]
+  },
+  {
+    "id": "USR051",
+    "name": "Aisling Byrne",
+    "gender": "F",
+    "date_of_birth": "1961-06-01",
+    "age": 65,
+    "email": "aisling.byrne@email.ie",
+    "phone": "+353 81 822 3262",
+    "address": {
+      "line1": "133 Park Avenue",
+      "city": "Ennis",
+      "postcode": "D02",
+      "country": "Ireland"
+    },
+    "pre_existing_conditions": [
+      "Heart Condition"
+    ],
+    "policies": [
+      {
+        "policy_number": "TRV-2026-100510",
+        "product": "Backpacker Travel Insurance",
+        "type": "travel",
+        "trip_type": "single",
+        "version": "post-nov-2025",
+        "start_date": "2026-01-01",
+        "end_date": "2026-01-10",
+        "status": "expired",
+        "excess": 150,
+        "covered_destinations": [
+          "Australia",
+          "Canada"
+        ],
+        "premium_paid": 439.06
+      }
+    ],
+    "claims": []
+  },
+  {
+    "id": "USR052",
+    "name": "Emma Kennedy",
+    "gender": "F",
+    "date_of_birth": "1976-11-25",
+    "age": 49,
+    "email": "emma.kennedy@email.ie",
+    "phone": "+353 85 143 5712",
+    "address": {
+      "line1": "183 Main Street",
+      "city": "Kilkenny",
+      "postcode": "D04",
+      "country": "Ireland"
+    },
+    "pre_existing_conditions": [
+      "Hypertension"
+    ],
+    "policies": [
+      {
+        "policy_number": "CHE-2026-200520",
+        "product": "Car Hire Excess Insurance Annual Multi-Trip",
+        "type": "car_hire",
+        "trip_type": "annual",
+        "version": "post-nov-2025",
+        "start_date": "2026-03-07",
+        "end_date": "2027-03-07",
+        "status": "expired",
+        "excess": 1000,
+        "covered_destinations": [
+          "Asia"
+        ],
+        "premium_paid": 148.14
+      },
+      {
+        "policy_number": "TRV-2025-100521",
+        "product": "Laya Healthcare Medicare Travel Insurance",
+        "type": "travel",
+        "trip_type": "annual",
+        "version": "pre-nov-2025",
+        "start_date": "2025-10-14",
+        "end_date": "2026-10-14",
+        "status": "cancelled",
+        "excess": 150,
+        "covered_destinations": [
+          "Worldwide"
+        ],
+        "premium_paid": 179.98
+      }
+    ],
+    "claims": [
+      {
+        "claim_id": "CLM-2026-01040",
+        "policy_number": "CHE-2026-200520",
+        "date": "2026-05-19",
+        "type": "Third Party Liability",
+        "amount_claimed": 3583.52,
+        "amount_paid": 0.0,
+        "status": "rejected",
+        "description": "Windscreen Damage during trip to Worldwide."
+      },
+      {
+        "claim_id": "CLM-2026-01041",
+        "policy_number": "CHE-2026-200520",
+        "date": "2026-05-16",
+        "type": "Windscreen Damage",
+        "amount_claimed": 1581.39,
+        "amount_paid": 0.0,
+        "status": "rejected",
+        "description": "Third Party Liability during trip to Canada."
+      }
+    ]
+  },
+  {
+    "id": "USR053",
+    "name": "Roisin Doherty",
+    "gender": "F",
+    "date_of_birth": "1969-08-06",
+    "age": 57,
+    "email": "roisin.doherty@email.ie",
+    "phone": "+353 82 797 3252",
+    "address": {
+      "line1": "2 Station Road",
+      "city": "Limerick",
+      "postcode": "X91",
+      "country": "Ireland"
+    },
+    "pre_existing_conditions": [
+      "None"
+    ],
+    "policies": [
+      {
+        "policy_number": "CHE-2025-200530",
+        "product": "Car Hire Excess Insurance Annual Multi-Trip with CDW and SLI",
+        "type": "car_hire",
+        "trip_type": "annual",
+        "version": "pre-nov-2025",
+        "start_date": "2025-10-18",
+        "end_date": "2026-10-18",
+        "status": "expired",
+        "excess": 750,
+        "covered_destinations": [
+          "Australia"
+        ],
+        "premium_paid": 57.48
+      },
+      {
+        "policy_number": "TRV-2026-100531",
+        "product": "Single & Annual Multi-Trip Travel Insurance",
+        "type": "travel",
+        "trip_type": "single",
+        "version": "post-nov-2025",
+        "start_date": "2026-05-09",
+        "end_date": "2026-05-30",
+        "status": "active",
+        "excess": 200,
+        "covered_destinations": [
+          "Europe"
+        ],
+        "premium_paid": 197.35
+      }
+    ],
+    "claims": []
+  },
+  {
+    "id": "USR054",
+    "name": "Emma Doherty",
+    "gender": "F",
+    "date_of_birth": "1989-03-07",
+    "age": 37,
+    "email": "emma.doherty@email.ie",
+    "phone": "+353 81 109 5888",
+    "address": {
+      "line1": "146 Green Way",
+      "city": "Limerick",
+      "postcode": "D08",
+      "country": "Ireland"
+    },
+    "pre_existing_conditions": [
+      "None"
+    ],
+    "policies": [
+      {
+        "policy_number": "TRV-2025-100540",
+        "product": "Single & Annual Multi-Trip Travel Insurance",
+        "type": "travel",
+        "trip_type": "single",
+        "version": "pre-nov-2025",
+        "start_date": "2025-07-16",
+        "end_date": "2025-08-02",
+        "status": "expired",
+        "excess": 200,
+        "covered_destinations": [
+          "USA"
+        ],
+        "premium_paid": 200.75
+      },
+      {
+        "policy_number": "CHE-2025-200541",
+        "product": "Car Hire Excess Insurance Single Trip",
+        "type": "car_hire",
+        "trip_type": "single",
+        "version": "pre-nov-2025",
+        "start_date": "2025-06-19",
+        "end_date": "2025-07-09",
+        "status": "active",
+        "excess": 1500,
+        "covered_destinations": [
+          "Asia"
+        ],
+        "premium_paid": 166.07
+      }
+    ],
+    "claims": []
+  },
+  {
+    "id": "USR055",
+    "name": "Grainne Murray",
+    "gender": "F",
+    "date_of_birth": "1988-10-07",
+    "age": 37,
+    "email": "grainne.murray@email.ie",
+    "phone": "+353 81 367 6890",
+    "address": {
+      "line1": "178 Park Avenue",
+      "city": "Tralee",
+      "postcode": "X91",
+      "country": "Ireland"
+    },
+    "pre_existing_conditions": [
+      "None"
+    ],
+    "policies": [
+      {
+        "policy_number": "CHE-2026-200550",
+        "product": "Car Hire Excess Insurance Single Trip",
+        "type": "car_hire",
+        "trip_type": "single",
+        "version": "post-nov-2025",
+        "start_date": "2026-02-14",
+        "end_date": "2026-02-28",
+        "status": "active",
+        "excess": 1000,
+        "covered_destinations": [
+          "Worldwide"
+        ],
+        "premium_paid": 70.85
+      },
+      {
+        "policy_number": "TRV-2026-100551",
+        "product": "Backpacker Travel Insurance",
+        "type": "travel",
+        "trip_type": "single",
+        "version": "post-nov-2025",
+        "start_date": "2026-04-28",
+        "end_date": "2026-05-09",
+        "status": "cancelled",
+        "excess": 50,
+        "covered_destinations": [
+          "Canada",
+          "Worldwide"
+        ],
+        "premium_paid": 87.32
+      }
+    ],
+    "claims": [
+      {
+        "claim_id": "CLM-2026-01100",
+        "policy_number": "TRV-2026-100551",
+        "date": "2026-05-08",
+        "type": "Personal Accident",
+        "amount_claimed": 4505.81,
+        "amount_paid": 0.0,
+        "status": "rejected",
+        "description": "Baggage Loss during trip to Europe."
+      },
+      {
+        "claim_id": "CLM-2026-01101",
+        "policy_number": "TRV-2026-100551",
+        "date": "2026-05-04",
+        "type": "Flight Delay",
+        "amount_claimed": 3412.43,
+        "amount_paid": 3387.43,
+        "status": "settled",
+        "description": "Baggage Loss during trip to USA."
+      },
+      {
+        "claim_id": "CLM-2026-01102",
+        "policy_number": "TRV-2026-100551",
+        "date": "2026-04-28",
+        "type": "Baggage Loss",
+        "amount_claimed": 1451.77,
+        "amount_paid": 1130.48,
+        "status": "settled",
+        "description": "Baggage Loss during trip to Worldwide."
+      }
+    ]
+  },
+  {
+    "id": "USR056",
+    "name": "Oisin O'Sullivan",
+    "gender": "M",
+    "date_of_birth": "1967-03-01",
+    "age": 59,
+    "email": "oisin.osullivan@email.ie",
+    "phone": "+353 89 573 6049",
+    "address": {
+      "line1": "186 Oak Street",
+      "city": "Sligo",
+      "postcode": "X91",
+      "country": "Ireland"
+    },
+    "pre_existing_conditions": [
+      "None"
+    ],
+    "policies": [
+      {
+        "policy_number": "CHE-2025-200560",
+        "product": "Car Hire Excess Insurance Annual Multi-Trip with CDW and SLI",
+        "type": "car_hire",
+        "trip_type": "annual",
+        "version": "pre-nov-2025",
+        "start_date": "2025-07-31",
+        "end_date": "2026-07-31",
+        "status": "active",
+        "excess": 1000,
+        "covered_destinations": [
+          "USA"
+        ],
+        "premium_paid": 98.81
+      },
+      {
+        "policy_number": "CHE-2025-200561",
+        "product": "Car Hire Excess Insurance Annual Multi-Trip",
+        "type": "car_hire",
+        "trip_type": "annual",
+        "version": "pre-nov-2025",
+        "start_date": "2025-08-18",
+        "end_date": "2026-08-18",
+        "status": "expired",
+        "excess": 1500,
+        "covered_destinations": [
+          "Worldwide"
+        ],
+        "premium_paid": 159.64
+      },
+      {
+        "policy_number": "TRV-2026-100562",
+        "product": "Laya Healthcare Medicare Travel Insurance",
+        "type": "travel",
+        "trip_type": "annual",
+        "version": "post-nov-2025",
+        "start_date": "2026-01-28",
+        "end_date": "2027-01-28",
+        "status": "expired",
+        "excess": 50,
+        "covered_destinations": [
+          "Australia"
+        ],
+        "premium_paid": 476.17
+      }
+    ],
+    "claims": [
+      {
+        "claim_id": "CLM-2025-01120",
+        "policy_number": "CHE-2025-200561",
+        "date": "2025-10-14",
+        "type": "Theft of Vehicle",
+        "amount_claimed": 496.44,
+        "amount_paid": 411.59,
+        "status": "settled",
+        "description": "Theft of Vehicle during trip to Worldwide."
+      },
+      {
+        "claim_id": "CLM-2026-01121",
+        "policy_number": "CHE-2025-200561",
+        "date": "2026-05-11",
+        "type": "Windscreen Damage",
+        "amount_claimed": 2320.83,
+        "amount_paid": 2058.04,
+        "status": "settled",
+        "description": "Vehicle Damage during trip to Australia."
+      },
+      {
+        "claim_id": "CLM-2026-01122",
+        "policy_number": "CHE-2025-200561",
+        "date": "2026-04-03",
+        "type": "Theft of Vehicle",
+        "amount_claimed": 4081.72,
+        "amount_paid": 0.0,
+        "status": "rejected",
+        "description": "Windscreen Damage during trip to Caribbean."
+      }
+    ]
+  },
+  {
+    "id": "USR057",
+    "name": "Aoife McCarthy",
+    "gender": "F",
+    "date_of_birth": "1985-12-10",
+    "age": 40,
+    "email": "aoife.mccarthy@email.ie",
+    "phone": "+353 81 243 9255",
+    "address": {
+      "line1": "75 Park Avenue",
+      "city": "Cork",
+      "postcode": "D01",
+      "country": "Ireland"
+    },
+    "pre_existing_conditions": [
+      "None"
+    ],
+    "policies": [
+      {
+        "policy_number": "TRV-2026-100570",
+        "product": "Single & Annual Multi-Trip Travel Insurance",
+        "type": "travel",
+        "trip_type": "single",
+        "version": "post-nov-2025",
+        "start_date": "2026-03-05",
+        "end_date": "2026-03-12",
+        "status": "expired",
+        "excess": 0,
+        "covered_destinations": [
+          "Europe",
+          "Worldwide"
+        ],
+        "premium_paid": 592.79
+      },
+      {
+        "policy_number": "TRV-2026-100571",
+        "product": "Single & Annual Multi-Trip Travel Insurance",
+        "type": "travel",
+        "trip_type": "single",
+        "version": "post-nov-2025",
+        "start_date": "2026-04-25",
+        "end_date": "2026-05-13",
+        "status": "expired",
+        "excess": 150,
+        "covered_destinations": [
+          "Caribbean",
+          "Canada"
+        ],
+        "premium_paid": 274.72
+      }
+    ],
+    "claims": [
+      {
+        "claim_id": "CLM-2026-01140",
+        "policy_number": "TRV-2026-100570",
+        "date": "2026-03-07",
+        "type": "Medical Emergency",
+        "amount_claimed": 3336.96,
+        "amount_paid": 0.0,
+        "status": "pending",
+        "description": "Trip Cancellation during trip to Australia."
+      },
+      {
+        "claim_id": "CLM-2026-01141",
+        "policy_number": "TRV-2026-100570",
+        "date": "2026-03-11",
+        "type": "Medical Emergency",
+        "amount_claimed": 2738.44,
+        "amount_paid": 2557.51,
+        "status": "settled",
+        "description": "Baggage Loss during trip to Caribbean."
+      },
+      {
+        "claim_id": "CLM-2026-01142",
+        "policy_number": "TRV-2026-100570",
+        "date": "2026-03-11",
+        "type": "Baggage Loss",
+        "amount_claimed": 2753.28,
+        "amount_paid": 1924.56,
+        "status": "settled",
+        "description": "Trip Cancellation during trip to Worldwide."
+      },
+      {
+        "claim_id": "CLM-2026-01143",
+        "policy_number": "TRV-2026-100571",
+        "date": "2026-04-28",
+        "type": "Personal Accident",
+        "amount_claimed": 354.64,
+        "amount_paid": 0.0,
+        "status": "rejected",
+        "description": "Medical Emergency during trip to USA."
+      },
+      {
+        "claim_id": "CLM-2026-01144",
+        "policy_number": "TRV-2026-100571",
+        "date": "2026-05-01",
+        "type": "Emergency Repatriation",
+        "amount_claimed": 523.0,
+        "amount_paid": 407.2,
+        "status": "settled",
+        "description": "Emergency Repatriation during trip to Canada."
+      },
+      {
+        "claim_id": "CLM-2026-01145",
+        "policy_number": "TRV-2026-100571",
+        "date": "2026-04-26",
+        "type": "Trip Cancellation",
+        "amount_claimed": 1374.72,
+        "amount_paid": 1046.03,
+        "status": "settled",
+        "description": "Personal Accident during trip to USA."
+      }
+    ]
+  },
+  {
+    "id": "USR058",
+    "name": "Sadhbh Healy",
+    "gender": "F",
+    "date_of_birth": "1994-08-27",
+    "age": 31,
+    "email": "sadhbh.healy@email.ie",
+    "phone": "+353 88 159 7761",
+    "address": {
+      "line1": "107 Station Road",
+      "city": "Kilkenny",
+      "postcode": "D06",
+      "country": "Ireland"
+    },
+    "pre_existing_conditions": [
+      "Heart Condition"
+    ],
+    "policies": [
+      {
+        "policy_number": "CHE-2026-200580",
+        "product": "Car Hire Excess Insurance Annual Multi-Trip with CDW and SLI",
+        "type": "car_hire",
+        "trip_type": "annual",
+        "version": "post-nov-2025",
+        "start_date": "2026-02-22",
+        "end_date": "2027-02-22",
+        "status": "active",
+        "excess": 750,
+        "covered_destinations": [
+          "Europe"
+        ],
+        "premium_paid": 106.17
+      },
+      {
+        "policy_number": "TRV-2025-100581",
+        "product": "Laya Healthcare Medicare Travel Insurance",
+        "type": "travel",
+        "trip_type": "annual",
+        "version": "pre-nov-2025",
+        "start_date": "2025-08-29",
+        "end_date": "2026-08-29",
+        "status": "expired",
+        "excess": 200,
+        "covered_destinations": [
+          "Asia",
+          "Canada"
+        ],
+        "premium_paid": 337.72
+      }
+    ],
+    "claims": [
+      {
+        "claim_id": "CLM-2026-01160",
+        "policy_number": "TRV-2025-100581",
+        "date": "2026-03-26",
+        "type": "Trip Cancellation",
+        "amount_claimed": 916.24,
+        "amount_paid": 0.0,
+        "status": "rejected",
+        "description": "Personal Accident during trip to Caribbean."
+      },
+      {
+        "claim_id": "CLM-2025-01161",
+        "policy_number": "TRV-2025-100581",
+        "date": "2025-12-30",
+        "type": "Emergency Repatriation",
+        "amount_claimed": 4276.84,
+        "amount_paid": 0.0,
+        "status": "pending",
+        "description": "Trip Cancellation during trip to Canada."
+      }
+    ]
+  },
+  {
+    "id": "USR059",
+    "name": "Kevin Byrne",
+    "gender": "M",
+    "date_of_birth": "1971-06-09",
+    "age": 55,
+    "email": "kevin.byrne@email.ie",
+    "phone": "+353 82 922 8692",
+    "address": {
+      "line1": "195 River Lane",
+      "city": "Limerick",
+      "postcode": "T12",
+      "country": "Ireland"
+    },
+    "pre_existing_conditions": [
+      "Asthma"
+    ],
+    "policies": [
+      {
+        "policy_number": "TRV-2025-100590",
+        "product": "Backpacker Travel Insurance",
+        "type": "travel",
+        "trip_type": "single",
+        "version": "post-nov-2025",
+        "start_date": "2025-12-07",
+        "end_date": "2025-12-15",
+        "status": "active",
+        "excess": 200,
+        "covered_destinations": [
+          "Europe"
+        ],
+        "premium_paid": 456.78
+      },
+      {
+        "policy_number": "TRV-2026-100591",
+        "product": "Laya Healthcare Medicare Travel Insurance",
+        "type": "travel",
+        "trip_type": "annual",
+        "version": "post-nov-2025",
+        "start_date": "2026-04-05",
+        "end_date": "2027-04-05",
+        "status": "active",
+        "excess": 0,
+        "covered_destinations": [
+          "Caribbean"
+        ],
+        "premium_paid": 177.84
+      },
+      {
+        "policy_number": "CHE-2025-200592",
+        "product": "Car Hire Excess Insurance Annual Multi-Trip",
+        "type": "car_hire",
+        "trip_type": "annual",
+        "version": "post-nov-2025",
+        "start_date": "2025-11-03",
+        "end_date": "2026-11-03",
+        "status": "active",
+        "excess": 500,
+        "covered_destinations": [
+          "Asia"
+        ],
+        "premium_paid": 73.89
+      }
+    ],
+    "claims": [
+      {
+        "claim_id": "CLM-2025-01180",
+        "policy_number": "TRV-2025-100590",
+        "date": "2025-12-10",
+        "type": "Trip Cancellation",
+        "amount_claimed": 3539.01,
+        "amount_paid": 2684.88,
+        "status": "settled",
+        "description": "Personal Accident during trip to Worldwide."
+      },
+      {
+        "claim_id": "CLM-2025-01181",
+        "policy_number": "TRV-2025-100590",
+        "date": "2025-12-11",
+        "type": "Baggage Loss",
+        "amount_claimed": 2027.18,
+        "amount_paid": 0.0,
+        "status": "pending",
+        "description": "Baggage Loss during trip to Worldwide."
+      }
+    ]
+  },
+  {
+    "id": "USR060",
+    "name": "Clodagh Gallagher",
+    "gender": "F",
+    "date_of_birth": "1962-01-19",
+    "age": 64,
+    "email": "clodagh.gallagher@email.ie",
+    "phone": "+353 81 644 7739",
+    "address": {
+      "line1": "4 Oak Street",
+      "city": "Ennis",
+      "postcode": "D06",
+      "country": "Ireland"
+    },
+    "pre_existing_conditions": [
+      "Heart Condition"
+    ],
+    "policies": [
+      {
+        "policy_number": "TRV-2026-100600",
+        "product": "Backpacker Travel Insurance",
+        "type": "travel",
+        "trip_type": "single",
+        "version": "post-nov-2025",
+        "start_date": "2026-03-11",
+        "end_date": "2026-04-01",
+        "status": "active",
+        "excess": 200,
+        "covered_destinations": [
+          "Worldwide",
+          "USA"
+        ],
+        "premium_paid": 381.15
+      },
+      {
+        "policy_number": "TRV-2026-100601",
+        "product": "Backpacker Travel Insurance",
+        "type": "travel",
+        "trip_type": "single",
+        "version": "post-nov-2025",
+        "start_date": "2026-03-19",
+        "end_date": "2026-04-08",
+        "status": "expired",
+        "excess": 50,
+        "covered_destinations": [
+          "Worldwide",
+          "Caribbean"
+        ],
+        "premium_paid": 339.64
+      },
+      {
+        "policy_number": "TRV-2025-100602",
+        "product": "Laya Healthcare Medicare Travel Insurance",
+        "type": "travel",
+        "trip_type": "annual",
+        "version": "post-nov-2025",
+        "start_date": "2025-11-28",
+        "end_date": "2026-11-28",
+        "status": "active",
+        "excess": 50,
+        "covered_destinations": [
+          "USA",
+          "Australia"
+        ],
+        "premium_paid": 454.56
+      }
+    ],
+    "claims": [
+      {
+        "claim_id": "CLM-2025-01200",
+        "policy_number": "TRV-2025-100602",
+        "date": "2025-12-10",
+        "type": "Trip Cancellation",
+        "amount_claimed": 3868.83,
+        "amount_paid": 0.0,
+        "status": "rejected",
+        "description": "Emergency Repatriation during trip to USA."
+      },
+      {
+        "claim_id": "CLM-2025-01201",
+        "policy_number": "TRV-2025-100602",
+        "date": "2025-12-15",
+        "type": "Flight Delay",
+        "amount_claimed": 3594.41,
+        "amount_paid": 2471.11,
+        "status": "settled",
+        "description": "Baggage Loss during trip to Europe."
+      },
+      {
+        "claim_id": "CLM-2026-01202",
+        "policy_number": "TRV-2025-100602",
+        "date": "2026-05-05",
+        "type": "Emergency Repatriation",
+        "amount_claimed": 3261.1,
+        "amount_paid": 0.0,
+        "status": "rejected",
+        "description": "Flight Delay during trip to Europe."
+      }
+    ]
+  },
+  {
+    "id": "USR061",
+    "name": "Dearbhla O'Sullivan",
+    "gender": "F",
+    "date_of_birth": "1960-10-07",
+    "age": 65,
+    "email": "dearbhla.osullivan@email.ie",
+    "phone": "+353 82 482 7652",
+    "address": {
+      "line1": "118 Green Way",
+      "city": "Tralee",
+      "postcode": "H91",
+      "country": "Ireland"
+    },
+    "pre_existing_conditions": [
+      "Asthma"
+    ],
+    "policies": [
+      {
+        "policy_number": "TRV-2026-100610",
+        "product": "Single & Annual Multi-Trip Travel Insurance",
+        "type": "travel",
+        "trip_type": "single",
+        "version": "post-nov-2025",
+        "start_date": "2026-02-24",
+        "end_date": "2026-03-05",
+        "status": "active",
+        "excess": 50,
+        "covered_destinations": [
+          "Canada",
+          "Worldwide"
+        ],
+        "premium_paid": 179.8
+      }
+    ],
+    "claims": []
+  },
+  {
+    "id": "USR062",
+    "name": "Fionn O'Brien",
+    "gender": "M",
+    "date_of_birth": "1989-04-28",
+    "age": 37,
+    "email": "fionn.obrien@email.ie",
+    "phone": "+353 88 377 1762",
+    "address": {
+      "line1": "20 Castle Drive",
+      "city": "Dublin",
+      "postcode": "D02",
+      "country": "Ireland"
+    },
+    "pre_existing_conditions": [
+      "Heart Condition"
+    ],
+    "policies": [
+      {
+        "policy_number": "TRV-2026-100620",
+        "product": "Laya Healthcare Medicare Travel Insurance",
+        "type": "travel",
+        "trip_type": "annual",
+        "version": "post-nov-2025",
+        "start_date": "2026-01-30",
+        "end_date": "2027-01-30",
+        "status": "expired",
+        "excess": 0,
+        "covered_destinations": [
+          "Caribbean"
+        ],
+        "premium_paid": 445.48
+      },
+      {
+        "policy_number": "TRV-2026-100621",
+        "product": "Backpacker Travel Insurance",
+        "type": "travel",
+        "trip_type": "single",
+        "version": "post-nov-2025",
+        "start_date": "2026-03-17",
+        "end_date": "2026-04-06",
+        "status": "active",
+        "excess": 0,
+        "covered_destinations": [
+          "USA"
+        ],
+        "premium_paid": 545.29
+      }
+    ],
+    "claims": []
+  },
+  {
+    "id": "USR063",
+    "name": "Niall O'Neill",
+    "gender": "M",
+    "date_of_birth": "1960-09-13",
+    "age": 65,
+    "email": "niall.oneill@email.ie",
+    "phone": "+353 87 793 9856",
+    "address": {
+      "line1": "85 High Street",
+      "city": "Limerick",
+      "postcode": "F91",
+      "country": "Ireland"
+    },
+    "pre_existing_conditions": [
+      "None"
+    ],
+    "policies": [
+      {
+        "policy_number": "CHE-2025-200630",
+        "product": "Car Hire Excess Insurance Annual Multi-Trip with CDW and SLI",
+        "type": "car_hire",
+        "trip_type": "annual",
+        "version": "post-nov-2025",
+        "start_date": "2025-12-21",
+        "end_date": "2026-12-21",
+        "status": "expired",
+        "excess": 500,
+        "covered_destinations": [
+          "USA"
+        ],
+        "premium_paid": 87.88
+      }
+    ],
+    "claims": []
+  },
+  {
+    "id": "USR064",
+    "name": "Fergus Doyle",
+    "gender": "M",
+    "date_of_birth": "1962-05-29",
+    "age": 64,
+    "email": "fergus.doyle@email.ie",
+    "phone": "+353 88 602 4737",
+    "address": {
+      "line1": "92 Station Road",
+      "city": "Cork",
+      "postcode": "H91",
+      "country": "Ireland"
+    },
+    "pre_existing_conditions": [
+      "None"
+    ],
+    "policies": [
+      {
+        "policy_number": "CHE-2026-200640",
+        "product": "Car Hire Excess Insurance Annual Multi-Trip",
+        "type": "car_hire",
+        "trip_type": "annual",
+        "version": "post-nov-2025",
+        "start_date": "2026-04-06",
+        "end_date": "2027-04-06",
+        "status": "active",
+        "excess": 1500,
+        "covered_destinations": [
+          "Europe"
+        ],
+        "premium_paid": 195.03
+      }
+    ],
+    "claims": []
+  },
+  {
+    "id": "USR065",
+    "name": "Orla Quinn",
+    "gender": "F",
+    "date_of_birth": "1989-08-20",
+    "age": 36,
+    "email": "orla.quinn@email.ie",
+    "phone": "+353 87 382 7899",
+    "address": {
+      "line1": "77 Mill Road",
+      "city": "Sligo",
+      "postcode": "D02",
+      "country": "Ireland"
+    },
+    "pre_existing_conditions": [
+      "None"
+    ],
+    "policies": [
+      {
+        "policy_number": "TRV-2026-100650",
+        "product": "Single & Annual Multi-Trip Travel Insurance",
+        "type": "travel",
+        "trip_type": "single",
+        "version": "post-nov-2025",
+        "start_date": "2026-06-01",
+        "end_date": "2026-06-09",
+        "status": "active",
+        "excess": 0,
+        "covered_destinations": [
+          "Asia",
+          "Canada"
+        ],
+        "premium_paid": 219.35
+      },
+      {
+        "policy_number": "CHE-2025-200651",
+        "product": "Car Hire Excess Insurance Annual Multi-Trip",
+        "type": "car_hire",
+        "trip_type": "annual",
+        "version": "post-nov-2025",
+        "start_date": "2025-12-02",
+        "end_date": "2026-12-02",
+        "status": "active",
+        "excess": 500,
+        "covered_destinations": [
+          "Caribbean"
+        ],
+        "premium_paid": 54.64
+      },
+      {
+        "policy_number": "TRV-2025-100652",
+        "product": "Backpacker Travel Insurance",
+        "type": "travel",
+        "trip_type": "single",
+        "version": "pre-nov-2025",
+        "start_date": "2025-07-23",
+        "end_date": "2025-08-01",
+        "status": "cancelled",
+        "excess": 0,
+        "covered_destinations": [
+          "Australia",
+          "Canada"
+        ],
+        "premium_paid": 177.44
+      }
+    ],
+    "claims": [
+      {
+        "claim_id": "CLM-2026-01300",
+        "policy_number": "CHE-2025-200651",
+        "date": "2026-04-22",
+        "type": "Windscreen Damage",
+        "amount_claimed": 646.71,
+        "amount_paid": 0.0,
+        "status": "pending",
+        "description": "Vehicle Damage during trip to Worldwide."
+      },
+      {
+        "claim_id": "CLM-2026-01301",
+        "policy_number": "CHE-2025-200651",
+        "date": "2026-03-17",
+        "type": "Theft of Vehicle",
+        "amount_claimed": 2061.44,
+        "amount_paid": 1834.55,
+        "status": "settled",
+        "description": "Theft of Vehicle during trip to Asia."
+      },
+      {
+        "claim_id": "CLM-2025-01302",
+        "policy_number": "TRV-2025-100652",
+        "date": "2025-07-27",
+        "type": "Trip Cancellation",
+        "amount_claimed": 1645.43,
+        "amount_paid": 0.0,
+        "status": "rejected",
+        "description": "Medical Emergency during trip to USA."
+      }
+    ]
+  },
+  {
+    "id": "USR066",
+    "name": "Roisin Byrne",
+    "gender": "F",
+    "date_of_birth": "1992-05-03",
+    "age": 34,
+    "email": "roisin.byrne@email.ie",
+    "phone": "+353 82 938 7703",
+    "address": {
+      "line1": "173 Mill Road",
+      "city": "Drogheda",
+      "postcode": "F91",
+      "country": "Ireland"
+    },
+    "pre_existing_conditions": [
+      "None"
+    ],
+    "policies": [
+      {
+        "policy_number": "TRV-2025-100660",
+        "product": "Single & Annual Multi-Trip Travel Insurance",
+        "type": "travel",
+        "trip_type": "single",
+        "version": "pre-nov-2025",
+        "start_date": "2025-08-09",
+        "end_date": "2025-08-20",
+        "status": "expired",
+        "excess": 0,
+        "covered_destinations": [
+          "Canada",
+          "Australia"
+        ],
+        "premium_paid": 573.39
+      },
+      {
+        "policy_number": "CHE-2026-200661",
+        "product": "Car Hire Excess Insurance Annual Multi-Trip",
+        "type": "car_hire",
+        "trip_type": "annual",
+        "version": "post-nov-2025",
+        "start_date": "2026-01-12",
+        "end_date": "2027-01-12",
+        "status": "expired",
+        "excess": 1000,
+        "covered_destinations": [
+          "Australia"
+        ],
+        "premium_paid": 108.9
+      },
+      {
+        "policy_number": "TRV-2026-100662",
+        "product": "Backpacker Travel Insurance",
+        "type": "travel",
+        "trip_type": "single",
+        "version": "post-nov-2025",
+        "start_date": "2026-04-05",
+        "end_date": "2026-04-23",
+        "status": "active",
+        "excess": 50,
+        "covered_destinations": [
+          "Caribbean"
+        ],
+        "premium_paid": 329.09
+      }
+    ],
+    "claims": [
+      {
+        "claim_id": "CLM-2025-01320",
+        "policy_number": "TRV-2025-100660",
+        "date": "2025-08-19",
+        "type": "Baggage Loss",
+        "amount_claimed": 2556.84,
+        "amount_paid": 1867.4,
+        "status": "settled",
+        "description": "Flight Delay during trip to Worldwide."
+      },
+      {
+        "claim_id": "CLM-2025-01321",
+        "policy_number": "TRV-2025-100660",
+        "date": "2025-08-10",
+        "type": "Personal Accident",
+        "amount_claimed": 4673.92,
+        "amount_paid": 3911.56,
+        "status": "settled",
+        "description": "Trip Cancellation during trip to Asia."
+      },
+      {
+        "claim_id": "CLM-2025-01322",
+        "policy_number": "TRV-2025-100660",
+        "date": "2025-08-17",
+        "type": "Emergency Repatriation",
+        "amount_claimed": 329.2,
+        "amount_paid": 0.0,
+        "status": "rejected",
+        "description": "Trip Cancellation during trip to Caribbean."
+      }
+    ]
+  },
+  {
+    "id": "USR067",
+    "name": "Caoimhe Ryan",
+    "gender": "F",
+    "date_of_birth": "1989-07-18",
+    "age": 37,
+    "email": "caoimhe.ryan@email.ie",
+    "phone": "+353 85 525 2406",
+    "address": {
+      "line1": "30 Church Road",
+      "city": "Galway",
+      "postcode": "H91",
+      "country": "Ireland"
+    },
+    "pre_existing_conditions": [
+      "Hypertension"
+    ],
+    "policies": [
+      {
+        "policy_number": "TRV-2026-100670",
+        "product": "Laya Healthcare Medicare Travel Insurance",
+        "type": "travel",
+        "trip_type": "annual",
+        "version": "post-nov-2025",
+        "start_date": "2026-02-01",
+        "end_date": "2027-02-01",
+        "status": "active",
+        "excess": 150,
+        "covered_destinations": [
+          "Australia",
+          "Europe"
+        ],
+        "premium_paid": 357.87
+      },
+      {
+        "policy_number": "CHE-2026-200671",
+        "product": "Car Hire Excess Insurance Annual Multi-Trip with CDW and SLI",
+        "type": "car_hire",
+        "trip_type": "annual",
+        "version": "post-nov-2025",
+        "start_date": "2026-04-01",
+        "end_date": "2027-04-01",
+        "status": "active",
+        "excess": 500,
+        "covered_destinations": [
+          "Asia"
+        ],
+        "premium_paid": 57.5
+      }
+    ],
+    "claims": [
+      {
+        "claim_id": "CLM-2026-01340",
+        "policy_number": "CHE-2026-200671",
+        "date": "2026-04-06",
+        "type": "Third Party Liability",
+        "amount_claimed": 2903.46,
+        "amount_paid": 0.0,
+        "status": "rejected",
+        "description": "Windscreen Damage during trip to Europe."
+      },
+      {
+        "claim_id": "CLM-2026-01341",
+        "policy_number": "CHE-2026-200671",
+        "date": "2026-04-02",
+        "type": "Theft of Vehicle",
+        "amount_claimed": 673.31,
+        "amount_paid": 541.52,
+        "status": "settled",
+        "description": "Windscreen Damage during trip to Worldwide."
+      },
+      {
+        "claim_id": "CLM-2026-01342",
+        "policy_number": "CHE-2026-200671",
+        "date": "2026-05-21",
+        "type": "Vehicle Damage",
+        "amount_claimed": 2422.7,
+        "amount_paid": 1787.92,
+        "status": "settled",
+        "description": "Windscreen Damage during trip to Europe."
+      }
+    ]
+  },
+  {
+    "id": "USR068",
+    "name": "Clodagh Murray",
+    "gender": "F",
+    "date_of_birth": "1995-03-07",
+    "age": 31,
+    "email": "clodagh.murray@email.ie",
+    "phone": "+353 84 310 5560",
+    "address": {
+      "line1": "193 Main Street",
+      "city": "Limerick",
+      "postcode": "X91",
+      "country": "Ireland"
+    },
+    "pre_existing_conditions": [
+      "None"
+    ],
+    "policies": [
+      {
+        "policy_number": "TRV-2026-100680",
+        "product": "Single & Annual Multi-Trip Travel Insurance",
+        "type": "travel",
+        "trip_type": "single",
+        "version": "post-nov-2025",
+        "start_date": "2026-01-11",
+        "end_date": "2026-01-29",
+        "status": "active",
+        "excess": 150,
+        "covered_destinations": [
+          "Europe",
+          "Asia"
+        ],
+        "premium_paid": 245.83
+      },
+      {
+        "policy_number": "TRV-2026-100681",
+        "product": "Backpacker Travel Insurance",
+        "type": "travel",
+        "trip_type": "single",
+        "version": "post-nov-2025",
+        "start_date": "2026-04-28",
+        "end_date": "2026-05-06",
+        "status": "active",
+        "excess": 50,
+        "covered_destinations": [
+          "Australia"
+        ],
+        "premium_paid": 563.56
+      }
+    ],
+    "claims": [
+      {
+        "claim_id": "CLM-2026-01360",
+        "policy_number": "TRV-2026-100681",
+        "date": "2026-05-05",
+        "type": "Emergency Repatriation",
+        "amount_claimed": 1312.91,
+        "amount_paid": 0.0,
+        "status": "rejected",
+        "description": "Trip Cancellation during trip to USA."
+      },
+      {
+        "claim_id": "CLM-2026-01361",
+        "policy_number": "TRV-2026-100681",
+        "date": "2026-05-04",
+        "type": "Flight Delay",
+        "amount_claimed": 2098.8,
+        "amount_paid": 1636.71,
+        "status": "settled",
+        "description": "Flight Delay during trip to Europe."
+      }
+    ]
+  },
+  {
+    "id": "USR069",
+    "name": "Colm O'Connor",
+    "gender": "M",
+    "date_of_birth": "1976-05-29",
+    "age": 50,
+    "email": "colm.oconnor@email.ie",
+    "phone": "+353 86 109 8939",
+    "address": {
+      "line1": "35 Park Avenue",
+      "city": "Kilkenny",
+      "postcode": "D06",
+      "country": "Ireland"
+    },
+    "pre_existing_conditions": [
+      "None"
+    ],
+    "policies": [
+      {
+        "policy_number": "TRV-2026-100690",
+        "product": "Laya Healthcare Medicare Travel Insurance",
+        "type": "travel",
+        "trip_type": "annual",
+        "version": "post-nov-2025",
+        "start_date": "2026-02-06",
+        "end_date": "2027-02-06",
+        "status": "active",
+        "excess": 100,
+        "covered_destinations": [
+          "Australia",
+          "Europe"
+        ],
+        "premium_paid": 390.42
+      },
+      {
+        "policy_number": "TRV-2026-100691",
+        "product": "Backpacker Travel Insurance",
+        "type": "travel",
+        "trip_type": "single",
+        "version": "post-nov-2025",
+        "start_date": "2026-04-13",
+        "end_date": "2026-04-22",
+        "status": "active",
+        "excess": 100,
+        "covered_destinations": [
+          "Asia"
+        ],
+        "premium_paid": 557.71
+      }
+    ],
+    "claims": [
+      {
+        "claim_id": "CLM-2026-01380",
+        "policy_number": "TRV-2026-100690",
+        "date": "2026-04-25",
+        "type": "Emergency Repatriation",
+        "amount_claimed": 761.35,
+        "amount_paid": 0.0,
+        "status": "pending",
+        "description": "Trip Cancellation during trip to Australia."
+      },
+      {
+        "claim_id": "CLM-2026-01381",
+        "policy_number": "TRV-2026-100691",
+        "date": "2026-04-15",
+        "type": "Trip Cancellation",
+        "amount_claimed": 2959.07,
+        "amount_paid": 0.0,
+        "status": "rejected",
+        "description": "Flight Delay during trip to Asia."
+      },
+      {
+        "claim_id": "CLM-2026-01382",
+        "policy_number": "TRV-2026-100691",
+        "date": "2026-04-21",
+        "type": "Flight Delay",
+        "amount_claimed": 3528.48,
+        "amount_paid": 2900.29,
+        "status": "settled",
+        "description": "Baggage Loss during trip to USA."
+      },
+      {
+        "claim_id": "CLM-2026-01383",
+        "policy_number": "TRV-2026-100691",
+        "date": "2026-04-15",
+        "type": "Personal Accident",
+        "amount_claimed": 1709.98,
+        "amount_paid": 0.0,
+        "status": "rejected",
+        "description": "Medical Emergency during trip to Canada."
+      }
+    ]
+  },
+  {
+    "id": "USR070",
+    "name": "Fiona Doherty",
+    "gender": "F",
+    "date_of_birth": "1978-08-23",
+    "age": 47,
+    "email": "fiona.doherty@email.ie",
+    "phone": "+353 88 662 9369",
+    "address": {
+      "line1": "29 Green Way",
+      "city": "Drogheda",
+      "postcode": "V94",
+      "country": "Ireland"
+    },
+    "pre_existing_conditions": [
+      "None"
+    ],
+    "policies": [
+      {
+        "policy_number": "TRV-2025-100700",
+        "product": "Single & Annual Multi-Trip Travel Insurance",
+        "type": "travel",
+        "trip_type": "single",
+        "version": "pre-nov-2025",
+        "start_date": "2025-09-21",
+        "end_date": "2025-10-02",
+        "status": "cancelled",
+        "excess": 0,
+        "covered_destinations": [
+          "USA",
+          "Caribbean"
+        ],
+        "premium_paid": 222.92
+      }
+    ],
+    "claims": []
+  },
+  {
+    "id": "USR071",
+    "name": "Dearbhla Doyle",
+    "gender": "F",
+    "date_of_birth": "1984-04-24",
+    "age": 42,
+    "email": "dearbhla.doyle@email.ie",
+    "phone": "+353 89 272 6302",
+    "address": {
+      "line1": "181 Castle Drive",
+      "city": "Dublin",
+      "postcode": "V94",
+      "country": "Ireland"
+    },
+    "pre_existing_conditions": [
+      "Diabetes Type 2"
+    ],
+    "policies": [
+      {
+        "policy_number": "TRV-2025-100710",
+        "product": "Backpacker Travel Insurance",
+        "type": "travel",
+        "trip_type": "single",
+        "version": "pre-nov-2025",
+        "start_date": "2025-07-23",
+        "end_date": "2025-08-10",
+        "status": "active",
+        "excess": 50,
+        "covered_destinations": [
+          "Caribbean"
+        ],
+        "premium_paid": 234.81
+      },
+      {
+        "policy_number": "TRV-2026-100711",
+        "product": "Single & Annual Multi-Trip Travel Insurance",
+        "type": "travel",
+        "trip_type": "single",
+        "version": "post-nov-2025",
+        "start_date": "2026-01-11",
+        "end_date": "2026-01-31",
+        "status": "cancelled",
+        "excess": 0,
+        "covered_destinations": [
+          "USA"
+        ],
+        "premium_paid": 483.33
+      },
+      {
+        "policy_number": "TRV-2026-100712",
+        "product": "Laya Healthcare Medicare Travel Insurance",
+        "type": "travel",
+        "trip_type": "annual",
+        "version": "post-nov-2025",
+        "start_date": "2026-04-09",
+        "end_date": "2027-04-09",
+        "status": "active",
+        "excess": 50,
+        "covered_destinations": [
+          "Canada"
+        ],
+        "premium_paid": 400.4
+      }
+    ],
+    "claims": []
+  },
+  {
+    "id": "USR072",
+    "name": "Aoibhin Walsh",
+    "gender": "F",
+    "date_of_birth": "1966-01-30",
+    "age": 60,
+    "email": "aoibhin.walsh@email.ie",
+    "phone": "+353 88 435 1040",
+    "address": {
+      "line1": "199 Main Street",
+      "city": "Sligo",
+      "postcode": "D01",
+      "country": "Ireland"
+    },
+    "pre_existing_conditions": [
+      "None"
+    ],
+    "policies": [
+      {
+        "policy_number": "CHE-2026-200720",
+        "product": "Car Hire Excess Insurance Single Trip",
+        "type": "car_hire",
+        "trip_type": "single",
+        "version": "post-nov-2025",
+        "start_date": "2026-05-26",
+        "end_date": "2026-06-15",
+        "status": "expired",
+        "excess": 750,
+        "covered_destinations": [
+          "Worldwide"
+        ],
+        "premium_paid": 79.95
+      },
+      {
+        "policy_number": "CHE-2025-200721",
+        "product": "Car Hire Excess Insurance Annual Multi-Trip with CDW and SLI",
+        "type": "car_hire",
+        "trip_type": "annual",
+        "version": "post-nov-2025",
+        "start_date": "2025-12-19",
+        "end_date": "2026-12-19",
+        "status": "expired",
+        "excess": 1500,
+        "covered_destinations": [
+          "Worldwide"
+        ],
+        "premium_paid": 62.75
+      }
+    ],
+    "claims": [
+      {
+        "claim_id": "CLM-2026-01440",
+        "policy_number": "CHE-2025-200721",
+        "date": "2026-05-30",
+        "type": "Third Party Liability",
+        "amount_claimed": 4014.07,
+        "amount_paid": 3055.27,
+        "status": "settled",
+        "description": "Third Party Liability during trip to Caribbean."
+      }
+    ]
+  },
+  {
+    "id": "USR073",
+    "name": "Niamh Nolan",
+    "gender": "F",
+    "date_of_birth": "1977-11-03",
+    "age": 48,
+    "email": "niamh.nolan@email.ie",
+    "phone": "+353 85 184 7092",
+    "address": {
+      "line1": "171 Church Road",
+      "city": "Limerick",
+      "postcode": "H91",
+      "country": "Ireland"
+    },
+    "pre_existing_conditions": [
+      "None"
+    ],
+    "policies": [
+      {
+        "policy_number": "TRV-2025-100730",
+        "product": "Backpacker Travel Insurance",
+        "type": "travel",
+        "trip_type": "single",
+        "version": "pre-nov-2025",
+        "start_date": "2025-10-24",
+        "end_date": "2025-11-05",
+        "status": "active",
+        "excess": 200,
+        "covered_destinations": [
+          "Canada",
+          "Worldwide"
+        ],
+        "premium_paid": 380.53
+      }
+    ],
+    "claims": [
+      {
+        "claim_id": "CLM-2025-01460",
+        "policy_number": "TRV-2025-100730",
+        "date": "2025-11-05",
+        "type": "Trip Cancellation",
+        "amount_claimed": 4216.17,
+        "amount_paid": 2739.22,
+        "status": "settled",
+        "description": "Flight Delay during trip to Caribbean."
+      },
+      {
+        "claim_id": "CLM-2025-01461",
+        "policy_number": "TRV-2025-100730",
+        "date": "2025-10-24",
+        "type": "Trip Cancellation",
+        "amount_claimed": 4960.82,
+        "amount_paid": 0.0,
+        "status": "rejected",
+        "description": "Emergency Repatriation during trip to USA."
+      },
+      {
+        "claim_id": "CLM-2025-01462",
+        "policy_number": "TRV-2025-100730",
+        "date": "2025-11-03",
+        "type": "Medical Emergency",
+        "amount_claimed": 1648.95,
+        "amount_paid": 0.0,
+        "status": "pending",
+        "description": "Emergency Repatriation during trip to Worldwide."
+      }
+    ]
+  },
+  {
+    "id": "USR074",
+    "name": "Grainne Byrne",
+    "gender": "F",
+    "date_of_birth": "1979-04-03",
+    "age": 47,
+    "email": "grainne.byrne@email.ie",
+    "phone": "+353 87 810 3165",
+    "address": {
+      "line1": "123 Main Street",
+      "city": "Cork",
+      "postcode": "D02",
+      "country": "Ireland"
+    },
+    "pre_existing_conditions": [
+      "Asthma"
+    ],
+    "policies": [
+      {
+        "policy_number": "TRV-2025-100740",
+        "product": "Single & Annual Multi-Trip Travel Insurance",
+        "type": "travel",
+        "trip_type": "single",
+        "version": "pre-nov-2025",
+        "start_date": "2025-08-07",
+        "end_date": "2025-08-23",
+        "status": "active",
+        "excess": 50,
+        "covered_destinations": [
+          "Europe",
+          "Canada"
+        ],
+        "premium_paid": 350.11
+      }
+    ],
+    "claims": []
+  },
+  {
+    "id": "USR075",
+    "name": "Niamh Walsh",
+    "gender": "F",
+    "date_of_birth": "1964-08-17",
+    "age": 61,
+    "email": "niamh.walsh@email.ie",
+    "phone": "+353 83 353 5537",
+    "address": {
+      "line1": "166 Main Street",
+      "city": "Kilkenny",
+      "postcode": "T12",
+      "country": "Ireland"
+    },
+    "pre_existing_conditions": [
+      "Asthma"
+    ],
+    "policies": [
+      {
+        "policy_number": "TRV-2026-100750",
+        "product": "Single & Annual Multi-Trip Travel Insurance",
+        "type": "travel",
+        "trip_type": "single",
+        "version": "post-nov-2025",
+        "start_date": "2026-04-25",
+        "end_date": "2026-05-12",
+        "status": "active",
+        "excess": 50,
+        "covered_destinations": [
+          "Australia"
+        ],
+        "premium_paid": 115.57
+      },
+      {
+        "policy_number": "TRV-2025-100751",
+        "product": "Laya Healthcare Medicare Travel Insurance",
+        "type": "travel",
+        "trip_type": "annual",
+        "version": "pre-nov-2025",
+        "start_date": "2025-09-18",
+        "end_date": "2026-09-18",
+        "status": "active",
+        "excess": 150,
+        "covered_destinations": [
+          "Canada",
+          "USA"
+        ],
+        "premium_paid": 400.36
+      }
+    ],
+    "claims": [
+      {
+        "claim_id": "CLM-2026-01500",
+        "policy_number": "TRV-2025-100751",
+        "date": "2026-07-16",
+        "type": "Flight Delay",
+        "amount_claimed": 3704.04,
+        "amount_paid": 0.0,
+        "status": "pending",
+        "description": "Baggage Loss during trip to Canada."
+      }
+    ]
+  },
+  {
+    "id": "USR076",
+    "name": "Aoife O'Sullivan",
+    "gender": "F",
+    "date_of_birth": "1969-03-20",
+    "age": 57,
+    "email": "aoife.osullivan@email.ie",
+    "phone": "+353 87 533 7590",
+    "address": {
+      "line1": "22 Station Road",
+      "city": "Tralee",
+      "postcode": "F91",
+      "country": "Ireland"
+    },
+    "pre_existing_conditions": [
+      "Heart Condition"
+    ],
+    "policies": [
+      {
+        "policy_number": "TRV-2025-100760",
+        "product": "Backpacker Travel Insurance",
+        "type": "travel",
+        "trip_type": "single",
+        "version": "pre-nov-2025",
+        "start_date": "2025-10-30",
+        "end_date": "2025-11-16",
+        "status": "expired",
+        "excess": 0,
+        "covered_destinations": [
+          "Caribbean"
+        ],
+        "premium_paid": 487.58
+      },
+      {
+        "policy_number": "TRV-2026-100761",
+        "product": "Backpacker Travel Insurance",
+        "type": "travel",
+        "trip_type": "single",
+        "version": "post-nov-2025",
+        "start_date": "2026-04-23",
+        "end_date": "2026-05-09",
+        "status": "active",
+        "excess": 0,
+        "covered_destinations": [
+          "Worldwide"
+        ],
+        "premium_paid": 354.71
+      },
+      {
+        "policy_number": "TRV-2026-100762",
+        "product": "Laya Healthcare Medicare Travel Insurance",
+        "type": "travel",
+        "trip_type": "annual",
+        "version": "post-nov-2025",
+        "start_date": "2026-01-02",
+        "end_date": "2027-01-02",
+        "status": "active",
+        "excess": 200,
+        "covered_destinations": [
+          "Canada",
+          "Europe"
+        ],
+        "premium_paid": 435.13
+      }
+    ],
+    "claims": [
+      {
+        "claim_id": "CLM-2026-01520",
+        "policy_number": "TRV-2026-100761",
+        "date": "2026-04-24",
+        "type": "Personal Accident",
+        "amount_claimed": 4628.38,
+        "amount_paid": 0.0,
+        "status": "rejected",
+        "description": "Baggage Loss during trip to Asia."
+      }
+    ]
+  },
+  {
+    "id": "USR077",
+    "name": "Ronan O'Brien",
+    "gender": "M",
+    "date_of_birth": "1973-11-25",
+    "age": 52,
+    "email": "ronan.obrien@email.ie",
+    "phone": "+353 85 815 8167",
+    "address": {
+      "line1": "187 Park Avenue",
+      "city": "Cork",
+      "postcode": "X91",
+      "country": "Ireland"
+    },
+    "pre_existing_conditions": [
+      "None"
+    ],
+    "policies": [
+      {
+        "policy_number": "CHE-2026-200770",
+        "product": "Car Hire Excess Insurance Single Trip",
+        "type": "car_hire",
+        "trip_type": "single",
+        "version": "post-nov-2025",
+        "start_date": "2026-03-02",
+        "end_date": "2026-03-14",
+        "status": "expired",
+        "excess": 1500,
+        "covered_destinations": [
+          "Asia"
+        ],
+        "premium_paid": 133.83
+      }
+    ],
+    "claims": []
+  },
+  {
+    "id": "USR078",
+    "name": "Sean Gallagher",
+    "gender": "M",
+    "date_of_birth": "1965-03-15",
+    "age": 61,
+    "email": "sean.gallagher@email.ie",
+    "phone": "+353 81 350 1753",
+    "address": {
+      "line1": "121 River Lane",
+      "city": "Drogheda",
+      "postcode": "F91",
+      "country": "Ireland"
+    },
+    "pre_existing_conditions": [
+      "None"
+    ],
+    "policies": [
+      {
+        "policy_number": "TRV-2026-100780",
+        "product": "Laya Healthcare Medicare Travel Insurance",
+        "type": "travel",
+        "trip_type": "annual",
+        "version": "post-nov-2025",
+        "start_date": "2026-05-03",
+        "end_date": "2027-05-03",
+        "status": "active",
+        "excess": 0,
+        "covered_destinations": [
+          "Asia"
+        ],
+        "premium_paid": 86.59
+      },
+      {
+        "policy_number": "TRV-2026-100781",
+        "product": "Backpacker Travel Insurance",
+        "type": "travel",
+        "trip_type": "single",
+        "version": "post-nov-2025",
+        "start_date": "2026-02-23",
+        "end_date": "2026-03-10",
+        "status": "active",
+        "excess": 100,
+        "covered_destinations": [
+          "Asia"
+        ],
+        "premium_paid": 166.82
+      },
+      {
+        "policy_number": "CHE-2025-200782",
+        "product": "Car Hire Excess Insurance Single Trip",
+        "type": "car_hire",
+        "trip_type": "single",
+        "version": "pre-nov-2025",
+        "start_date": "2025-06-16",
+        "end_date": "2025-06-28",
+        "status": "active",
+        "excess": 1500,
+        "covered_destinations": [
+          "Worldwide"
+        ],
+        "premium_paid": 83.52
+      }
+    ],
+    "claims": [
+      {
+        "claim_id": "CLM-2025-01560",
+        "policy_number": "CHE-2025-200782",
+        "date": "2025-06-24",
+        "type": "Theft of Vehicle",
+        "amount_claimed": 1928.59,
+        "amount_paid": 0.0,
+        "status": "rejected",
+        "description": "Third Party Liability during trip to USA."
+      },
+      {
+        "claim_id": "CLM-2025-01561",
+        "policy_number": "CHE-2025-200782",
+        "date": "2025-06-20",
+        "type": "Vehicle Damage",
+        "amount_claimed": 3911.98,
+        "amount_paid": 2704.59,
+        "status": "settled",
+        "description": "Vehicle Damage during trip to Canada."
+      }
+    ]
+  },
+  {
+    "id": "USR079",
+    "name": "Niall Kelly",
+    "gender": "M",
+    "date_of_birth": "1984-10-19",
+    "age": 41,
+    "email": "niall.kelly@email.ie",
+    "phone": "+353 84 254 1104",
+    "address": {
+      "line1": "105 Oak Street",
+      "city": "Sligo",
+      "postcode": "D06",
+      "country": "Ireland"
+    },
+    "pre_existing_conditions": [
+      "Asthma"
+    ],
+    "policies": [
+      {
+        "policy_number": "TRV-2025-100790",
+        "product": "Laya Healthcare Medicare Travel Insurance",
+        "type": "travel",
+        "trip_type": "annual",
+        "version": "post-nov-2025",
+        "start_date": "2025-11-11",
+        "end_date": "2026-11-11",
+        "status": "active",
+        "excess": 0,
+        "covered_destinations": [
+          "Australia"
+        ],
+        "premium_paid": 377.2
+      },
+      {
+        "policy_number": "TRV-2025-100791",
+        "product": "Laya Healthcare Medicare Travel Insurance",
+        "type": "travel",
+        "trip_type": "annual",
+        "version": "pre-nov-2025",
+        "start_date": "2025-06-24",
+        "end_date": "2026-06-24",
+        "status": "active",
+        "excess": 0,
+        "covered_destinations": [
+          "Canada",
+          "Worldwide"
+        ],
+        "premium_paid": 536.04
+      }
+    ],
+    "claims": [
+      {
+        "claim_id": "CLM-2025-01580",
+        "policy_number": "TRV-2025-100790",
+        "date": "2025-11-15",
+        "type": "Personal Accident",
+        "amount_claimed": 1970.81,
+        "amount_paid": 0.0,
+        "status": "pending",
+        "description": "Baggage Loss during trip to Asia."
+      },
+      {
+        "claim_id": "CLM-2026-01581",
+        "policy_number": "TRV-2025-100790",
+        "date": "2026-03-15",
+        "type": "Trip Cancellation",
+        "amount_claimed": 2426.85,
+        "amount_paid": 0.0,
+        "status": "rejected",
+        "description": "Emergency Repatriation during trip to Australia."
+      }
+    ]
+  },
+  {
+    "id": "USR080",
+    "name": "Aoife O'Neill",
+    "gender": "F",
+    "date_of_birth": "1960-01-24",
+    "age": 66,
+    "email": "aoife.oneill@email.ie",
+    "phone": "+353 82 694 2565",
+    "address": {
+      "line1": "130 Church Road",
+      "city": "Sligo",
+      "postcode": "D08",
+      "country": "Ireland"
+    },
+    "pre_existing_conditions": [
+      "None"
+    ],
+    "policies": [
+      {
+        "policy_number": "TRV-2026-100800",
+        "product": "Single & Annual Multi-Trip Travel Insurance",
+        "type": "travel",
+        "trip_type": "single",
+        "version": "post-nov-2025",
+        "start_date": "2026-01-01",
+        "end_date": "2026-01-15",
+        "status": "active",
+        "excess": 0,
+        "covered_destinations": [
+          "Asia"
+        ],
+        "premium_paid": 585.73
+      }
+    ],
+    "claims": [
+      {
+        "claim_id": "CLM-2026-01600",
+        "policy_number": "TRV-2026-100800",
+        "date": "2026-01-15",
+        "type": "Emergency Repatriation",
+        "amount_claimed": 4258.42,
+        "amount_paid": 0.0,
+        "status": "rejected",
+        "description": "Baggage Loss during trip to Caribbean."
+      }
+    ]
+  },
+  {
+    "id": "USR081",
+    "name": "Donal Quinn",
+    "gender": "M",
+    "date_of_birth": "1962-10-17",
+    "age": 63,
+    "email": "donal.quinn@email.ie",
+    "phone": "+353 81 320 6370",
+    "address": {
+      "line1": "38 Main Street",
+      "city": "Sligo",
+      "postcode": "D04",
+      "country": "Ireland"
+    },
+    "pre_existing_conditions": [
+      "Asthma"
+    ],
+    "policies": [
+      {
+        "policy_number": "TRV-2025-100810",
+        "product": "Backpacker Travel Insurance",
+        "type": "travel",
+        "trip_type": "single",
+        "version": "post-nov-2025",
+        "start_date": "2025-12-19",
+        "end_date": "2026-01-06",
+        "status": "active",
+        "excess": 100,
+        "covered_destinations": [
+          "USA",
+          "Europe"
+        ],
+        "premium_paid": 245.39
+      }
+    ],
+    "claims": [
+      {
+        "claim_id": "CLM-2025-01620",
+        "policy_number": "TRV-2025-100810",
+        "date": "2025-12-22",
+        "type": "Baggage Loss",
+        "amount_claimed": 945.97,
+        "amount_paid": 737.69,
+        "status": "settled",
+        "description": "Flight Delay during trip to Europe."
+      },
+      {
+        "claim_id": "CLM-2026-01621",
+        "policy_number": "TRV-2025-100810",
+        "date": "2026-01-05",
+        "type": "Flight Delay",
+        "amount_claimed": 1919.78,
+        "amount_paid": 1498.9,
+        "status": "settled",
+        "description": "Baggage Loss during trip to Canada."
+      },
+      {
+        "claim_id": "CLM-2025-01622",
+        "policy_number": "TRV-2025-100810",
+        "date": "2025-12-22",
+        "type": "Emergency Repatriation",
+        "amount_claimed": 634.02,
+        "amount_paid": 0.0,
+        "status": "pending",
+        "description": "Emergency Repatriation during trip to Australia."
+      }
+    ]
+  },
+  {
+    "id": "USR082",
+    "name": "Sorcha Kennedy",
+    "gender": "F",
+    "date_of_birth": "1962-03-13",
+    "age": 64,
+    "email": "sorcha.kennedy@email.ie",
+    "phone": "+353 82 696 5240",
+    "address": {
+      "line1": "20 Oak Street",
+      "city": "Waterford",
+      "postcode": "D08",
+      "country": "Ireland"
+    },
+    "pre_existing_conditions": [
+      "None"
+    ],
+    "policies": [
+      {
+        "policy_number": "TRV-2026-100820",
+        "product": "Backpacker Travel Insurance",
+        "type": "travel",
+        "trip_type": "single",
+        "version": "post-nov-2025",
+        "start_date": "2026-01-18",
+        "end_date": "2026-02-02",
+        "status": "active",
+        "excess": 200,
+        "covered_destinations": [
+          "Europe",
+          "USA"
+        ],
+        "premium_paid": 209.92
+      }
+    ],
+    "claims": [
+      {
+        "claim_id": "CLM-2026-01640",
+        "policy_number": "TRV-2026-100820",
+        "date": "2026-01-22",
+        "type": "Baggage Loss",
+        "amount_claimed": 1151.04,
+        "amount_paid": 0.0,
+        "status": "rejected",
+        "description": "Emergency Repatriation during trip to Asia."
+      }
+    ]
+  },
+  {
+    "id": "USR083",
+    "name": "Oisin Smith",
+    "gender": "M",
+    "date_of_birth": "1964-02-15",
+    "age": 62,
+    "email": "oisin.smith@email.ie",
+    "phone": "+353 84 758 9614",
+    "address": {
+      "line1": "64 Station Road",
+      "city": "Kilkenny",
+      "postcode": "D02",
+      "country": "Ireland"
+    },
+    "pre_existing_conditions": [
+      "None"
+    ],
+    "policies": [
+      {
+        "policy_number": "CHE-2025-200830",
+        "product": "Car Hire Excess Insurance Single Trip",
+        "type": "car_hire",
+        "trip_type": "single",
+        "version": "pre-nov-2025",
+        "start_date": "2025-08-26",
+        "end_date": "2025-09-16",
+        "status": "active",
+        "excess": 1500,
+        "covered_destinations": [
+          "Caribbean"
+        ],
+        "premium_paid": 171.47
+      }
+    ],
+    "claims": [
+      {
+        "claim_id": "CLM-2025-01660",
+        "policy_number": "CHE-2025-200830",
+        "date": "2025-09-08",
+        "type": "Third Party Liability",
+        "amount_claimed": 1029.47,
+        "amount_paid": 991.71,
+        "status": "settled",
+        "description": "Third Party Liability during trip to Caribbean."
+      },
+      {
+        "claim_id": "CLM-2025-01661",
+        "policy_number": "CHE-2025-200830",
+        "date": "2025-08-30",
+        "type": "Windscreen Damage",
+        "amount_claimed": 366.32,
+        "amount_paid": 314.64,
+        "status": "settled",
+        "description": "Windscreen Damage during trip to Australia."
+      },
+      {
+        "claim_id": "CLM-2025-01662",
+        "policy_number": "CHE-2025-200830",
+        "date": "2025-09-10",
+        "type": "Windscreen Damage",
+        "amount_claimed": 492.7,
+        "amount_paid": 0.0,
+        "status": "pending",
+        "description": "Theft of Vehicle during trip to Caribbean."
+      }
+    ]
+  },
+  {
+    "id": "USR084",
+    "name": "Maeve Doherty",
+    "gender": "F",
+    "date_of_birth": "1984-06-04",
+    "age": 42,
+    "email": "maeve.doherty@email.ie",
+    "phone": "+353 83 448 3907",
+    "address": {
+      "line1": "83 Oak Street",
+      "city": "Drogheda",
+      "postcode": "T12",
+      "country": "Ireland"
+    },
+    "pre_existing_conditions": [
+      "None"
+    ],
+    "policies": [
+      {
+        "policy_number": "TRV-2025-100840",
+        "product": "Backpacker Travel Insurance",
+        "type": "travel",
+        "trip_type": "single",
+        "version": "pre-nov-2025",
+        "start_date": "2025-10-17",
+        "end_date": "2025-10-26",
+        "status": "active",
+        "excess": 0,
+        "covered_destinations": [
+          "Europe"
+        ],
+        "premium_paid": 245.82
+      },
+      {
+        "policy_number": "TRV-2026-100841",
+        "product": "Backpacker Travel Insurance",
+        "type": "travel",
+        "trip_type": "single",
+        "version": "post-nov-2025",
+        "start_date": "2026-02-27",
+        "end_date": "2026-03-11",
+        "status": "active",
+        "excess": 200,
+        "covered_destinations": [
+          "Europe"
+        ],
+        "premium_paid": 599.79
+      },
+      {
+        "policy_number": "TRV-2026-100842",
+        "product": "Backpacker Travel Insurance",
+        "type": "travel",
+        "trip_type": "single",
+        "version": "post-nov-2025",
+        "start_date": "2026-03-01",
+        "end_date": "2026-03-21",
+        "status": "expired",
+        "excess": 0,
+        "covered_destinations": [
+          "Australia"
+        ],
+        "premium_paid": 477.31
+      }
+    ],
+    "claims": [
+      {
+        "claim_id": "CLM-2025-01680",
+        "policy_number": "TRV-2025-100840",
+        "date": "2025-10-19",
+        "type": "Emergency Repatriation",
+        "amount_claimed": 1335.45,
+        "amount_paid": 0.0,
+        "status": "pending",
+        "description": "Emergency Repatriation during trip to Worldwide."
+      },
+      {
+        "claim_id": "CLM-2026-01681",
+        "policy_number": "TRV-2026-100842",
+        "date": "2026-03-12",
+        "type": "Trip Cancellation",
+        "amount_claimed": 4748.28,
+        "amount_paid": 3918.49,
+        "status": "settled",
+        "description": "Flight Delay during trip to Australia."
+      },
+      {
+        "claim_id": "CLM-2026-01682",
+        "policy_number": "TRV-2026-100842",
+        "date": "2026-03-10",
+        "type": "Trip Cancellation",
+        "amount_claimed": 1042.67,
+        "amount_paid": 663.25,
+        "status": "settled",
+        "description": "Personal Accident during trip to USA."
+      },
+      {
+        "claim_id": "CLM-2026-01683",
+        "policy_number": "TRV-2026-100842",
+        "date": "2026-03-01",
+        "type": "Personal Accident",
+        "amount_claimed": 2726.95,
+        "amount_paid": 1998.02,
+        "status": "settled",
+        "description": "Trip Cancellation during trip to Canada."
+      }
+    ]
+  },
+  {
+    "id": "USR085",
+    "name": "Donal Smith",
+    "gender": "M",
+    "date_of_birth": "1994-09-26",
+    "age": 31,
+    "email": "donal.smith@email.ie",
+    "phone": "+353 86 328 3872",
+    "address": {
+      "line1": "97 Castle Drive",
+      "city": "Cork",
+      "postcode": "X91",
+      "country": "Ireland"
+    },
+    "pre_existing_conditions": [
+      "Diabetes Type 2"
+    ],
+    "policies": [
+      {
+        "policy_number": "CHE-2026-200850",
+        "product": "Car Hire Excess Insurance Annual Multi-Trip",
+        "type": "car_hire",
+        "trip_type": "annual",
+        "version": "post-nov-2025",
+        "start_date": "2026-05-27",
+        "end_date": "2027-05-27",
+        "status": "active",
+        "excess": 1500,
+        "covered_destinations": [
+          "Worldwide"
+        ],
+        "premium_paid": 133.76
+      },
+      {
+        "policy_number": "TRV-2026-100851",
+        "product": "Single & Annual Multi-Trip Travel Insurance",
+        "type": "travel",
+        "trip_type": "single",
+        "version": "post-nov-2025",
+        "start_date": "2026-01-10",
+        "end_date": "2026-01-29",
+        "status": "cancelled",
+        "excess": 150,
+        "covered_destinations": [
+          "Asia"
+        ],
+        "premium_paid": 417.57
+      }
+    ],
+    "claims": []
+  },
+  {
+    "id": "USR086",
+    "name": "Niall Murphy",
+    "gender": "M",
+    "date_of_birth": "2002-07-23",
+    "age": 24,
+    "email": "niall.murphy@email.ie",
+    "phone": "+353 86 274 7151",
+    "address": {
+      "line1": "42 Main Street",
+      "city": "Ennis",
+      "postcode": "H91",
+      "country": "Ireland"
+    },
+    "pre_existing_conditions": [
+      "Heart Condition"
+    ],
+    "policies": [
+      {
+        "policy_number": "TRV-2025-100860",
+        "product": "Laya Healthcare Medicare Travel Insurance",
+        "type": "travel",
+        "trip_type": "annual",
+        "version": "post-nov-2025",
+        "start_date": "2025-11-10",
+        "end_date": "2026-11-10",
+        "status": "active",
+        "excess": 50,
+        "covered_destinations": [
+          "Caribbean"
+        ],
+        "premium_paid": 412.62
+      },
+      {
+        "policy_number": "TRV-2025-100861",
+        "product": "Single & Annual Multi-Trip Travel Insurance",
+        "type": "travel",
+        "trip_type": "single",
+        "version": "pre-nov-2025",
+        "start_date": "2025-09-30",
+        "end_date": "2025-10-12",
+        "status": "active",
+        "excess": 100,
+        "covered_destinations": [
+          "Canada"
+        ],
+        "premium_paid": 167.3
+      },
+      {
+        "policy_number": "TRV-2025-100862",
+        "product": "Backpacker Travel Insurance",
+        "type": "travel",
+        "trip_type": "single",
+        "version": "pre-nov-2025",
+        "start_date": "2025-09-16",
+        "end_date": "2025-09-26",
+        "status": "active",
+        "excess": 0,
+        "covered_destinations": [
+          "Asia"
+        ],
+        "premium_paid": 262.25
+      }
+    ],
+    "claims": [
+      {
+        "claim_id": "CLM-2026-01720",
+        "policy_number": "TRV-2025-100860",
+        "date": "2026-06-12",
+        "type": "Flight Delay",
+        "amount_claimed": 4851.69,
+        "amount_paid": 0.0,
+        "status": "rejected",
+        "description": "Flight Delay during trip to Worldwide."
+      },
+      {
+        "claim_id": "CLM-2026-01721",
+        "policy_number": "TRV-2025-100860",
+        "date": "2026-05-21",
+        "type": "Personal Accident",
+        "amount_claimed": 686.86,
+        "amount_paid": 0.0,
+        "status": "rejected",
+        "description": "Emergency Repatriation during trip to Canada."
+      },
+      {
+        "claim_id": "CLM-2025-01722",
+        "policy_number": "TRV-2025-100862",
+        "date": "2025-09-16",
+        "type": "Baggage Loss",
+        "amount_claimed": 1615.56,
+        "amount_paid": 0.0,
+        "status": "pending",
+        "description": "Medical Emergency during trip to Europe."
+      }
+    ]
+  },
+  {
+    "id": "USR087",
+    "name": "Brian Healy",
+    "gender": "M",
+    "date_of_birth": "1987-07-11",
+    "age": 39,
+    "email": "brian.healy@email.ie",
+    "phone": "+353 84 274 5781",
+    "address": {
+      "line1": "21 Mill Road",
+      "city": "Drogheda",
+      "postcode": "D01",
+      "country": "Ireland"
+    },
+    "pre_existing_conditions": [
+      "None"
+    ],
+    "policies": [
+      {
+        "policy_number": "CHE-2026-200870",
+        "product": "Car Hire Excess Insurance Single Trip",
+        "type": "car_hire",
+        "trip_type": "single",
+        "version": "post-nov-2025",
+        "start_date": "2026-04-07",
+        "end_date": "2026-04-28",
+        "status": "active",
+        "excess": 1500,
+        "covered_destinations": [
+          "Worldwide"
+        ],
+        "premium_paid": 65.14
+      },
+      {
+        "policy_number": "TRV-2025-100871",
+        "product": "Single & Annual Multi-Trip Travel Insurance",
+        "type": "travel",
+        "trip_type": "single",
+        "version": "post-nov-2025",
+        "start_date": "2025-12-27",
+        "end_date": "2026-01-14",
+        "status": "active",
+        "excess": 200,
+        "covered_destinations": [
+          "Asia",
+          "Worldwide"
+        ],
+        "premium_paid": 455.46
+      }
+    ],
+    "claims": [
+      {
+        "claim_id": "CLM-2026-01740",
+        "policy_number": "CHE-2026-200870",
+        "date": "2026-04-19",
+        "type": "Theft of Vehicle",
+        "amount_claimed": 2944.5,
+        "amount_paid": 0.0,
+        "status": "rejected",
+        "description": "Vehicle Damage during trip to Worldwide."
+      },
+      {
+        "claim_id": "CLM-2026-01741",
+        "policy_number": "TRV-2025-100871",
+        "date": "2026-01-05",
+        "type": "Trip Cancellation",
+        "amount_claimed": 4154.71,
+        "amount_paid": 0.0,
+        "status": "rejected",
+        "description": "Medical Emergency during trip to Europe."
+      }
+    ]
+  },
+  {
+    "id": "USR088",
+    "name": "Sorcha Doherty",
+    "gender": "F",
+    "date_of_birth": "1981-12-09",
+    "age": 44,
+    "email": "sorcha.doherty@email.ie",
+    "phone": "+353 88 686 4860",
+    "address": {
+      "line1": "122 Castle Drive",
+      "city": "Waterford",
+      "postcode": "D02",
+      "country": "Ireland"
+    },
+    "pre_existing_conditions": [
+      "None"
+    ],
+    "policies": [
+      {
+        "policy_number": "TRV-2025-100880",
+        "product": "Single & Annual Multi-Trip Travel Insurance",
+        "type": "travel",
+        "trip_type": "single",
+        "version": "post-nov-2025",
+        "start_date": "2025-12-07",
+        "end_date": "2025-12-28",
+        "status": "expired",
+        "excess": 150,
+        "covered_destinations": [
+          "Europe",
+          "Worldwide"
+        ],
+        "premium_paid": 272.09
+      },
+      {
+        "policy_number": "TRV-2025-100881",
+        "product": "Single & Annual Multi-Trip Travel Insurance",
+        "type": "travel",
+        "trip_type": "single",
+        "version": "pre-nov-2025",
+        "start_date": "2025-10-16",
+        "end_date": "2025-11-01",
+        "status": "active",
+        "excess": 0,
+        "covered_destinations": [
+          "Europe"
+        ],
+        "premium_paid": 158.59
+      },
+      {
+        "policy_number": "CHE-2026-200882",
+        "product": "Car Hire Excess Insurance Annual Multi-Trip",
+        "type": "car_hire",
+        "trip_type": "annual",
+        "version": "post-nov-2025",
+        "start_date": "2026-03-29",
+        "end_date": "2027-03-29",
+        "status": "active",
+        "excess": 750,
+        "covered_destinations": [
+          "Canada"
+        ],
+        "premium_paid": 128.58
+      }
+    ],
+    "claims": []
+  },
+  {
+    "id": "USR089",
+    "name": "Ciara Kennedy",
+    "gender": "F",
+    "date_of_birth": "1985-08-15",
+    "age": 40,
+    "email": "ciara.kennedy@email.ie",
+    "phone": "+353 87 139 7484",
+    "address": {
+      "line1": "85 Park Avenue",
+      "city": "Tralee",
+      "postcode": "F91",
+      "country": "Ireland"
+    },
+    "pre_existing_conditions": [
+      "None"
+    ],
+    "policies": [
+      {
+        "policy_number": "CHE-2025-200890",
+        "product": "Car Hire Excess Insurance Single Trip",
+        "type": "car_hire",
+        "trip_type": "single",
+        "version": "pre-nov-2025",
+        "start_date": "2025-08-01",
+        "end_date": "2025-08-20",
+        "status": "active",
+        "excess": 1500,
+        "covered_destinations": [
+          "USA"
+        ],
+        "premium_paid": 67.66
+      },
+      {
+        "policy_number": "CHE-2025-200891",
+        "product": "Car Hire Excess Insurance Single Trip",
+        "type": "car_hire",
+        "trip_type": "single",
+        "version": "pre-nov-2025",
+        "start_date": "2025-06-22",
+        "end_date": "2025-07-05",
+        "status": "active",
+        "excess": 500,
+        "covered_destinations": [
+          "USA"
+        ],
+        "premium_paid": 198.12
+      },
+      {
+        "policy_number": "CHE-2025-200892",
+        "product": "Car Hire Excess Insurance Annual Multi-Trip with CDW and SLI",
+        "type": "car_hire",
+        "trip_type": "annual",
+        "version": "pre-nov-2025",
+        "start_date": "2025-08-15",
+        "end_date": "2026-08-15",
+        "status": "expired",
+        "excess": 1000,
+        "covered_destinations": [
+          "Canada"
+        ],
+        "premium_paid": 91.16
+      }
+    ],
+    "claims": [
+      {
+        "claim_id": "CLM-2025-01780",
+        "policy_number": "CHE-2025-200890",
+        "date": "2025-08-18",
+        "type": "Third Party Liability",
+        "amount_claimed": 2107.3,
+        "amount_paid": 0.0,
+        "status": "pending",
+        "description": "Windscreen Damage during trip to Canada."
+      },
+      {
+        "claim_id": "CLM-2025-01781",
+        "policy_number": "CHE-2025-200890",
+        "date": "2025-08-01",
+        "type": "Vehicle Damage",
+        "amount_claimed": 3975.44,
+        "amount_paid": 0.0,
+        "status": "rejected",
+        "description": "Windscreen Damage during trip to USA."
+      },
+      {
+        "claim_id": "CLM-2025-01782",
+        "policy_number": "CHE-2025-200891",
+        "date": "2025-07-01",
+        "type": "Vehicle Damage",
+        "amount_claimed": 3840.21,
+        "amount_paid": 3724.89,
+        "status": "settled",
+        "description": "Third Party Liability during trip to Canada."
+      },
+      {
+        "claim_id": "CLM-2025-01783",
+        "policy_number": "CHE-2025-200891",
+        "date": "2025-06-30",
+        "type": "Third Party Liability",
+        "amount_claimed": 4424.65,
+        "amount_paid": 0.0,
+        "status": "rejected",
+        "description": "Windscreen Damage during trip to Asia."
+      },
+      {
+        "claim_id": "CLM-2025-01784",
+        "policy_number": "CHE-2025-200891",
+        "date": "2025-06-29",
+        "type": "Vehicle Damage",
+        "amount_claimed": 2945.71,
+        "amount_paid": 0.0,
+        "status": "rejected",
+        "description": "Theft of Vehicle during trip to Worldwide."
+      }
+    ]
+  },
+  {
+    "id": "USR090",
+    "name": "Roisin Doyle",
+    "gender": "F",
+    "date_of_birth": "1960-11-27",
+    "age": 65,
+    "email": "roisin.doyle@email.ie",
+    "phone": "+353 87 238 9589",
+    "address": {
+      "line1": "146 Oak Street",
+      "city": "Kilkenny",
+      "postcode": "D08",
+      "country": "Ireland"
+    },
+    "pre_existing_conditions": [
+      "None"
+    ],
+    "policies": [
+      {
+        "policy_number": "TRV-2026-100900",
+        "product": "Backpacker Travel Insurance",
+        "type": "travel",
+        "trip_type": "single",
+        "version": "post-nov-2025",
+        "start_date": "2026-05-23",
+        "end_date": "2026-06-09",
+        "status": "active",
+        "excess": 0,
+        "covered_destinations": [
+          "USA"
+        ],
+        "premium_paid": 585.7
+      },
+      {
+        "policy_number": "CHE-2025-200901",
+        "product": "Car Hire Excess Insurance Annual Multi-Trip",
+        "type": "car_hire",
+        "trip_type": "annual",
+        "version": "post-nov-2025",
+        "start_date": "2025-11-12",
+        "end_date": "2026-11-12",
+        "status": "expired",
+        "excess": 1000,
+        "covered_destinations": [
+          "Asia"
+        ],
+        "premium_paid": 156.61
+      }
+    ],
+    "claims": [
+      {
+        "claim_id": "CLM-2026-01800",
+        "policy_number": "TRV-2026-100900",
+        "date": "2026-05-29",
+        "type": "Emergency Repatriation",
+        "amount_claimed": 4584.48,
+        "amount_paid": 0.0,
+        "status": "rejected",
+        "description": "Flight Delay during trip to Canada."
+      },
+      {
+        "claim_id": "CLM-2026-01801",
+        "policy_number": "TRV-2026-100900",
+        "date": "2026-06-08",
+        "type": "Trip Cancellation",
+        "amount_claimed": 4362.51,
+        "amount_paid": 3516.65,
+        "status": "settled",
+        "description": "Medical Emergency during trip to Worldwide."
+      }
+    ]
+  },
+  {
+    "id": "USR091",
+    "name": "Eoin Kelly",
+    "gender": "M",
+    "date_of_birth": "1971-03-11",
+    "age": 55,
+    "email": "eoin.kelly@email.ie",
+    "phone": "+353 88 700 6730",
+    "address": {
+      "line1": "89 Church Road",
+      "city": "Dublin",
+      "postcode": "V94",
+      "country": "Ireland"
+    },
+    "pre_existing_conditions": [
+      "Diabetes Type 2"
+    ],
+    "policies": [
+      {
+        "policy_number": "CHE-2025-200910",
+        "product": "Car Hire Excess Insurance Annual Multi-Trip with CDW and SLI",
+        "type": "car_hire",
+        "trip_type": "annual",
+        "version": "pre-nov-2025",
+        "start_date": "2025-09-10",
+        "end_date": "2026-09-10",
+        "status": "active",
+        "excess": 1000,
+        "covered_destinations": [
+          "Australia"
+        ],
+        "premium_paid": 98.94
+      }
+    ],
+    "claims": [
+      {
+        "claim_id": "CLM-2025-01820",
+        "policy_number": "CHE-2025-200910",
+        "date": "2025-09-25",
+        "type": "Windscreen Damage",
+        "amount_claimed": 1361.3,
+        "amount_paid": 0.0,
+        "status": "rejected",
+        "description": "Theft of Vehicle during trip to Canada."
+      }
+    ]
+  },
+  {
+    "id": "USR092",
+    "name": "Fionn Murphy",
+    "gender": "M",
+    "date_of_birth": "1977-05-04",
+    "age": 49,
+    "email": "fionn.murphy@email.ie",
+    "phone": "+353 87 698 2676",
+    "address": {
+      "line1": "2 Station Road",
+      "city": "Dublin",
+      "postcode": "D04",
+      "country": "Ireland"
+    },
+    "pre_existing_conditions": [
+      "Hypertension"
+    ],
+    "policies": [
+      {
+        "policy_number": "CHE-2025-200920",
+        "product": "Car Hire Excess Insurance Single Trip",
+        "type": "car_hire",
+        "trip_type": "single",
+        "version": "pre-nov-2025",
+        "start_date": "2025-09-22",
+        "end_date": "2025-10-09",
+        "status": "active",
+        "excess": 750,
+        "covered_destinations": [
+          "Asia"
+        ],
+        "premium_paid": 148.43
+      },
+      {
+        "policy_number": "TRV-2026-100921",
+        "product": "Single & Annual Multi-Trip Travel Insurance",
+        "type": "travel",
+        "trip_type": "single",
+        "version": "post-nov-2025",
+        "start_date": "2026-05-16",
+        "end_date": "2026-05-23",
+        "status": "active",
+        "excess": 150,
+        "covered_destinations": [
+          "Australia"
+        ],
+        "premium_paid": 553.99
+      },
+      {
+        "policy_number": "TRV-2025-100922",
+        "product": "Laya Healthcare Medicare Travel Insurance",
+        "type": "travel",
+        "trip_type": "annual",
+        "version": "post-nov-2025",
+        "start_date": "2025-11-04",
+        "end_date": "2026-11-04",
+        "status": "active",
+        "excess": 150,
+        "covered_destinations": [
+          "Caribbean",
+          "Worldwide"
+        ],
+        "premium_paid": 545.65
+      }
+    ],
+    "claims": []
+  },
+  {
+    "id": "USR093",
+    "name": "Grainne Walsh",
+    "gender": "F",
+    "date_of_birth": "1981-08-10",
+    "age": 44,
+    "email": "grainne.walsh@email.ie",
+    "phone": "+353 84 463 4659",
+    "address": {
+      "line1": "191 Castle Drive",
+      "city": "Cork",
+      "postcode": "T12",
+      "country": "Ireland"
+    },
+    "pre_existing_conditions": [
+      "None"
+    ],
+    "policies": [
+      {
+        "policy_number": "TRV-2025-100930",
+        "product": "Backpacker Travel Insurance",
+        "type": "travel",
+        "trip_type": "single",
+        "version": "pre-nov-2025",
+        "start_date": "2025-10-12",
+        "end_date": "2025-10-29",
+        "status": "cancelled",
+        "excess": 100,
+        "covered_destinations": [
+          "Europe"
+        ],
+        "premium_paid": 177.95
+      },
+      {
+        "policy_number": "TRV-2026-100931",
+        "product": "Backpacker Travel Insurance",
+        "type": "travel",
+        "trip_type": "single",
+        "version": "post-nov-2025",
+        "start_date": "2026-05-15",
+        "end_date": "2026-05-24",
+        "status": "expired",
+        "excess": 0,
+        "covered_destinations": [
+          "Worldwide",
+          "Caribbean"
+        ],
+        "premium_paid": 420.81
+      }
+    ],
+    "claims": [
+      {
+        "claim_id": "CLM-2025-01860",
+        "policy_number": "TRV-2025-100930",
+        "date": "2025-10-18",
+        "type": "Emergency Repatriation",
+        "amount_claimed": 1847.2,
+        "amount_paid": 1615.43,
+        "status": "settled",
+        "description": "Flight Delay during trip to Asia."
+      },
+      {
+        "claim_id": "CLM-2026-01861",
+        "policy_number": "TRV-2026-100931",
+        "date": "2026-05-17",
+        "type": "Flight Delay",
+        "amount_claimed": 4235.07,
+        "amount_paid": 3038.72,
+        "status": "settled",
+        "description": "Trip Cancellation during trip to Asia."
+      },
+      {
+        "claim_id": "CLM-2026-01862",
+        "policy_number": "TRV-2026-100931",
+        "date": "2026-05-19",
+        "type": "Baggage Loss",
+        "amount_claimed": 3680.9,
+        "amount_paid": 3602.75,
+        "status": "settled",
+        "description": "Emergency Repatriation during trip to Europe."
+      }
+    ]
+  },
+  {
+    "id": "USR094",
+    "name": "Maeve Ryan",
+    "gender": "F",
+    "date_of_birth": "1986-04-07",
+    "age": 40,
+    "email": "maeve.ryan@email.ie",
+    "phone": "+353 87 642 5888",
+    "address": {
+      "line1": "106 Oak Street",
+      "city": "Waterford",
+      "postcode": "V94",
+      "country": "Ireland"
+    },
+    "pre_existing_conditions": [
+      "None"
+    ],
+    "policies": [
+      {
+        "policy_number": "TRV-2026-100940",
+        "product": "Laya Healthcare Medicare Travel Insurance",
+        "type": "travel",
+        "trip_type": "annual",
+        "version": "post-nov-2025",
+        "start_date": "2026-03-26",
+        "end_date": "2027-03-26",
+        "status": "active",
+        "excess": 200,
+        "covered_destinations": [
+          "Australia"
+        ],
+        "premium_paid": 117.03
+      }
+    ],
+    "claims": []
+  },
+  {
+    "id": "USR095",
+    "name": "Eoin O'Neill",
+    "gender": "M",
+    "date_of_birth": "1978-05-10",
+    "age": 48,
+    "email": "eoin.oneill@email.ie",
+    "phone": "+353 87 588 7280",
+    "address": {
+      "line1": "2 Oak Street",
+      "city": "Ennis",
+      "postcode": "V94",
+      "country": "Ireland"
+    },
+    "pre_existing_conditions": [
+      "Heart Condition"
+    ],
+    "policies": [
+      {
+        "policy_number": "TRV-2025-100950",
+        "product": "Laya Healthcare Medicare Travel Insurance",
+        "type": "travel",
+        "trip_type": "annual",
+        "version": "pre-nov-2025",
+        "start_date": "2025-09-01",
+        "end_date": "2026-09-01",
+        "status": "active",
+        "excess": 150,
+        "covered_destinations": [
+          "Worldwide"
+        ],
+        "premium_paid": 252.97
+      }
+    ],
+    "claims": [
+      {
+        "claim_id": "CLM-2025-01900",
+        "policy_number": "TRV-2025-100950",
+        "date": "2025-12-17",
+        "type": "Trip Cancellation",
+        "amount_claimed": 3853.73,
+        "amount_paid": 3200.57,
+        "status": "settled",
+        "description": "Flight Delay during trip to Canada."
+      },
+      {
+        "claim_id": "CLM-2025-01901",
+        "policy_number": "TRV-2025-100950",
+        "date": "2025-10-16",
+        "type": "Emergency Repatriation",
+        "amount_claimed": 821.15,
+        "amount_paid": 0.0,
+        "status": "rejected",
+        "description": "Flight Delay during trip to Caribbean."
+      }
+    ]
+  },
+  {
+    "id": "USR096",
+    "name": "Declan Murphy",
+    "gender": "M",
+    "date_of_birth": "2000-01-05",
+    "age": 26,
+    "email": "declan.murphy@email.ie",
+    "phone": "+353 87 119 4742",
+    "address": {
+      "line1": "58 Church Road",
+      "city": "Kilkenny",
+      "postcode": "X91",
+      "country": "Ireland"
+    },
+    "pre_existing_conditions": [
+      "Asthma"
+    ],
+    "policies": [
+      {
+        "policy_number": "TRV-2026-100960",
+        "product": "Single & Annual Multi-Trip Travel Insurance",
+        "type": "travel",
+        "trip_type": "single",
+        "version": "post-nov-2025",
+        "start_date": "2026-04-17",
+        "end_date": "2026-05-05",
+        "status": "active",
+        "excess": 50,
+        "covered_destinations": [
+          "Worldwide",
+          "USA"
+        ],
+        "premium_paid": 197.66
+      }
+    ],
+    "claims": [
+      {
+        "claim_id": "CLM-2026-01920",
+        "policy_number": "TRV-2026-100960",
+        "date": "2026-04-26",
+        "type": "Baggage Loss",
+        "amount_claimed": 1001.7,
+        "amount_paid": 720.5,
+        "status": "settled",
+        "description": "Flight Delay during trip to Asia."
+      },
+      {
+        "claim_id": "CLM-2026-01921",
+        "policy_number": "TRV-2026-100960",
+        "date": "2026-05-03",
+        "type": "Flight Delay",
+        "amount_claimed": 3062.58,
+        "amount_paid": 0.0,
+        "status": "pending",
+        "description": "Emergency Repatriation during trip to USA."
+      },
+      {
+        "claim_id": "CLM-2026-01922",
+        "policy_number": "TRV-2026-100960",
+        "date": "2026-04-27",
+        "type": "Baggage Loss",
+        "amount_claimed": 4981.47,
+        "amount_paid": 0.0,
+        "status": "rejected",
+        "description": "Trip Cancellation during trip to USA."
+      }
+    ]
+  },
+  {
+    "id": "USR097",
+    "name": "Donal Kennedy",
+    "gender": "M",
+    "date_of_birth": "1967-07-31",
+    "age": 59,
+    "email": "donal.kennedy@email.ie",
+    "phone": "+353 89 176 2659",
+    "address": {
+      "line1": "66 Park Avenue",
+      "city": "Cork",
+      "postcode": "T12",
+      "country": "Ireland"
+    },
+    "pre_existing_conditions": [
+      "None"
+    ],
+    "policies": [
+      {
+        "policy_number": "TRV-2025-100970",
+        "product": "Single & Annual Multi-Trip Travel Insurance",
+        "type": "travel",
+        "trip_type": "single",
+        "version": "post-nov-2025",
+        "start_date": "2025-12-10",
+        "end_date": "2025-12-31",
+        "status": "active",
+        "excess": 100,
+        "covered_destinations": [
+          "Australia"
+        ],
+        "premium_paid": 481.05
+      },
+      {
+        "policy_number": "TRV-2025-100971",
+        "product": "Laya Healthcare Medicare Travel Insurance",
+        "type": "travel",
+        "trip_type": "annual",
+        "version": "pre-nov-2025",
+        "start_date": "2025-06-11",
+        "end_date": "2026-06-11",
+        "status": "active",
+        "excess": 0,
+        "covered_destinations": [
+          "Europe",
+          "Australia"
+        ],
+        "premium_paid": 296.72
+      },
+      {
+        "policy_number": "TRV-2025-100972",
+        "product": "Single & Annual Multi-Trip Travel Insurance",
+        "type": "travel",
+        "trip_type": "single",
+        "version": "pre-nov-2025",
+        "start_date": "2025-09-14",
+        "end_date": "2025-10-02",
+        "status": "cancelled",
+        "excess": 0,
+        "covered_destinations": [
+          "Asia"
+        ],
+        "premium_paid": 236.58
+      }
+    ],
+    "claims": [
+      {
+        "claim_id": "CLM-2025-01940",
+        "policy_number": "TRV-2025-100970",
+        "date": "2025-12-14",
+        "type": "Personal Accident",
+        "amount_claimed": 2210.36,
+        "amount_paid": 1778.53,
+        "status": "settled",
+        "description": "Medical Emergency during trip to Worldwide."
+      },
+      {
+        "claim_id": "CLM-2025-01941",
+        "policy_number": "TRV-2025-100970",
+        "date": "2025-12-13",
+        "type": "Trip Cancellation",
+        "amount_claimed": 3966.85,
+        "amount_paid": 0.0,
+        "status": "rejected",
+        "description": "Personal Accident during trip to USA."
+      },
+      {
+        "claim_id": "CLM-2025-01942",
+        "policy_number": "TRV-2025-100970",
+        "date": "2025-12-18",
+        "type": "Flight Delay",
+        "amount_claimed": 4191.19,
+        "amount_paid": 3114.76,
+        "status": "settled",
+        "description": "Baggage Loss during trip to USA."
+      },
+      {
+        "claim_id": "CLM-2025-01943",
+        "policy_number": "TRV-2025-100971",
+        "date": "2025-09-25",
+        "type": "Baggage Loss",
+        "amount_claimed": 3503.38,
+        "amount_paid": 0.0,
+        "status": "rejected",
+        "description": "Trip Cancellation during trip to Europe."
+      },
+      {
+        "claim_id": "CLM-2025-01944",
+        "policy_number": "TRV-2025-100971",
+        "date": "2025-06-17",
+        "type": "Emergency Repatriation",
+        "amount_claimed": 3423.84,
+        "amount_paid": 3198.18,
+        "status": "settled",
+        "description": "Flight Delay during trip to USA."
+      }
+    ]
+  },
+  {
+    "id": "USR098",
+    "name": "Roisin Murray",
+    "gender": "F",
+    "date_of_birth": "1962-03-31",
+    "age": 64,
+    "email": "roisin.murray@email.ie",
+    "phone": "+353 81 109 3267",
+    "address": {
+      "line1": "170 Church Road",
+      "city": "Cork",
+      "postcode": "D04",
+      "country": "Ireland"
+    },
+    "pre_existing_conditions": [
+      "Hypertension"
+    ],
+    "policies": [
+      {
+        "policy_number": "CHE-2026-200980",
+        "product": "Car Hire Excess Insurance Annual Multi-Trip",
+        "type": "car_hire",
+        "trip_type": "annual",
+        "version": "post-nov-2025",
+        "start_date": "2026-05-13",
+        "end_date": "2027-05-13",
+        "status": "active",
+        "excess": 1000,
+        "covered_destinations": [
+          "Europe"
+        ],
+        "premium_paid": 108.16
+      }
+    ],
+    "claims": []
+  },
+  {
+    "id": "USR099",
+    "name": "Laura Healy",
+    "gender": "F",
+    "date_of_birth": "1972-01-13",
+    "age": 54,
+    "email": "laura.healy@email.ie",
+    "phone": "+353 86 779 7305",
+    "address": {
+      "line1": "39 Station Road",
+      "city": "Cork",
+      "postcode": "T12",
+      "country": "Ireland"
+    },
+    "pre_existing_conditions": [
+      "None"
+    ],
+    "policies": [
+      {
+        "policy_number": "TRV-2025-100990",
+        "product": "Backpacker Travel Insurance",
+        "type": "travel",
+        "trip_type": "single",
+        "version": "post-nov-2025",
+        "start_date": "2025-12-22",
+        "end_date": "2026-01-05",
+        "status": "active",
+        "excess": 100,
+        "covered_destinations": [
+          "Canada",
+          "Caribbean"
+        ],
+        "premium_paid": 514.57
+      },
+      {
+        "policy_number": "TRV-2025-100991",
+        "product": "Laya Healthcare Medicare Travel Insurance",
+        "type": "travel",
+        "trip_type": "annual",
+        "version": "pre-nov-2025",
+        "start_date": "2025-07-01",
+        "end_date": "2026-07-01",
+        "status": "expired",
+        "excess": 0,
+        "covered_destinations": [
+          "Canada",
+          "Australia"
+        ],
+        "premium_paid": 296.33
+      }
+    ],
+    "claims": [
+      {
+        "claim_id": "CLM-2026-01980",
+        "policy_number": "TRV-2025-100990",
+        "date": "2026-01-03",
+        "type": "Emergency Repatriation",
+        "amount_claimed": 1921.27,
+        "amount_paid": 1815.66,
+        "status": "settled",
+        "description": "Trip Cancellation during trip to Caribbean."
+      },
+      {
+        "claim_id": "CLM-2026-01981",
+        "policy_number": "TRV-2025-100990",
+        "date": "2026-01-05",
+        "type": "Flight Delay",
+        "amount_claimed": 2542.99,
+        "amount_paid": 0.0,
+        "status": "rejected",
+        "description": "Medical Emergency during trip to Europe."
+      },
+      {
+        "claim_id": "CLM-2025-01982",
+        "policy_number": "TRV-2025-100991",
+        "date": "2025-07-07",
+        "type": "Emergency Repatriation",
+        "amount_claimed": 3581.93,
+        "amount_paid": 3550.26,
+        "status": "settled",
+        "description": "Baggage Loss during trip to Australia."
+      },
+      {
+        "claim_id": "CLM-2026-01983",
+        "policy_number": "TRV-2025-100991",
+        "date": "2026-03-25",
+        "type": "Emergency Repatriation",
+        "amount_claimed": 3503.56,
+        "amount_paid": 2708.74,
+        "status": "settled",
+        "description": "Trip Cancellation during trip to Caribbean."
+      }
+    ]
+  },
+  {
+    "id": "USR100",
+    "name": "Liam O'Connor",
+    "gender": "M",
+    "date_of_birth": "1982-09-05",
+    "age": 43,
+    "email": "liam.oconnor@email.ie",
+    "phone": "+353 87 512 4850",
+    "address": {
+      "line1": "21 Mill Road",
+      "city": "Drogheda",
+      "postcode": "V94",
+      "country": "Ireland"
+    },
+    "pre_existing_conditions": [
+      "None"
+    ],
+    "policies": [
+      {
+        "policy_number": "TRV-2025-101000",
+        "product": "Backpacker Travel Insurance",
+        "type": "travel",
+        "trip_type": "single",
+        "version": "post-nov-2025",
+        "start_date": "2025-11-12",
+        "end_date": "2025-11-22",
+        "status": "active",
+        "excess": 100,
+        "covered_destinations": [
+          "Australia"
+        ],
+        "premium_paid": 584.48
+      }
+    ],
+    "claims": []
+  }
+]

@@ -1,7 +1,119 @@
-.chat-page {
+/* ── Layout wrapper ──────────────────────────────────── */
+.chat-layout {
+  display: flex;
+  gap: 1rem;
+  height: calc(100vh - 80px);
+}
+
+/* ── User sidebar ────────────────────────────────────── */
+.user-panel {
+  width: 220px;
+  flex-shrink: 0;
   display: flex;
   flex-direction: column;
-  height: calc(100vh - 80px);
+  gap: 0.5rem;
+  border-right: 1px solid #e4e8ef;
+  padding-right: 1rem;
+  overflow: hidden;
+}
+
+.user-panel h3 {
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: #888;
+  margin: 0;
+}
+
+.user-search {
+  padding: 0.4rem 0.65rem;
+  border: 1px solid #ddd;
+  border-radius: 0.4rem;
+  font-size: 0.82rem;
+  outline: none;
+}
+
+.user-search:focus {
+  border-color: #0055b3;
+}
+
+.selected-user {
+  background: #eef4ff;
+  border: 1px solid #c5d8ff;
+  border-radius: 0.4rem;
+  padding: 0.5rem 0.65rem;
+  font-size: 0.8rem;
+}
+
+.selected-user-name {
+  font-weight: 700;
+  color: #0055b3;
+  margin-bottom: 0.15rem;
+}
+
+.selected-user-meta {
+  color: #555;
+  font-size: 0.75rem;
+}
+
+.clear-user {
+  margin-top: 0.4rem;
+  background: none;
+  border: none;
+  color: #888;
+  font-size: 0.75rem;
+  cursor: pointer;
+  padding: 0;
+}
+
+.clear-user:hover {
+  color: #dc2626;
+}
+
+.user-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  overflow-y: auto;
+  flex: 1;
+}
+
+.user-item {
+  padding: 0.45rem 0.6rem;
+  border-radius: 0.35rem;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  gap: 0.1rem;
+  transition: background 0.1s;
+}
+
+.user-item:hover {
+  background: #f0f5ff;
+}
+
+.user-item.active {
+  background: #dceafe;
+}
+
+.user-item-name {
+  font-size: 0.83rem;
+  font-weight: 600;
+  color: #1a1a1a;
+}
+
+.user-item-meta {
+  font-size: 0.72rem;
+  color: #888;
+}
+
+/* ── Chat page ───────────────────────────────────────── */
+.chat-page {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
 }
 
 /* ── Message list ────────────────────────────────────── */
@@ -218,6 +330,19 @@
   gap: 0.5rem;
   padding-top: 0.75rem;
   border-top: 1px solid #e4e8ef;
+}
+
+.input-user-badge {
+  display: flex;
+  align-items: center;
+  white-space: nowrap;
+  background: #dceafe;
+  color: #0055b3;
+  font-size: 0.78rem;
+  font-weight: 600;
+  padding: 0.3rem 0.65rem;
+  border-radius: 999px;
+  border: 1px solid #c5d8ff;
 }
 
 .input-row input {
