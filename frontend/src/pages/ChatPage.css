@@ -235,6 +235,30 @@
   margin-bottom: 0.2rem;
 }
 
+.answer-body table {
+  border-collapse: collapse;
+  width: 100%;
+  font-size: 0.85rem;
+  margin: 0.5rem 0 0.75rem;
+}
+
+.answer-body th,
+.answer-body td {
+  border: 1px solid #d0d8e8;
+  padding: 0.4rem 0.75rem;
+  text-align: left;
+}
+
+.answer-body th {
+  background: #eef4ff;
+  font-weight: 700;
+  color: #0055b3;
+}
+
+.answer-body tr:nth-child(even) td {
+  background: #f8faff;
+}
+
 .answer-body hr {
   border: none;
   border-top: 1px solid #e4e8ef;

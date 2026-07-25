@@ -1,5 +1,6 @@
 import { useState, useRef, useEffect } from 'react'
 import ReactMarkdown from 'react-markdown'
+import remarkGfm from 'remark-gfm'
 import { queryKB, listUsers, UserSummary, QueryResponse } from '../api/client'
 import './ChatPage.css'
 
@@ -135,7 +136,7 @@ export default function ChatPage() {
               <p>{msg.text}</p>
             ) : (
               <div className="answer-body">
-                <ReactMarkdown>{msg.text}</ReactMarkdown>
+                <ReactMarkdown remarkPlugins={[remarkGfm]}>{msg.text}</ReactMarkdown>
 
                 {msg.sources && msg.sources.length > 0 && (
                   <div className="sources-section">
