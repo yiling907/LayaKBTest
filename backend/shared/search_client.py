@@ -84,6 +84,20 @@ def ensure_index():
     index_client.create_or_update_index(index)
 
 
+def delete_document_chunks(document_id: str):
+    """Delete all search index chunks belonging to a document."""
+    client = SearchClient(endpoint=_endpoint(), index_name=_index_name(), credential=_credential())
+    results = client.search(
+        search_text="*",
+        filter=f"document_id eq '{document_id}'",
+        select=["id"],
+        top=1000,
+    )
+    ids = [{"id": r["id"]} for r in results]
+    if ids:
+        client.delete_documents(documents=ids)
+
+
 def upsert_chunks(chunks: list[dict]):
     client = SearchClient(endpoint=_endpoint(), index_name=_index_name(), credential=_credential())
     client.upload_documents(documents=chunks)

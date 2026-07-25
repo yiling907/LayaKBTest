@@ -216,6 +216,42 @@ def list_documents():
 
 
 # ---------------------------------------------------------------------------
+# Delete a document
+# ---------------------------------------------------------------------------
+
+@app.delete("/api/documents/{doc_id}")
+def delete_document(doc_id: str):
+    meta = cosmos_client.get_document_metadata(doc_id)
+    if not meta:
+        raise HTTPException(status_code=404, detail="Document not found")
+
+    errors = []
+
+    try:
+        search_client.delete_document_chunks(doc_id)
+    except Exception as e:
+        logger.exception("Failed to delete search chunks for %s", doc_id)
+        errors.append(f"search: {e}")
+
+    try:
+        blob_client.delete_document(meta["name"])
+    except Exception as e:
+        logger.exception("Failed to delete blob for %s", doc_id)
+        errors.append(f"blob: {e}")
+
+    try:
+        cosmos_client.delete_document_metadata(doc_id)
+    except Exception as e:
+        logger.exception("Failed to delete metadata for %s", doc_id)
+        errors.append(f"cosmos: {e}")
+
+    if errors:
+        raise HTTPException(status_code=500, detail={"errors": errors})
+
+    return {"deleted": doc_id}
+
+
+# ---------------------------------------------------------------------------
 # Excel Custom Skill — called by AI Search Indexer
 # ---------------------------------------------------------------------------
 

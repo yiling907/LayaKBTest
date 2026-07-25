@@ -44,3 +44,6 @@ export const ingestDocuments = (files: File[]) => {
 
 export const listDocuments = () =>
   api.get<{ documents: Document[] }>('/documents')
+
+export const deleteDocument = (id: string) =>
+  api.delete<{ deleted: string }>(`/documents/${id}`)

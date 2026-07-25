@@ -24,6 +24,11 @@ def get_document_metadata(doc_id: str) -> dict | None:
         return None
 
 
+def delete_document_metadata(doc_id: str):
+    container = _get_container()
+    container.delete_item(item=doc_id, partition_key=doc_id)
+
+
 def update_document_status(doc_id: str, status: str, chunks: int = None):
     container = _get_container()
     item = container.read_item(item=doc_id, partition_key=doc_id)
