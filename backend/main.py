@@ -66,13 +66,17 @@ Car Hire Excess Insurance (two versions: policies bound before / after November 
 
 ## Behaviour rules
 
-1. Always call search_knowledge_base before answering any policy question.
-2. If the question concerns a specific document or the user wants to read the source, \
+1. If a customer context is provided in the message, use get_user_profile or get_user_policies \
+to retrieve their exact coverage details before searching the knowledge base.
+2. Always call search_knowledge_base to find the relevant policy clauses for the question.
+3. Cross-reference the customer's specific policy (product, version, excess, destinations) \
+with what the knowledge base says — tailor the answer to their actual coverage.
+4. If the question concerns a specific document or the user wants to read the source, \
 call generate_sas_url to produce a download link.
-3. Clarify which policy version (pre- or post-November 2025) you are referencing when it matters.
-4. Be precise: quote exact coverage limits, excess amounts, exclusions, and clause numbers.
-5. Never speculate beyond what the documents state. If information is absent, say so clearly.
-6. Do not give personal financial or legal advice; direct the user to contact Laya Healthcare \
+5. Clarify which policy version (pre- or post-November 2025) applies to this customer.
+6. Be precise: quote exact coverage limits, excess amounts, exclusions, and clause numbers.
+7. Never speculate beyond what the documents state. If information is absent, say so clearly.
+8. Do not give personal financial or legal advice; direct the user to contact Laya Healthcare \
 or a licensed broker for decisions specific to their situation.
 
 ## Required response format
@@ -123,6 +127,62 @@ _AGENT_TOOLS = [
                     "expiry_hours": {"type": "integer", "default": 24},
                 },
                 "required": ["blob_path"],
+            },
+        },
+    },
+    {
+        "type": "function",
+        "function": {
+            "name": "get_user_profile",
+            "description": "Get a customer's full profile including personal details, all policies, and claims history.",
+            "parameters": {
+                "type": "object",
+                "properties": {
+                    "user_id": {"type": "string", "description": "Customer ID, e.g. USR001"},
+                },
+                "required": ["user_id"],
+            },
+        },
+    },
+    {
+        "type": "function",
+        "function": {
+            "name": "get_user_policies",
+            "description": "Get all policies (active and historical) for a customer.",
+            "parameters": {
+                "type": "object",
+                "properties": {
+                    "user_id": {"type": "string"},
+                },
+                "required": ["user_id"],
+            },
+        },
+    },
+    {
+        "type": "function",
+        "function": {
+            "name": "get_user_claims",
+            "description": "Get the full claims history for a customer.",
+            "parameters": {
+                "type": "object",
+                "properties": {
+                    "user_id": {"type": "string"},
+                },
+                "required": ["user_id"],
+            },
+        },
+    },
+    {
+        "type": "function",
+        "function": {
+            "name": "search_users",
+            "description": "Search customers by name, email, or policy number prefix.",
+            "parameters": {
+                "type": "object",
+                "properties": {
+                    "query": {"type": "string"},
+                },
+                "required": ["query"],
             },
         },
     },
@@ -403,9 +463,18 @@ def agent_query(body: QueryRequest):
     if not question:
         raise HTTPException(status_code=400, detail="Field 'question' is required.")
 
+    # Inject customer context if a user_id was provided
+    user_context = ""
+    if body.user_id:
+        user_context = user_client.build_user_context(body.user_id)
+
+    user_message = question
+    if user_context:
+        user_message = f"Customer context:\n{user_context}\n\nQuestion: {question}"
+
     messages = [
         {"role": "system", "content": _AGENT_SYSTEM_PROMPT},
-        {"role": "user", "content": question},
+        {"role": "user", "content": user_message},
     ]
 
     for _ in range(6):
@@ -627,6 +696,29 @@ def _execute_agent_tool(tool_call) -> dict:
         blob_name = _strip_container_prefix(raw_path)
         sas_url = blob_client.generate_sas_url(blob_name, expiry_hours)
         return {"sas_url": sas_url, "blob_path": blob_name}
+
+    if name == "get_user_profile":
+        uid = args.get("user_id", "")
+        u = user_client.get_user_by_id(uid)
+        return u if u else {"error": f"No customer found with ID '{uid}'"}
+
+    if name == "get_user_policies":
+        uid = args.get("user_id", "")
+        policies = user_client.get_user_policies(uid)
+        if policies is None:
+            return {"error": f"No customer found with ID '{uid}'"}
+        return {"policies": policies}
+
+    if name == "get_user_claims":
+        uid = args.get("user_id", "")
+        claims = user_client.get_user_claims(uid)
+        if claims is None:
+            return {"error": f"No customer found with ID '{uid}'"}
+        return {"claims": claims}
+
+    if name == "search_users":
+        results = user_client.search_users(args.get("query", ""), limit=10)
+        return {"users": results}
 
     return {"error": f"Unknown tool: {name}"}
 

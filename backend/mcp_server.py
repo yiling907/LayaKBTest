@@ -20,8 +20,15 @@ load_dotenv(os.path.join(os.path.dirname(__file__), "..", ".env"))
 from mcp.server.fastmcp import FastMCP
 from shared import user_client
 
+parser = argparse.ArgumentParser()
+parser.add_argument("--sse", action="store_true", help="Run with SSE transport on port 8001")
+parser.add_argument("--port", type=int, default=8001)
+args, _ = parser.parse_known_args()
+
 mcp = FastMCP(
     "Laya Healthcare User Data",
+    host="0.0.0.0",
+    port=args.port,
     instructions=(
         "Use these tools to look up a customer's profile, policies, and claims "
         "before answering questions. Always fetch user context first when a user_id "
@@ -114,12 +121,7 @@ def get_user_policies(user_id: str) -> str:
 
 
 if __name__ == "__main__":
-    parser = argparse.ArgumentParser()
-    parser.add_argument("--sse", action="store_true", help="Run with SSE transport on port 8001")
-    parser.add_argument("--port", type=int, default=8001)
-    args = parser.parse_args()
-
     if args.sse:
-        mcp.run(transport="streamable-http", host="0.0.0.0", port=args.port, path="/mcp")
+        mcp.run(transport="streamable-http")
     else:
         mcp.run(transport="stdio")
