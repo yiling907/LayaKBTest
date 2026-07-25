@@ -65,3 +65,23 @@ tr:not(:last-child) td {
   background: #fee2e2;
   color: #991b1b;
 }
+
+.btn-delete {
+  padding: 0.3rem 0.7rem;
+  font-size: 0.8rem;
+  background: transparent;
+  color: #dc2626;
+  border: 1px solid #dc2626;
+  border-radius: 0.25rem;
+  cursor: pointer;
+}
+
+.btn-delete:hover:not(:disabled) {
+  background: #dc2626;
+  color: #fff;
+}
+
+.btn-delete:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}

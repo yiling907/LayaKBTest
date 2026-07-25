@@ -1,11 +1,12 @@
 import { useState, useEffect } from 'react'
-import { listDocuments, Document } from '../api/client'
+import { listDocuments, deleteDocument, Document } from '../api/client'
 import DocumentUpload from '../components/DocumentUpload'
 import './DocumentsPage.css'
 
 export default function DocumentsPage() {
   const [documents, setDocuments] = useState<Document[]>([])
   const [loading, setLoading] = useState(true)
+  const [deleting, setDeleting] = useState<string | null>(null)
 
   const fetchDocuments = async () => {
     try {
@@ -15,6 +16,19 @@ export default function DocumentsPage() {
       // ignore — empty list on error
     } finally {
       setLoading(false)
+    }
+  }
+
+  const handleDelete = async (doc: Document) => {
+    if (!confirm(`Delete "${doc.name}"?`)) return
+    setDeleting(doc.id)
+    try {
+      await deleteDocument(doc.id)
+      setDocuments(prev => prev.filter(d => d.id !== doc.id))
+    } catch {
+      alert('Failed to delete document.')
+    } finally {
+      setDeleting(null)
     }
   }
 
@@ -39,6 +53,7 @@ export default function DocumentsPage() {
                 <th>Chunks</th>
                 <th>Status</th>
                 <th>Size</th>
+                <th></th>
               </tr>
             </thead>
             <tbody>
@@ -48,6 +63,15 @@ export default function DocumentsPage() {
                   <td>{doc.chunks}</td>
                   <td><span className={`badge ${doc.status}`}>{doc.status}</span></td>
                   <td>{(doc.size / 1024).toFixed(1)} KB</td>
+                  <td>
+                    <button
+                      className="btn-delete"
+                      disabled={deleting === doc.id}
+                      onClick={() => handleDelete(doc)}
+                    >
+                      {deleting === doc.id ? '...' : 'Delete'}
+                    </button>
+                  </td>
                 </tr>
               ))}
             </tbody>
