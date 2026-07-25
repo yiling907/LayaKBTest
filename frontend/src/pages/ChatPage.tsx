@@ -96,6 +96,9 @@ export default function ChatPage() {
             <button className="clear-user" onClick={() => setSelectedUser(null)}>✕ Clear</button>
           </div>
         )}
+        {!selectedUser && !userSearch && (
+          <p className="user-panel-hint">Select a customer to personalise answers</p>
+        )}
         <ul className="user-list">
           {filteredUsers.map(u => (
             <li

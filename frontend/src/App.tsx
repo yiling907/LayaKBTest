@@ -1,4 +1,4 @@
-import { Routes, Route, Link, NavLink } from 'react-router-dom'
+import { Routes, Route, NavLink } from 'react-router-dom'
 import ChatPage from './pages/ChatPage'
 import DocumentsPage from './pages/DocumentsPage'
 import './App.css'
@@ -7,7 +7,11 @@ export default function App() {
   return (
     <div className="app">
       <header className="header">
-        <Link to="/" className="logo">LayaKB</Link>
+        <div className="header-brand">
+          <span className="logo-mark">L</span>
+          <span className="logo-text">Laya Healthcare</span>
+          <span className="logo-sub">Knowledge Base</span>
+        </div>
         <nav>
           <NavLink to="/" end className={({ isActive }) => isActive ? 'active' : ''}>Chat</NavLink>
           <NavLink to="/documents" className={({ isActive }) => isActive ? 'active' : ''}>Documents</NavLink>

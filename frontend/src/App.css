@@ -4,48 +4,89 @@
   min-height: 100vh;
 }
 
+/* ── Header ──────────────────────────────────────────── */
 .header {
   display: flex;
   align-items: center;
-  gap: 2rem;
-  padding: 0.75rem 1.5rem;
+  justify-content: space-between;
+  padding: 0 1.75rem;
+  height: 56px;
   background: #fff;
-  border-bottom: 1px solid #e0e0e0;
+  border-bottom: 1px solid #e4e8ef;
   position: sticky;
   top: 0;
   z-index: 100;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.06);
 }
 
-.logo {
-  font-size: 1.25rem;
+.header-brand {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  text-decoration: none;
+}
+
+.logo-mark {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  background: #0055b3;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 800;
+  border-radius: 8px;
+  flex-shrink: 0;
+}
+
+.logo-text {
+  font-size: 1rem;
   font-weight: 700;
-  color: #0066cc;
+  color: #0055b3;
+}
+
+.logo-sub {
+  font-size: 0.78rem;
+  color: #999;
+  font-weight: 400;
+  border-left: 1px solid #ddd;
+  padding-left: 0.6rem;
+  margin-left: 0.1rem;
 }
 
 .header nav {
   display: flex;
-  gap: 1.25rem;
+  gap: 0.25rem;
 }
 
 .header nav a {
   color: #555;
-  font-size: 0.95rem;
-  padding: 0.25rem 0;
-  border-bottom: 2px solid transparent;
-  transition: color 0.15s, border-color 0.15s;
+  font-size: 0.9rem;
+  font-weight: 500;
+  padding: 0.35rem 0.85rem;
+  border-radius: 0.4rem;
+  transition: background 0.15s, color 0.15s;
 }
 
-.header nav a:hover,
-.header nav a.active {
-  color: #0066cc;
-  border-bottom-color: #0066cc;
+.header nav a:hover {
+  background: #f0f5ff;
+  color: #0055b3;
   text-decoration: none;
 }
 
+.header nav a.active {
+  background: #e6efff;
+  color: #0055b3;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+/* ── Main content ────────────────────────────────────── */
 .main {
   flex: 1;
-  padding: 1.5rem;
-  max-width: 900px;
+  padding: 1.25rem 1.75rem;
+  max-width: 1280px;
   margin: 0 auto;
   width: 100%;
 }
