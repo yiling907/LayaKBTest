@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import axios from 'axios'
+import api from '../api/client'
 import './EvalPage.css'
 
 const CATEGORIES = ['all', 'kb_retrieval', 'policy_version', 'personalised', 'edge_case']
@@ -47,7 +47,7 @@ export default function EvalPage() {
     setSummary(null)
     setResults([])
     try {
-      const { data } = await axios.post('/api/evaluate', {
+      const { data } = await api.post('/evaluate', {
         category: category === 'all' ? null : category,
       })
       setSummary(data.summary)
