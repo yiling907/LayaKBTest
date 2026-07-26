@@ -1,0 +1,236 @@
+.eval-page h1 {
+  font-size: 1.35rem;
+  font-weight: 700;
+  margin-bottom: 0.35rem;
+}
+
+.eval-desc {
+  color: #777;
+  font-size: 0.88rem;
+  margin-bottom: 1.25rem;
+}
+
+/* ── Controls ────────────────────────────────────────── */
+.eval-controls {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-bottom: 1.25rem;
+}
+
+.category-tabs {
+  display: flex;
+  gap: 0.35rem;
+  flex-wrap: wrap;
+}
+
+.tab {
+  padding: 0.35rem 0.85rem;
+  background: #f4f6fa;
+  border: 1px solid #e4e8ef;
+  border-radius: 999px;
+  font-size: 0.82rem;
+  color: #555;
+  transition: background 0.15s, color 0.15s;
+  text-transform: capitalize;
+}
+
+.tab:hover:not(:disabled) { background: #e6efff; color: #0055b3; }
+.tab.active { background: #0055b3; color: #fff; border-color: #0055b3; font-weight: 600; }
+.tab:disabled { opacity: 0.5; cursor: not-allowed; }
+
+.btn-run {
+  padding: 0.45rem 1.25rem;
+  background: #0055b3;
+  color: #fff;
+  border: none;
+  border-radius: 0.4rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+  transition: background 0.15s;
+}
+
+.btn-run:hover:not(:disabled) { background: #003d87; }
+.btn-run:disabled { background: #a8c4e8; cursor: not-allowed; }
+
+/* ── Progress ────────────────────────────────────────── */
+.eval-progress {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 2rem;
+  color: #777;
+  font-size: 0.88rem;
+}
+
+.progress-bar {
+  width: 240px;
+  height: 4px;
+  background: #e4e8ef;
+  border-radius: 999px;
+  overflow: hidden;
+  position: relative;
+}
+
+.progress-bar::after {
+  content: '';
+  position: absolute;
+  left: -40%;
+  width: 40%;
+  height: 100%;
+  background: #0055b3;
+  border-radius: 999px;
+  animation: slide 1.2s infinite linear;
+}
+
+@keyframes slide {
+  to { left: 100%; }
+}
+
+.eval-error { color: #dc2626; font-size: 0.88rem; }
+
+/* ── Summary ─────────────────────────────────────────── */
+.summary-grid {
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+  margin-bottom: 1.5rem;
+}
+
+.summary-card {
+  background: #fff;
+  border: 1px solid #e4e8ef;
+  border-radius: 0.5rem;
+  padding: 0.75rem 1.25rem;
+  min-width: 110px;
+  text-align: center;
+}
+
+.summary-value {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #0055b3;
+}
+
+.summary-label {
+  font-size: 0.72rem;
+  color: #999;
+  text-transform: capitalize;
+  margin-top: 0.2rem;
+}
+
+/* ── Results list ────────────────────────────────────── */
+.results-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.result-card {
+  background: #fff;
+  border: 1px solid #e4e8ef;
+  border-radius: 0.5rem;
+  overflow: hidden;
+}
+
+.result-card.fail { border-left: 3px solid #dc2626; }
+
+.result-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.65rem 1rem;
+  cursor: pointer;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.result-header:hover { background: #fafbff; }
+
+.result-meta {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.result-id { font-weight: 700; font-size: 0.82rem; color: #0055b3; }
+.result-cat {
+  font-size: 0.72rem;
+  background: #f4f6fa;
+  color: #666;
+  padding: 0.15rem 0.5rem;
+  border-radius: 999px;
+  text-transform: capitalize;
+}
+.result-user { font-size: 0.75rem; color: #888; }
+.result-hardfail { font-size: 0.72rem; color: #dc2626; font-weight: 600; }
+
+.result-scores { display: flex; align-items: center; gap: 0.35rem; flex-wrap: wrap; }
+
+.score-chip {
+  font-size: 0.72rem;
+  font-weight: 700;
+  padding: 0.15rem 0.45rem;
+  border-radius: 999px;
+}
+
+.overall-chip {
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: #0055b3;
+  background: #eef4ff;
+  padding: 0.15rem 0.5rem;
+  border-radius: 999px;
+}
+
+.expand-toggle { color: #aaa; font-size: 0.9rem; }
+
+.result-question {
+  padding: 0 1rem 0.6rem;
+  font-size: 0.84rem;
+  color: #444;
+}
+
+.result-detail {
+  border-top: 1px solid #f0f2f7;
+  padding: 0.75rem 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.detail-reasoning {
+  font-size: 0.82rem;
+  color: #555;
+  background: #f8f9fc;
+  padding: 0.5rem 0.75rem;
+  border-radius: 0.35rem;
+}
+
+.detail-failures {
+  font-size: 0.8rem;
+  color: #dc2626;
+}
+
+.detail-answer {
+  font-size: 0.82rem;
+  color: #333;
+}
+
+.detail-answer pre {
+  margin-top: 0.35rem;
+  background: #f4f6fa;
+  border: 1px solid #e4e8ef;
+  border-radius: 0.35rem;
+  padding: 0.65rem 0.85rem;
+  white-space: pre-wrap;
+  word-break: break-word;
+  font-family: inherit;
+  font-size: 0.81rem;
+  color: #333;
+  max-height: 300px;
+  overflow-y: auto;
+}

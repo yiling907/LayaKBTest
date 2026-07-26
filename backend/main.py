@@ -496,6 +496,83 @@ def agent_query(body: QueryRequest):
 
 
 # ---------------------------------------------------------------------------
+# Evaluation
+# ---------------------------------------------------------------------------
+
+class EvalRequest(BaseModel):
+    category: str | None = None
+    ids: list[str] | None = None
+
+
+@app.post("/api/evaluate")
+def run_evaluation(body: EvalRequest = EvalRequest()):
+    """
+    Run LLM-as-judge evaluation against the test suite.
+    Optionally filter by category or specific test IDs.
+    Long-running — may take several minutes for the full suite.
+    """
+    from evaluation.test_cases import TEST_CASES
+    from evaluation.evaluator import evaluate_case
+    import importlib
+
+    main_mod = importlib.import_module("main")
+
+    def _agent_fn(question: str, uid: str | None) -> dict:
+        ctx = user_client.build_user_context(uid) if uid else ""
+        content = f"Customer context:\n{ctx}\n\nQuestion: {question}" if ctx else question
+        messages = [
+            {"role": "system", "content": main_mod._AGENT_SYSTEM_PROMPT},
+            {"role": "user",   "content": content},
+        ]
+        for _ in range(6):
+            choice = openai_client.chat_with_tools(messages, main_mod._AGENT_TOOLS)
+            if choice.finish_reason == "tool_calls":
+                messages.append(choice.message.model_dump())
+                for tc in choice.message.tool_calls:
+                    result = _execute_agent_tool(tc)
+                    messages.append({"role": "tool", "tool_call_id": tc.id, "content": json.dumps(result)})
+            else:
+                return {"answer": choice.message.content or "", "sources": []}
+        return {"answer": "Agent did not converge.", "sources": []}
+
+    cases = TEST_CASES
+    if body.category:
+        cases = [c for c in cases if c["category"] == body.category]
+    if body.ids:
+        cases = [c for c in cases if c["id"] in body.ids]
+
+    results = []
+    for case in cases:
+        results.append(evaluate_case(case, _agent_fn))
+
+    total = len(results)
+    overall_avg = round(sum(r["overall"] for r in results) / total, 3) if total else 0
+    hard_passed = sum(1 for r in results if r["hard_pass"])
+
+    by_category: dict[str, dict] = {}
+    for r in results:
+        cat = r["category"]
+        if cat not in by_category:
+            by_category[cat] = {"scores": [], "count": 0}
+        by_category[cat]["scores"].append(r["overall"])
+        by_category[cat]["count"] += 1
+    category_summary = {
+        cat: {"avg": round(sum(v["scores"]) / v["count"], 3), "count": v["count"]}
+        for cat, v in by_category.items()
+    }
+
+    return {
+        "summary": {
+            "total": total,
+            "hard_passed": hard_passed,
+            "overall_avg": overall_avg,
+            "by_category": category_summary,
+        },
+        "results": results,
+    }
+
+
+# ---------------------------------------------------------------------------
 # Setup Indexer
 # ---------------------------------------------------------------------------
 
