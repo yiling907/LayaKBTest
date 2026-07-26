@@ -129,31 +129,28 @@ def hybrid_search(query: str, query_vector: list[float], top_k: int = 5, filter_
     client = SearchClient(endpoint=_endpoint(), index_name=_index_name(), credential=_credential())
     vector_query = VectorizedQuery(vector=query_vector, k_nearest_neighbors=50, fields="content_vector")
 
+    _select = ["id", "content", "source_blob_path", "source_file_name",
+               "page_number", "sheet_name", "doc_type", "product_name"]
     try:
-        results = client.search(
+        # Consume the lazy iterator inside the try so semantic errors are caught here
+        raw = list(client.search(
             search_text=query,
             vector_queries=[vector_query],
             query_type=QueryType.SEMANTIC,
             semantic_configuration_name="insurance-semantic-config",
-            select=[
-                "id", "content", "source_blob_path", "source_file_name",
-                "page_number", "sheet_name", "doc_type", "product_name",
-            ],
+            select=_select,
             filter=filter_expr,
             top=top_k,
-        )
+        ))
     except Exception:
-        # Fallback to basic hybrid without semantic reranker
-        results = client.search(
+        # Fallback: basic hybrid without semantic reranker (e.g. Basic tier)
+        raw = list(client.search(
             search_text=query,
             vector_queries=[vector_query],
-            select=[
-                "id", "content", "source_blob_path", "source_file_name",
-                "page_number", "sheet_name", "doc_type", "product_name",
-            ],
+            select=_select,
             filter=filter_expr,
             top=top_k,
-        )
+        ))
 
     return [
         {
@@ -167,5 +164,5 @@ def hybrid_search(query: str, query_vector: list[float], top_k: int = 5, filter_
             "product_name":     r.get("product_name", ""),
             "score":            r.get("@search.score", 0),
         }
-        for r in results
+        for r in raw
     ]
