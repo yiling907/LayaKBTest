@@ -22,9 +22,9 @@ variable "location" {
 }
 
 variable "search_sku" {
-  description = "Azure AI Search SKU"
+  description = "Azure AI Search SKU (basic = vector search; standard = + semantic reranker)"
   type        = string
-  default     = "free"
+  default     = "basic"
 }
 
 variable "ark_api_key" {

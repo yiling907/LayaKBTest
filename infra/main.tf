@@ -179,6 +179,60 @@ resource "azurerm_container_app" "api" {
 }
 
 # ---------------------------------------------------------------------------
+# MCP Server Container App
+# ---------------------------------------------------------------------------
+
+resource "azurerm_container_app" "mcp" {
+  name                         = "ca-mcp-${local.name_suffix}"
+  resource_group_name          = azurerm_resource_group.main.name
+  container_app_environment_id = azurerm_container_app_environment.main.id
+  revision_mode                = "Single"
+  tags                         = local.tags
+
+  registry {
+    server               = azurerm_container_registry.main.login_server
+    username             = azurerm_container_registry.main.admin_username
+    password_secret_name = "acr-password"
+  }
+
+  secret {
+    name  = "acr-password"
+    value = azurerm_container_registry.main.admin_password
+  }
+
+  template {
+    container {
+      name    = "mcp-server"
+      image   = "${azurerm_container_registry.main.login_server}/layakb-api:latest"
+      cpu     = 0.25
+      memory  = "0.5Gi"
+      command = ["python", "mcp_server.py", "--sse", "--port", "8001"]
+
+      env {
+        name  = "ARK_API_KEY"
+        value = var.ark_api_key
+      }
+      env {
+        name  = "ARK_BASE_URL"
+        value = var.ark_base_url
+      }
+    }
+
+    min_replicas = 0
+    max_replicas = 1
+  }
+
+  ingress {
+    external_enabled = true
+    target_port      = 8001
+    traffic_weight {
+      percentage      = 100
+      latest_revision = true
+    }
+  }
+}
+
+# ---------------------------------------------------------------------------
 # Azure AI Search
 # ---------------------------------------------------------------------------
 

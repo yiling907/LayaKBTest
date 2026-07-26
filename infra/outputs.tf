@@ -38,3 +38,8 @@ output "swa_api_key" {
   value       = azurerm_static_web_app.frontend.api_key
   sensitive   = true
 }
+
+output "mcp_url" {
+  description = "MCP server URL"
+  value       = "https://${azurerm_container_app.mcp.ingress[0].fqdn}/mcp"
+}
