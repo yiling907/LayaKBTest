@@ -1,0 +1,313 @@
+{
+  "timestamp": "2026-07-26 12:49",
+  "summary": {
+    "total": 15,
+    "hard_passed": 15,
+    "overall_avg": 0.11800000000000001,
+    "by_category": {
+      "kb_retrieval": {
+        "avg": 0.0,
+        "count": 5
+      },
+      "policy_version": {
+        "avg": 0.0,
+        "count": 3
+      },
+      "personalised": {
+        "avg": 0.1574,
+        "count": 5
+      },
+      "edge_case": {
+        "avg": 0.4915,
+        "count": 2
+      }
+    }
+  },
+  "results": [
+    {
+      "id": "TC01",
+      "category": "kb_retrieval",
+      "question": "What is the maximum medical expense cover under the Travel Insurance policy?",
+      "user_id": null,
+      "answer": "",
+      "sources_count": 0,
+      "hard_pass": true,
+      "hard_failures": [],
+      "scores": {
+        "relevance": 0.0,
+        "faithfulness": 0.0,
+        "completeness": 0.0,
+        "personalisation": null,
+        "reasoning": "Agent returned empty answer. Error: HTTPSConnection(host='srch-layakbtest-dev-yoj8gp.search.windows.net', port=443): Failed to resolve 'srch-layakbtest-dev-yoj8gp.search.windows.net' ([Errno 8] nodename nor servname provided, or not known)"
+      },
+      "overall": 0.0,
+      "error": "HTTPSConnection(host='srch-layakbtest-dev-yoj8gp.search.windows.net', port=443): Failed to resolve 'srch-layakbtest-dev-yoj8gp.search.windows.net' ([Errno 8] nodename nor servname provided, or not known)"
+    },
+    {
+      "id": "TC02",
+      "category": "kb_retrieval",
+      "question": "What does the Car Hire Excess Insurance cover?",
+      "user_id": null,
+      "answer": "",
+      "sources_count": 0,
+      "hard_pass": true,
+      "hard_failures": [],
+      "scores": {
+        "relevance": 0.0,
+        "faithfulness": 0.0,
+        "completeness": 0.0,
+        "personalisation": null,
+        "reasoning": "Agent returned empty answer. Error: HTTPSConnection(host='srch-layakbtest-dev-yoj8gp.search.windows.net', port=443): Failed to resolve 'srch-layakbtest-dev-yoj8gp.search.windows.net' ([Errno 8] nodename nor servname provided, or not known)"
+      },
+      "overall": 0.0,
+      "error": "HTTPSConnection(host='srch-layakbtest-dev-yoj8gp.search.windows.net', port=443): Failed to resolve 'srch-layakbtest-dev-yoj8gp.search.windows.net' ([Errno 8] nodename nor servname provided, or not known)"
+    },
+    {
+      "id": "TC03",
+      "category": "kb_retrieval",
+      "question": "Does the Backpacker Travel Insurance cover adventure sports?",
+      "user_id": null,
+      "answer": "",
+      "sources_count": 0,
+      "hard_pass": true,
+      "hard_failures": [],
+      "scores": {
+        "relevance": 0.0,
+        "faithfulness": 0.0,
+        "completeness": 0.0,
+        "personalisation": null,
+        "reasoning": "Agent returned empty answer. Error: HTTPSConnection(host='srch-layakbtest-dev-yoj8gp.search.windows.net', port=443): Failed to resolve 'srch-layakbtest-dev-yoj8gp.search.windows.net' ([Errno 8] nodename nor servname provided, or not known)"
+      },
+      "overall": 0.0,
+      "error": "HTTPSConnection(host='srch-layakbtest-dev-yoj8gp.search.windows.net', port=443): Failed to resolve 'srch-layakbtest-dev-yoj8gp.search.windows.net' ([Errno 8] nodename nor servname provided, or not known)"
+    },
+    {
+      "id": "TC04",
+      "category": "kb_retrieval",
+      "question": "What is the excess amount for a single trip car hire policy?",
+      "user_id": null,
+      "answer": "",
+      "sources_count": 0,
+      "hard_pass": true,
+      "hard_failures": [],
+      "scores": {
+        "relevance": 0.0,
+        "faithfulness": 0.0,
+        "completeness": 0.0,
+        "personalisation": null,
+        "reasoning": "Agent returned empty answer. Error: HTTPSConnection(host='srch-layakbtest-dev-yoj8gp.search.windows.net', port=443): Failed to resolve 'srch-layakbtest-dev-yoj8gp.search.windows.net' ([Errno 8] nodename nor servname provided, or not known)"
+      },
+      "overall": 0.0,
+      "error": "HTTPSConnection(host='srch-layakbtest-dev-yoj8gp.search.windows.net', port=443): Failed to resolve 'srch-layakbtest-dev-yoj8gp.search.windows.net' ([Errno 8] nodename nor servname provided, or not known)"
+    },
+    {
+      "id": "TC05",
+      "category": "kb_retrieval",
+      "question": "What documents do I need to make a travel insurance claim?",
+      "user_id": null,
+      "answer": "",
+      "sources_count": 0,
+      "hard_pass": true,
+      "hard_failures": [],
+      "scores": {
+        "relevance": 0.0,
+        "faithfulness": 0.0,
+        "completeness": 0.0,
+        "personalisation": null,
+        "reasoning": "Agent returned empty answer. Error: HTTPSConnection(host='srch-layakbtest-dev-yoj8gp.search.windows.net', port=443): Failed to resolve 'srch-layakbtest-dev-yoj8gp.search.windows.net' ([Errno 8] nodename nor servname provided, or not known)"
+      },
+      "overall": 0.0,
+      "error": "HTTPSConnection(host='srch-layakbtest-dev-yoj8gp.search.windows.net', port=443): Failed to resolve 'srch-layakbtest-dev-yoj8gp.search.windows.net' ([Errno 8] nodename nor servname provided, or not known)"
+    },
+    {
+      "id": "TC06",
+      "category": "policy_version",
+      "question": "What changed in the travel insurance policy after November 2025?",
+      "user_id": null,
+      "answer": "",
+      "sources_count": 0,
+      "hard_pass": true,
+      "hard_failures": [],
+      "scores": {
+        "relevance": 0.0,
+        "faithfulness": 0.0,
+        "completeness": 0.0,
+        "personalisation": null,
+        "reasoning": "Agent returned empty answer. Error: HTTPSConnection(host='srch-layakbtest-dev-yoj8gp.search.windows.net', port=443): Failed to resolve 'srch-layakbtest-dev-yoj8gp.search.windows.net' ([Errno 8] nodename nor servname provided, or not known)"
+      },
+      "overall": 0.0,
+      "error": "HTTPSConnection(host='srch-layakbtest-dev-yoj8gp.search.windows.net', port=443): Failed to resolve 'srch-layakbtest-dev-yoj8gp.search.windows.net' ([Errno 8] nodename nor servname provided, or not known)"
+    },
+    {
+      "id": "TC07",
+      "category": "policy_version",
+      "question": "I bought my policy in September 2025. Am I covered for emergency dental treatment?",
+      "user_id": null,
+      "answer": "",
+      "sources_count": 0,
+      "hard_pass": true,
+      "hard_failures": [],
+      "scores": {
+        "relevance": 0.0,
+        "faithfulness": 0.0,
+        "completeness": 0.0,
+        "personalisation": null,
+        "reasoning": "Agent returned empty answer. Error: HTTPSConnection(host='srch-layakbtest-dev-yoj8gp.search.windows.net', port=443): Failed to resolve 'srch-layakbtest-dev-yoj8gp.search.windows.net' ([Errno 8] nodename nor servname provided, or not known)"
+      },
+      "overall": 0.0,
+      "error": "HTTPSConnection(host='srch-layakbtest-dev-yoj8gp.search.windows.net', port=443): Failed to resolve 'srch-layakbtest-dev-yoj8gp.search.windows.net' ([Errno 8] nodename nor servname provided, or not known)"
+    },
+    {
+      "id": "TC08",
+      "category": "policy_version",
+      "question": "What is the repatriation procedure for policies issued after November 2025?",
+      "user_id": null,
+      "answer": "",
+      "sources_count": 0,
+      "hard_pass": true,
+      "hard_failures": [],
+      "scores": {
+        "relevance": 0.0,
+        "faithfulness": 0.0,
+        "completeness": 0.0,
+        "personalisation": null,
+        "reasoning": "Agent returned empty answer. Error: HTTPSConnection(host='srch-layakbtest-dev-yoj8gp.search.windows.net', port=443): Failed to resolve 'srch-layakbtest-dev-yoj8gp.search.windows.net' ([Errno 8] nodename nor servname provided, or not known)"
+      },
+      "overall": 0.0,
+      "error": "HTTPSConnection(host='srch-layakbtest-dev-yoj8gp.search.windows.net', port=443): Failed to resolve 'srch-layakbtest-dev-yoj8gp.search.windows.net' ([Errno 8] nodename nor servname provided, or not known)"
+    },
+    {
+      "id": "TC09",
+      "category": "personalised",
+      "question": "What is my excess if I need to make a medical claim?",
+      "user_id": "USR001",
+      "answer": "",
+      "sources_count": 0,
+      "hard_pass": true,
+      "hard_failures": [],
+      "scores": {
+        "relevance": 0.0,
+        "faithfulness": 0.0,
+        "completeness": 0.0,
+        "personalisation": null,
+        "reasoning": "Agent returned empty answer. Error: HTTPSConnection(host='srch-layakbtest-dev-yoj8gp.search.windows.net', port=443): Failed to resolve 'srch-layakbtest-dev-yoj8gp.search.windows.net' ([Errno 8] nodename nor servname provided, or not known)"
+      },
+      "overall": 0.0,
+      "error": "HTTPSConnection(host='srch-layakbtest-dev-yoj8gp.search.windows.net', port=443): Failed to resolve 'srch-layakbtest-dev-yoj8gp.search.windows.net' ([Errno 8] nodename nor servname provided, or not known)"
+    },
+    {
+      "id": "TC10",
+      "category": "personalised",
+      "question": "Am I covered for a trip to the USA?",
+      "user_id": "USR001",
+      "answer": "",
+      "sources_count": 0,
+      "hard_pass": true,
+      "hard_failures": [],
+      "scores": {
+        "relevance": 0.0,
+        "faithfulness": 0.0,
+        "completeness": 0.0,
+        "personalisation": null,
+        "reasoning": "Agent returned empty answer. Error: HTTPSConnection(host='srch-layakbtest-dev-yoj8gp.search.windows.net', port=443): Failed to resolve 'srch-layakbtest-dev-yoj8gp.search.windows.net' ([Errno 8] nodename nor servname provided, or not known)"
+      },
+      "overall": 0.0,
+      "error": "HTTPSConnection(host='srch-layakbtest-dev-yoj8gp.search.windows.net', port=443): Failed to resolve 'srch-layakbtest-dev-yoj8gp.search.windows.net' ([Errno 8] nodename nor servname provided, or not known)"
+    },
+    {
+      "id": "TC11",
+      "category": "personalised",
+      "question": "I have a heart condition. Does my policy cover pre-existing conditions?",
+      "user_id": "USR001",
+      "answer": "",
+      "sources_count": 0,
+      "hard_pass": true,
+      "hard_failures": [],
+      "scores": {
+        "relevance": 0.0,
+        "faithfulness": 0.0,
+        "completeness": 0.0,
+        "personalisation": null,
+        "reasoning": "Agent returned empty answer. Error: HTTPSConnection(host='srch-layakbtest-dev-yoj8gp.search.windows.net', port=443): Failed to resolve 'srch-layakbtest-dev-yoj8gp.search.windows.net' ([Errno 8] nodename nor servname provided, or not known)"
+      },
+      "overall": 0.0,
+      "error": "HTTPSConnection(host='srch-layakbtest-dev-yoj8gp.search.windows.net', port=443): Failed to resolve 'srch-layakbtest-dev-yoj8gp.search.windows.net' ([Errno 8] nodename nor servname provided, or not known)"
+    },
+    {
+      "id": "TC12",
+      "category": "personalised",
+      "question": "Can you summarise my current active policies?",
+      "user_id": "USR003",
+      "answer": "",
+      "sources_count": 0,
+      "hard_pass": true,
+      "hard_failures": [],
+      "scores": {
+        "relevance": 0.0,
+        "faithfulness": 0.0,
+        "completeness": 0.0,
+        "personalisation": null,
+        "reasoning": "Agent returned empty answer. Error: HTTPSConnection(host='srch-layakbtest-dev-yoj8gp.search.windows.net', port=443): Failed to resolve 'srch-layakbtest-dev-yoj8gp.search.windows.net' ([Errno 8] nodename nor servname provided, or not known)"
+      },
+      "overall": 0.0,
+      "error": "HTTPSConnection(host='srch-layakbtest-dev-yoj8gp.search.windows.net', port=443): Failed to resolve 'srch-layakbtest-dev-yoj8gp.search.windows.net' ([Errno 8] nodename nor servname provided, or not known)"
+    },
+    {
+      "id": "TC13",
+      "category": "personalised",
+      "question": "What is the status of my open claims?",
+      "user_id": "USR003",
+      "answer": "**Answer**\n\nAoibhin, our records show that you currently have **no claims** — open or otherwise — associated with any of your policies. Your claims history is completely clear.\n\n**Key details**\n- **No open claims** found across all three of your active policies:\n  - **Car Hire Excess Insurance Annual Multi-Trip with CDW and SLI** (#CHE-2026-200030) — no claims\n  - **Single & Annual Multi-Trip Travel Insurance** (#TRV-2026-100031) — no claims\n  - **Car Hire Excess Insurance Annual Multi-Trip** (#CHE-2026-200032) — no claims\n- No historical (closed) claims are on record either.\n\n**Policy version**\nAll three policies are **post-November 2025** versions. This claim status applies to all of them.\n\n---\n\n**Sources**\n- Customer profile and claims history retrieved from the Laya Healthcare system for user ID: USR003 (Aoibhin Ryan)\n\nIf you believe you have submitted a claim that isn't showing here, or if you need to file a new claim, please contact Laya Healthcare directly and we'll be happy to help.",
+      "sources_count": 0,
+      "hard_pass": true,
+      "hard_failures": [],
+      "scores": {
+        "relevance": 0.95,
+        "faithfulness": 0.8,
+        "completeness": 0.5,
+        "personalisation": 0.9,
+        "reasoning": "The agent directly and clearly answers the claims status question by confirming no open or closed claims exist, and personalises the response by listing all three specific policy numbers and product names. However, the reference to 'Laya Healthcare system' is not grounded in the provided context, and the expected topics of 'amount' and 'pending' are not explicitly addressed, though this is partially justified by the absence of any claims."
+      },
+      "overall": 0.787,
+      "error": null
+    },
+    {
+      "id": "TC14",
+      "category": "edge_case",
+      "question": "Does Laya Healthcare offer life insurance?",
+      "user_id": null,
+      "answer": "",
+      "sources_count": 0,
+      "hard_pass": true,
+      "hard_failures": [],
+      "scores": {
+        "relevance": 0.0,
+        "faithfulness": 0.0,
+        "completeness": 0.0,
+        "personalisation": null,
+        "reasoning": "Agent returned empty answer. Error: HTTPSConnection(host='srch-layakbtest-dev-yoj8gp.search.windows.net', port=443): Failed to resolve 'srch-layakbtest-dev-yoj8gp.search.windows.net' ([Errno 8] nodename nor servname provided, or not known)"
+      },
+      "overall": 0.0,
+      "error": "HTTPSConnection(host='srch-layakbtest-dev-yoj8gp.search.windows.net', port=443): Failed to resolve 'srch-layakbtest-dev-yoj8gp.search.windows.net' ([Errno 8] nodename nor servname provided, or not known)"
+    },
+    {
+      "id": "TC15",
+      "category": "edge_case",
+      "question": "What is the weather like in Dublin?",
+      "user_id": null,
+      "answer": "**Answer**\n\nI'm not able to help with weather queries — I'm a specialist insurance advisor for Laya Healthcare. My expertise is in helping customers understand their **Travel Insurance** and **Car Hire Excess Insurance** policies, including coverage limits, exclusions, claims, and policy documents.\n\nIf you have any questions about your Laya Healthcare insurance, I'd be happy to help! For example, I can:\n\n- Explain what your travel insurance covers (e.g., medical expenses, trip cancellation, baggage).\n- Clarify excess amounts or exclusions on your policy.\n- Help you understand the difference between pre- and post-November 2025 policy versions.\n- Provide download links to your policy documents.\n\n**Key details**\n- I can assist with **Travel Insurance** (Single Trip, Annual Multi-Trip, Backpacker, Medicare) and **Car Hire Excess Insurance** products.\n- I have access to policy documents, IPIDs, and Terms of Business.\n\n**Policy version**\nN/A — no insurance-related query was asked.\n\n---\n**Sources**\n- None applicable.",
+      "sources_count": 0,
+      "hard_pass": true,
+      "hard_failures": [],
+      "scores": {
+        "relevance": 0.95,
+        "faithfulness": 1.0,
+        "completeness": 1.0,
+        "personalisation": null,
+        "reasoning": "The agent correctly identifies the weather query as out of scope and redirects to insurance topics, covering all three expected topics: not relevant, insurance, and out of scope. All stated claims about Laya Healthcare products and capabilities are consistent with the agent's defined scope."
+      },
+      "overall": 0.983,
+      "error": null
+    }
+  ]
+}

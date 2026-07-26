@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import api from '../api/client'
 import './EvalPage.css'
 
@@ -33,6 +33,12 @@ interface EvalSummary {
   by_category: Record<string, { avg: number; count: number }>
 }
 
+interface StaticResults {
+  summary: EvalSummary
+  results: EvalResult[]
+  timestamp?: string
+}
+
 export default function EvalPage() {
   const [category, setCategory] = useState('all')
   const [running, setRunning] = useState(false)
@@ -40,12 +46,30 @@ export default function EvalPage() {
   const [results, setResults] = useState<EvalResult[]>([])
   const [expanded, setExpanded] = useState<Set<string>>(new Set())
   const [error, setError] = useState('')
+  const [isStatic, setIsStatic] = useState(false)
+  const [staticTimestamp, setStaticTimestamp] = useState<string | null>(null)
+
+  // Load static results on mount
+  useEffect(() => {
+    fetch('/eval-results.json')
+      .then(r => r.json())
+      .then((data: StaticResults) => {
+        setSummary(data.summary)
+        setResults(data.results)
+        setIsStatic(true)
+        setStaticTimestamp(data.timestamp ?? null)
+      })
+      .catch(() => {
+        // No static results available — that's fine
+      })
+  }, [])
 
   const runEval = async () => {
     setRunning(true)
     setError('')
     setSummary(null)
     setResults([])
+    setIsStatic(false)
     try {
       const { data } = await api.post('/evaluate', {
         category: category === 'all' ? null : category,
@@ -71,6 +95,10 @@ export default function EvalPage() {
 
   const scoreBg = (v: number) =>
     v >= 0.8 ? '#d1fae5' : v >= 0.6 ? '#fef3c7' : '#fee2e2'
+
+  const filteredResults = category === 'all'
+    ? results
+    : results.filter(r => r.category === category)
 
   return (
     <div className="eval-page">
@@ -107,6 +135,13 @@ export default function EvalPage() {
 
       {error && <p className="eval-error">{error}</p>}
 
+      {isStatic && summary && (
+        <p className="eval-static-notice">
+          Showing pre-computed results{staticTimestamp ? ` from ${staticTimestamp}` : ''}.
+          Click <strong>▶ Run Evaluation</strong> to generate live results.
+        </p>
+      )}
+
       {summary && (
         <div className="summary-grid">
           <div className="summary-card">
@@ -126,9 +161,9 @@ export default function EvalPage() {
         </div>
       )}
 
-      {results.length > 0 && (
+      {filteredResults.length > 0 && (
         <div className="results-list">
-          {results.map(r => (
+          {filteredResults.map(r => (
             <div key={r.id} className={`result-card ${r.hard_pass ? '' : 'fail'}`}>
               <div className="result-header" onClick={() => toggle(r.id)}>
                 <div className="result-meta">
