@@ -12,9 +12,12 @@ Prompt names used in Langfuse:
 """
 import logging
 import os
+import sys
 import threading
 import time
 from typing import Optional
+
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 
 from langfuse.model import TextPromptClient
 
