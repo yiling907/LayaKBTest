@@ -7,13 +7,15 @@ import uuid
 from dotenv import load_dotenv
 load_dotenv(os.path.join(os.path.dirname(__file__), "..", ".env"))
 
-from fastapi import FastAPI, File, UploadFile, HTTPException, BackgroundTasks
+from fastapi import FastAPI, File, UploadFile, HTTPException, BackgroundTasks, Request
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import JSONResponse
 from pydantic import BaseModel
 from typing import List
 
 from shared import blob_client, search_client, openai_client, cosmos_client, user_client
+import langfuse_prompts
+import langfuse_tracing
 
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
@@ -27,76 +29,20 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-SYSTEM_PROMPT = """You are a knowledgeable assistant for Laya Healthcare insurance products. \
-You answer questions strictly based on the provided policy documents.
 
-Knowledge base covers:
-- Travel Insurance: Policy Wordings, Insurance Product Information Documents (Single & Annual Multi-Trip, Backpacker), Terms of Business
-- Car Hire Excess Insurance: Policy Wordings, Insurance Product Information Documents (Annual Multi-Trip with CDW/SLI, Annual Multi-Trip, Single Trip), Terms of Business
-- Two policy versions: documents for policies bound BEFORE November 2025 and AFTER November 2025
+@app.on_event("shutdown")
+def _on_shutdown():
+    langfuse_tracing.flush_langfuse()
 
-Response rules:
-1. Answer only from the provided context. If the answer is not in the context, say: \
-"I'm unable to find this information in the available Laya Healthcare policy documents. \
-Please contact Laya Healthcare directly or refer to your policy document."
-2. Always specify which policy version applies (pre- or post-November 2025) when relevant.
-3. Use plain, clear English. Avoid jargon where possible; define technical terms when first used.
-4. For coverage limits, exclusions, or claim procedures, quote the relevant clause or section directly.
-5. End every response with a source citation in this format:
-   Source: {document name} | {page or section reference}"""
 
-_AGENT_SYSTEM_PROMPT = """You are a specialist insurance advisor for Laya Healthcare. \
-You have access to a knowledge base containing the full text of all Laya Healthcare policy documents.
+def _system_prompt() -> str:
+    """Current SYSTEM_PROMPT text, fetched from Langfuse Prompt Management (TTL-cached, falls back to a hardcoded copy)."""
+    return langfuse_prompts.get_prompt(langfuse_prompts.SYSTEM_PROMPT_NAME)
 
-## Documents in the knowledge base
 
-Travel Insurance (two versions: policies bound before / after November 2025):
-- Laya Healthcare Travel Insurance Policy Document
-- Laya Healthcare Medicare Travel Insurance Policy Document
-- Single & Annual Multi-Trip Travel Insurance IPID
-- Backpacker Travel Insurance IPID
-- Terms of Business
-
-Car Hire Excess Insurance (two versions: policies bound before / after November 2025):
-- Laya Healthcare Car Hire Excess Insurance Policy Document
-- Car Hire Excess Insurance Annual Multi-Trip with CDW and SLI IPID
-- Car Hire Excess Insurance Annual Multi-Trip IPID
-- Car Hire Excess Insurance Single Trip IPID
-- Terms of Business
-
-## Behaviour rules
-
-1. If a customer context is provided in the message, use get_user_profile or get_user_policies \
-to retrieve their exact coverage details before searching the knowledge base.
-2. Always call search_knowledge_base to find the relevant policy clauses for the question.
-3. Cross-reference the customer's specific policy (product, version, excess, destinations) \
-with what the knowledge base says — tailor the answer to their actual coverage.
-4. If the question concerns a specific document or the user wants to read the source, \
-call generate_sas_url to produce a download link.
-5. Clarify which policy version (pre- or post-November 2025) applies to this customer.
-6. Be precise: quote exact coverage limits, excess amounts, exclusions, and clause numbers.
-7. Never speculate beyond what the documents state. If information is absent, say so clearly.
-8. Do not give personal financial or legal advice; direct the user to contact Laya Healthcare \
-or a licensed broker for decisions specific to their situation.
-
-## Required response format
-
-Structure every answer as follows:
-
-**Answer**
-<direct response to the question, in plain English>
-
-**Key details**
-- <bullet point for each relevant coverage limit, exclusion, or condition>
-
-**Policy version**
-<state whether this applies to policies before or after November 2025, or both>
-
----
-**Sources**
-- Document: {source_file_name} | Page/Section: {page_number or section}
-- Link: {sas_url} (valid for 24 hours)
-"""
+def _agent_system_prompt() -> str:
+    """Current agent SYSTEM_PROMPT text, fetched from Langfuse Prompt Management (TTL-cached, falls back to a hardcoded copy)."""
+    return langfuse_prompts.get_prompt(langfuse_prompts.AGENT_SYSTEM_PROMPT_NAME)
 
 _AGENT_TOOLS = [
     {
@@ -295,34 +241,42 @@ class QueryRequest(BaseModel):
 
 
 @app.post("/api/query")
-def query(body: QueryRequest):
+def query(request: Request, body: QueryRequest):
     question = body.question.strip()
     if not question:
         raise HTTPException(status_code=400, detail="Field 'question' is required.")
 
-    query_vector = openai_client.get_embedding(question)
-    hits = search_client.vector_search(query_vector, top_k=5)
+    trace_metadata = langfuse_tracing.extract_trace_metadata(request.headers)
+    with langfuse_tracing.observe_query(question, body.user_id, trace_metadata) as span:
+        query_vector = openai_client.get_embedding(question)
+        with langfuse_tracing.trace_tool_call("search_knowledge_base", {"query": question, "top_k": 5}):
+            hits = search_client.vector_search(query_vector, top_k=5)
 
-    kb_context = "\n\n---\n\n".join(
-        f"[{h['source_file_name']}]\n{h['content']}" for h in hits
-    )
-
-    user_context = ""
-    if body.user_id:
-        user_context = user_client.build_user_context(body.user_id)
-
-    if user_context:
-        user_message = (
-            f"Customer context:\n{user_context}\n\n"
-            f"Knowledge base context:\n{kb_context}\n\n"
-            f"Question: {question}"
+        kb_context = "\n\n---\n\n".join(
+            f"[{h['source_file_name']}]\n{h['content']}" for h in hits
         )
-    else:
-        user_message = f"Context:\n{kb_context}\n\nQuestion: {question}"
 
-    answer = openai_client.chat_completion(SYSTEM_PROMPT, user_message)
-    sources = [{"document": h["source_file_name"], "chunk": h["content"][:300]} for h in hits]
-    return {"answer": answer, "sources": sources}
+        user_context = ""
+        if body.user_id:
+            user_context = user_client.build_user_context(body.user_id)
+
+        if user_context:
+            user_message = (
+                f"Customer context:\n{user_context}\n\n"
+                f"Knowledge base context:\n{kb_context}\n\n"
+                f"Question: {question}"
+            )
+        else:
+            user_message = f"Context:\n{kb_context}\n\nQuestion: {question}"
+
+        model = os.environ.get("ARK_CHAT_MODEL", "")
+        with langfuse_tracing.trace_llm_call(model, message_count=2):
+            answer = openai_client.chat_completion(_system_prompt(), user_message)
+
+        sources = [{"document": h["source_file_name"], "chunk": h["content"][:300]} for h in hits]
+        if span:
+            span.update(output={"answer": answer, "sources": sources})
+        return {"answer": answer, "sources": sources}
 
 
 @app.get("/api/users")
@@ -458,41 +412,52 @@ async def clean_document(request_body: dict):
 # ---------------------------------------------------------------------------
 
 @app.post("/api/agent_query")
-def agent_query(body: QueryRequest):
+def agent_query(request: Request, body: QueryRequest):
     question = body.question.strip()
     if not question:
         raise HTTPException(status_code=400, detail="Field 'question' is required.")
 
-    # Inject customer context if a user_id was provided
-    user_context = ""
-    if body.user_id:
-        user_context = user_client.build_user_context(body.user_id)
+    trace_metadata = langfuse_tracing.extract_trace_metadata(request.headers)
+    with langfuse_tracing.observe_agent_query(question, body.user_id, trace_metadata) as span:
+        # Inject customer context if a user_id was provided
+        user_context = ""
+        if body.user_id:
+            user_context = user_client.build_user_context(body.user_id)
 
-    user_message = question
-    if user_context:
-        user_message = f"Customer context:\n{user_context}\n\nQuestion: {question}"
+        user_message = question
+        if user_context:
+            user_message = f"Customer context:\n{user_context}\n\nQuestion: {question}"
 
-    messages = [
-        {"role": "system", "content": _AGENT_SYSTEM_PROMPT},
-        {"role": "user", "content": user_message},
-    ]
+        messages = [
+            {"role": "system", "content": _agent_system_prompt()},
+            {"role": "user", "content": user_message},
+        ]
 
-    for _ in range(6):
-        choice = openai_client.chat_with_tools(messages, _AGENT_TOOLS)
+        model = os.environ.get("ARK_CHAT_MODEL", "")
+        for iteration in range(6):
+            with langfuse_tracing.trace_agent_loop_iteration(iteration, len(messages)):
+                with langfuse_tracing.trace_llm_call(model, message_count=len(messages)):
+                    choice = openai_client.chat_with_tools(messages, _AGENT_TOOLS)
 
-        if choice.finish_reason == "tool_calls":
-            messages.append(choice.message.model_dump())
-            for tc in choice.message.tool_calls:
-                result = _execute_agent_tool(tc)
-                messages.append({
-                    "role": "tool",
-                    "tool_call_id": tc.id,
-                    "content": json.dumps(result),
-                })
-        else:
-            return {"answer": choice.message.content or ""}
+                if choice.finish_reason == "tool_calls":
+                    messages.append(choice.message.model_dump())
+                    for tc in choice.message.tool_calls:
+                        with langfuse_tracing.trace_tool_call(
+                            tc.function.name, json.loads(tc.function.arguments or "{}")
+                        ):
+                            result = _execute_agent_tool(tc)
+                        messages.append({
+                            "role": "tool",
+                            "tool_call_id": tc.id,
+                            "content": json.dumps(result),
+                        })
+                else:
+                    answer = choice.message.content or ""
+                    if span:
+                        span.update(output={"answer": answer})
+                    return {"answer": answer}
 
-    raise HTTPException(status_code=500, detail="Agent did not converge within iteration limit.")
+        raise HTTPException(status_code=500, detail="Agent did not converge within iteration limit.")
 
 
 # ---------------------------------------------------------------------------
@@ -521,7 +486,7 @@ def run_evaluation(body: EvalRequest = EvalRequest()):
         ctx = user_client.build_user_context(uid) if uid else ""
         content = f"Customer context:\n{ctx}\n\nQuestion: {question}" if ctx else question
         messages = [
-            {"role": "system", "content": main_mod._AGENT_SYSTEM_PROMPT},
+            {"role": "system", "content": main_mod._agent_system_prompt()},
             {"role": "user",   "content": content},
         ]
         for _ in range(6):
