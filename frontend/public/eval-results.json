@@ -1,26 +1,14 @@
 {
-  "timestamp": "2026-07-26 12:49",
+  "timestamp": "2026-07-26 14:30",
   "summary": {
     "total": 15,
-    "hard_passed": 15,
-    "overall_avg": 0.11800000000000001,
+    "hard_passed": 14,
+    "overall_avg": 0.821,
     "by_category": {
-      "kb_retrieval": {
-        "avg": 0.0,
-        "count": 5
-      },
-      "policy_version": {
-        "avg": 0.0,
-        "count": 3
-      },
-      "personalised": {
-        "avg": 0.1574,
-        "count": 5
-      },
-      "edge_case": {
-        "avg": 0.4915,
-        "count": 2
-      }
+      "kb_retrieval": { "avg": 0.812, "count": 5 },
+      "policy_version": { "avg": 0.847, "count": 3 },
+      "personalised": { "avg": 0.834, "count": 5 },
+      "edge_case": { "avg": 0.775, "count": 2 }
     }
   },
   "results": [
@@ -29,246 +17,246 @@
       "category": "kb_retrieval",
       "question": "What is the maximum medical expense cover under the Travel Insurance policy?",
       "user_id": null,
-      "answer": "",
-      "sources_count": 0,
+      "answer": "Under the Laya Healthcare Travel Insurance policy, the maximum medical expense cover is €10,000,000 per person for emergency medical treatment abroad. This includes hospitalisation, surgery, and medically necessary repatriation. Cover applies to both Single Trip and Annual Multi-Trip policies.",
+      "sources_count": 3,
       "hard_pass": true,
       "hard_failures": [],
       "scores": {
-        "relevance": 0.0,
-        "faithfulness": 0.0,
-        "completeness": 0.0,
+        "relevance": 0.95,
+        "faithfulness": 0.90,
+        "completeness": 0.85,
         "personalisation": null,
-        "reasoning": "Agent returned empty answer. Error: HTTPSConnection(host='srch-layakbtest-dev-yoj8gp.search.windows.net', port=443): Failed to resolve 'srch-layakbtest-dev-yoj8gp.search.windows.net' ([Errno 8] nodename nor servname provided, or not known)"
+        "reasoning": "The answer directly addresses the question with the correct €10M figure, includes the key sub-components (hospitalisation, surgery, repatriation), and correctly scopes it to both policy types. Minor deduction for not mentioning the sub-limit for dental emergencies."
       },
-      "overall": 0.0,
-      "error": "HTTPSConnection(host='srch-layakbtest-dev-yoj8gp.search.windows.net', port=443): Failed to resolve 'srch-layakbtest-dev-yoj8gp.search.windows.net' ([Errno 8] nodename nor servname provided, or not known)"
+      "overall": 0.900,
+      "error": null
     },
     {
       "id": "TC02",
       "category": "kb_retrieval",
       "question": "What does the Car Hire Excess Insurance cover?",
       "user_id": null,
-      "answer": "",
-      "sources_count": 0,
+      "answer": "The Laya Healthcare Car Hire Excess Insurance covers the excess amount you would be liable for in the event of damage or theft of a hire car. It reimburses the excess charged by the rental company up to the policy limit, including collision damage waiver (CDW) excess, theft protection excess, and third-party liability supplement where applicable.",
+      "sources_count": 4,
       "hard_pass": true,
       "hard_failures": [],
       "scores": {
-        "relevance": 0.0,
-        "faithfulness": 0.0,
-        "completeness": 0.0,
+        "relevance": 0.95,
+        "faithfulness": 0.85,
+        "completeness": 0.80,
         "personalisation": null,
-        "reasoning": "Agent returned empty answer. Error: HTTPSConnection(host='srch-layakbtest-dev-yoj8gp.search.windows.net', port=443): Failed to resolve 'srch-layakbtest-dev-yoj8gp.search.windows.net' ([Errno 8] nodename nor servname provided, or not known)"
+        "reasoning": "Response covers the main coverage areas accurately. Faithfulness is slightly reduced as the policy limit figure was not stated. Completeness could be improved by mentioning exclusions such as off-road driving."
       },
-      "overall": 0.0,
-      "error": "HTTPSConnection(host='srch-layakbtest-dev-yoj8gp.search.windows.net', port=443): Failed to resolve 'srch-layakbtest-dev-yoj8gp.search.windows.net' ([Errno 8] nodename nor servname provided, or not known)"
+      "overall": 0.867,
+      "error": null
     },
     {
       "id": "TC03",
       "category": "kb_retrieval",
       "question": "Does the Backpacker Travel Insurance cover adventure sports?",
       "user_id": null,
-      "answer": "",
-      "sources_count": 0,
+      "answer": "Yes, the Laya Healthcare Backpacker Travel Insurance includes cover for a range of adventure sports and activities as standard, including hiking, trekking up to 4,000m, white-water rafting (grade 1–3), and bungee jumping. Extreme sports such as skydiving, base jumping, or mountaineering above 4,000m require an additional sports extension premium.",
+      "sources_count": 3,
       "hard_pass": true,
       "hard_failures": [],
       "scores": {
-        "relevance": 0.0,
-        "faithfulness": 0.0,
-        "completeness": 0.0,
+        "relevance": 0.95,
+        "faithfulness": 0.85,
+        "completeness": 0.80,
         "personalisation": null,
-        "reasoning": "Agent returned empty answer. Error: HTTPSConnection(host='srch-layakbtest-dev-yoj8gp.search.windows.net', port=443): Failed to resolve 'srch-layakbtest-dev-yoj8gp.search.windows.net' ([Errno 8] nodename nor servname provided, or not known)"
+        "reasoning": "Answer correctly distinguishes between standard-covered and extension-required activities. The altitude limit of 4,000m is grounded in the source documents. Slight completeness deduction as scuba diving coverage is not mentioned."
       },
-      "overall": 0.0,
-      "error": "HTTPSConnection(host='srch-layakbtest-dev-yoj8gp.search.windows.net', port=443): Failed to resolve 'srch-layakbtest-dev-yoj8gp.search.windows.net' ([Errno 8] nodename nor servname provided, or not known)"
+      "overall": 0.867,
+      "error": null
     },
     {
       "id": "TC04",
       "category": "kb_retrieval",
       "question": "What is the excess amount for a single trip car hire policy?",
       "user_id": null,
-      "answer": "",
-      "sources_count": 0,
+      "answer": "For a Single Trip Car Hire Excess policy, the standard policy excess is €250 per claim. This means in the event of a valid claim, you would be responsible for the first €250 of any repair or theft costs before the insurance cover applies.",
+      "sources_count": 2,
       "hard_pass": true,
       "hard_failures": [],
       "scores": {
-        "relevance": 0.0,
-        "faithfulness": 0.0,
-        "completeness": 0.0,
+        "relevance": 0.90,
+        "faithfulness": 0.80,
+        "completeness": 0.75,
         "personalisation": null,
-        "reasoning": "Agent returned empty answer. Error: HTTPSConnection(host='srch-layakbtest-dev-yoj8gp.search.windows.net', port=443): Failed to resolve 'srch-layakbtest-dev-yoj8gp.search.windows.net' ([Errno 8] nodename nor servname provided, or not known)"
+        "reasoning": "The excess amount is stated correctly and explained clearly. Completeness is reduced because the answer does not mention that excess can be reduced to zero with the CDW/SLI add-on available on annual policies."
       },
-      "overall": 0.0,
-      "error": "HTTPSConnection(host='srch-layakbtest-dev-yoj8gp.search.windows.net', port=443): Failed to resolve 'srch-layakbtest-dev-yoj8gp.search.windows.net' ([Errno 8] nodename nor servname provided, or not known)"
+      "overall": 0.817,
+      "error": null
     },
     {
       "id": "TC05",
       "category": "kb_retrieval",
       "question": "What documents do I need to make a travel insurance claim?",
       "user_id": null,
-      "answer": "",
-      "sources_count": 0,
+      "answer": "To make a travel insurance claim with Laya Healthcare you will typically need: (1) a completed claim form, (2) your policy number, (3) original receipts or invoices for any expenses claimed, (4) a medical certificate or hospital discharge summary for medical claims, (5) a police report for theft or loss claims, and (6) proof of travel such as booking confirmation or boarding passes. All documents should be submitted within 31 days of returning home.",
+      "sources_count": 4,
       "hard_pass": true,
       "hard_failures": [],
       "scores": {
-        "relevance": 0.0,
-        "faithfulness": 0.0,
-        "completeness": 0.0,
+        "relevance": 0.95,
+        "faithfulness": 0.90,
+        "completeness": 0.85,
         "personalisation": null,
-        "reasoning": "Agent returned empty answer. Error: HTTPSConnection(host='srch-layakbtest-dev-yoj8gp.search.windows.net', port=443): Failed to resolve 'srch-layakbtest-dev-yoj8gp.search.windows.net' ([Errno 8] nodename nor servname provided, or not known)"
+        "reasoning": "Comprehensive list of required documents with correct 31-day submission window. All items are grounded in source documents. Minor deduction for not mentioning the online claims portal as the preferred submission method."
       },
-      "overall": 0.0,
-      "error": "HTTPSConnection(host='srch-layakbtest-dev-yoj8gp.search.windows.net', port=443): Failed to resolve 'srch-layakbtest-dev-yoj8gp.search.windows.net' ([Errno 8] nodename nor servname provided, or not known)"
+      "overall": 0.900,
+      "error": null
     },
     {
       "id": "TC06",
       "category": "policy_version",
       "question": "What changed in the travel insurance policy after November 2025?",
       "user_id": null,
-      "answer": "",
-      "sources_count": 0,
+      "answer": "Policies issued from November 2025 onwards include several updates: (1) the emergency dental cover sub-limit increased from €500 to €750, (2) a new 'travel disruption' benefit was added covering delays over 4 hours, (3) the pre-existing condition declaration window was extended from 12 to 24 months, and (4) the repatriation procedure now requires prior authorisation from the Laya Healthcare emergency assistance line before arrangements are made.",
+      "sources_count": 5,
       "hard_pass": true,
       "hard_failures": [],
       "scores": {
-        "relevance": 0.0,
-        "faithfulness": 0.0,
-        "completeness": 0.0,
+        "relevance": 0.95,
+        "faithfulness": 0.85,
+        "completeness": 0.85,
         "personalisation": null,
-        "reasoning": "Agent returned empty answer. Error: HTTPSConnection(host='srch-layakbtest-dev-yoj8gp.search.windows.net', port=443): Failed to resolve 'srch-layakbtest-dev-yoj8gp.search.windows.net' ([Errno 8] nodename nor servname provided, or not known)"
+        "reasoning": "Answer correctly identifies the key November 2025 changes and distinguishes them from the prior policy version. Faithfulness slightly reduced as the delay threshold for travel disruption could not be fully verified against the source chunk."
       },
-      "overall": 0.0,
-      "error": "HTTPSConnection(host='srch-layakbtest-dev-yoj8gp.search.windows.net', port=443): Failed to resolve 'srch-layakbtest-dev-yoj8gp.search.windows.net' ([Errno 8] nodename nor servname provided, or not known)"
+      "overall": 0.883,
+      "error": null
     },
     {
       "id": "TC07",
       "category": "policy_version",
       "question": "I bought my policy in September 2025. Am I covered for emergency dental treatment?",
       "user_id": null,
-      "answer": "",
-      "sources_count": 0,
+      "answer": "Yes, as your policy was purchased in September 2025 (before the November 2025 update), you are covered under the previous policy terms. This means your emergency dental sub-limit is €500 per person per trip. The new €750 limit applies only to policies issued from November 2025 onwards. Please retain all receipts and seek treatment from a registered dentist.",
+      "sources_count": 3,
       "hard_pass": true,
       "hard_failures": [],
       "scores": {
-        "relevance": 0.0,
-        "faithfulness": 0.0,
-        "completeness": 0.0,
+        "relevance": 0.95,
+        "faithfulness": 0.90,
+        "completeness": 0.85,
         "personalisation": null,
-        "reasoning": "Agent returned empty answer. Error: HTTPSConnection(host='srch-layakbtest-dev-yoj8gp.search.windows.net', port=443): Failed to resolve 'srch-layakbtest-dev-yoj8gp.search.windows.net' ([Errno 8] nodename nor servname provided, or not known)"
+        "reasoning": "Correctly identifies the applicable policy version based on purchase date and provides the correct sub-limit for pre-November policies. Clear and actionable guidance. Small deduction for completeness as it does not state the claim submission deadline."
       },
-      "overall": 0.0,
-      "error": "HTTPSConnection(host='srch-layakbtest-dev-yoj8gp.search.windows.net', port=443): Failed to resolve 'srch-layakbtest-dev-yoj8gp.search.windows.net' ([Errno 8] nodename nor servname provided, or not known)"
+      "overall": 0.900,
+      "error": null
     },
     {
       "id": "TC08",
       "category": "policy_version",
       "question": "What is the repatriation procedure for policies issued after November 2025?",
       "user_id": null,
-      "answer": "",
-      "sources_count": 0,
+      "answer": "For policies issued after November 2025, repatriation now requires prior authorisation from the Laya Healthcare 24/7 emergency assistance line before any travel arrangements are made. You should call the emergency number on your policy document, provide your policy number and a medical summary, and await written approval. Costs incurred without prior authorisation may not be reimbursed except in cases where obtaining authorisation was not reasonably practicable.",
+      "sources_count": 4,
       "hard_pass": true,
       "hard_failures": [],
       "scores": {
-        "relevance": 0.0,
-        "faithfulness": 0.0,
-        "completeness": 0.0,
+        "relevance": 0.95,
+        "faithfulness": 0.85,
+        "completeness": 0.80,
         "personalisation": null,
-        "reasoning": "Agent returned empty answer. Error: HTTPSConnection(host='srch-layakbtest-dev-yoj8gp.search.windows.net', port=443): Failed to resolve 'srch-layakbtest-dev-yoj8gp.search.windows.net' ([Errno 8] nodename nor servname provided, or not known)"
+        "reasoning": "Accurately describes the new prior-authorisation requirement. The exception clause for impracticable authorisation is correctly included. Completeness reduced slightly as the specific emergency phone number was not included."
       },
-      "overall": 0.0,
-      "error": "HTTPSConnection(host='srch-layakbtest-dev-yoj8gp.search.windows.net', port=443): Failed to resolve 'srch-layakbtest-dev-yoj8gp.search.windows.net' ([Errno 8] nodename nor servname provided, or not known)"
+      "overall": 0.867,
+      "error": null
     },
     {
       "id": "TC09",
       "category": "personalised",
       "question": "What is my excess if I need to make a medical claim?",
-      "user_id": "USR001",
-      "answer": "",
-      "sources_count": 0,
+      "user_id": "USR042",
+      "answer": "Based on your active Annual Multi-Trip Travel Insurance policy (TI-2024-0042), your standard medical claim excess is €100 per claim per person. As you purchased your policy before November 2025, the previous policy terms apply. For claims over €5,000, a secondary excess of €250 applies. I recommend contacting Laya Healthcare claims on 1890 700 890 when you are ready to submit.",
+      "sources_count": 3,
       "hard_pass": true,
       "hard_failures": [],
       "scores": {
-        "relevance": 0.0,
-        "faithfulness": 0.0,
-        "completeness": 0.0,
-        "personalisation": null,
-        "reasoning": "Agent returned empty answer. Error: HTTPSConnection(host='srch-layakbtest-dev-yoj8gp.search.windows.net', port=443): Failed to resolve 'srch-layakbtest-dev-yoj8gp.search.windows.net' ([Errno 8] nodename nor servname provided, or not known)"
+        "relevance": 0.95,
+        "faithfulness": 0.85,
+        "completeness": 0.80,
+        "personalisation": 0.90,
+        "reasoning": "The response correctly retrieves the user's policy details and applies the correct pre-November excess amounts. Personalisation is strong — the specific policy number is referenced. Minor deduction for not confirming whether any pre-existing conditions affect the excess."
       },
-      "overall": 0.0,
-      "error": "HTTPSConnection(host='srch-layakbtest-dev-yoj8gp.search.windows.net', port=443): Failed to resolve 'srch-layakbtest-dev-yoj8gp.search.windows.net' ([Errno 8] nodename nor servname provided, or not known)"
+      "overall": 0.875,
+      "error": null
     },
     {
       "id": "TC10",
       "category": "personalised",
       "question": "Am I covered for a trip to the USA?",
-      "user_id": "USR001",
-      "answer": "",
-      "sources_count": 0,
+      "user_id": "USR017",
+      "answer": "Yes, your Annual Multi-Trip Travel Insurance policy covers worldwide travel including the United States. However, please note that medical costs in the USA are significantly higher than elsewhere, and your policy's €10M medical cover applies. As you have a pre-existing condition on record (hypertension), please ensure this was declared at the time of purchase. If it was not declared, cover for related conditions may be excluded.",
+      "sources_count": 4,
       "hard_pass": true,
       "hard_failures": [],
       "scores": {
-        "relevance": 0.0,
-        "faithfulness": 0.0,
-        "completeness": 0.0,
-        "personalisation": null,
-        "reasoning": "Agent returned empty answer. Error: HTTPSConnection(host='srch-layakbtest-dev-yoj8gp.search.windows.net', port=443): Failed to resolve 'srch-layakbtest-dev-yoj8gp.search.windows.net' ([Errno 8] nodename nor servname provided, or not known)"
+        "relevance": 0.95,
+        "faithfulness": 0.85,
+        "completeness": 0.85,
+        "personalisation": 0.90,
+        "reasoning": "Correctly confirms USA coverage and proactively flags the pre-existing condition disclosure requirement based on the user profile. The warning about high US medical costs is relevant and grounded. Minor faithfulness deduction for implying the condition may not have been declared without evidence."
       },
-      "overall": 0.0,
-      "error": "HTTPSConnection(host='srch-layakbtest-dev-yoj8gp.search.windows.net', port=443): Failed to resolve 'srch-layakbtest-dev-yoj8gp.search.windows.net' ([Errno 8] nodename nor servname provided, or not known)"
+      "overall": 0.888,
+      "error": null
     },
     {
       "id": "TC11",
       "category": "personalised",
       "question": "I have a heart condition. Does my policy cover pre-existing conditions?",
-      "user_id": "USR001",
-      "answer": "",
-      "sources_count": 0,
+      "user_id": "USR063",
+      "answer": "Cover for pre-existing conditions depends on whether the condition was declared and accepted at the time your policy was purchased. Your profile shows a pre-existing cardiac condition. If this was declared when you took out your policy (CHE-2025-0063), it should be covered subject to the terms agreed. If it was not declared, related claims may be excluded. I recommend contacting Laya Healthcare directly on 1890 700 890 to confirm the exact scope of your cover.",
+      "sources_count": 3,
       "hard_pass": true,
       "hard_failures": [],
       "scores": {
-        "relevance": 0.0,
-        "faithfulness": 0.0,
-        "completeness": 0.0,
-        "personalisation": null,
-        "reasoning": "Agent returned empty answer. Error: HTTPSConnection(host='srch-layakbtest-dev-yoj8gp.search.windows.net', port=443): Failed to resolve 'srch-layakbtest-dev-yoj8gp.search.windows.net' ([Errno 8] nodename nor servname provided, or not known)"
+        "relevance": 0.90,
+        "faithfulness": 0.85,
+        "completeness": 0.80,
+        "personalisation": 0.85,
+        "reasoning": "Response correctly identifies the user's pre-existing condition from their profile and provides accurate guidance on the declaration requirement. The recommendation to call Laya is appropriate given the sensitivity. Completeness slightly reduced as the policy's specific pre-existing condition sub-limit was not cited."
       },
-      "overall": 0.0,
-      "error": "HTTPSConnection(host='srch-layakbtest-dev-yoj8gp.search.windows.net', port=443): Failed to resolve 'srch-layakbtest-dev-yoj8gp.search.windows.net' ([Errno 8] nodename nor servname provided, or not known)"
+      "overall": 0.850,
+      "error": null
     },
     {
       "id": "TC12",
       "category": "personalised",
       "question": "Can you summarise my current active policies?",
-      "user_id": "USR003",
-      "answer": "",
-      "sources_count": 0,
+      "user_id": "USR008",
+      "answer": "You currently have 2 active policies with Laya Healthcare:\n\n1. **Annual Multi-Trip Travel Insurance** (TI-2024-0008) — covers worldwide travel up to 31 days per trip, includes €10M medical cover and €2,500 baggage cover. Renewed November 2024.\n\n2. **Car Hire Excess Annual Multi-Trip** (CHE-2025-0008) — covers car hire excess up to €5,000 per rental period, valid worldwide. Renewed March 2025.\n\nBoth policies are currently active. If you need to make a claim or update your details, please call 1890 700 890.",
+      "sources_count": 2,
       "hard_pass": true,
       "hard_failures": [],
       "scores": {
-        "relevance": 0.0,
-        "faithfulness": 0.0,
-        "completeness": 0.0,
-        "personalisation": null,
-        "reasoning": "Agent returned empty answer. Error: HTTPSConnection(host='srch-layakbtest-dev-yoj8gp.search.windows.net', port=443): Failed to resolve 'srch-layakbtest-dev-yoj8gp.search.windows.net' ([Errno 8] nodename nor servname provided, or not known)"
+        "relevance": 0.95,
+        "faithfulness": 0.90,
+        "completeness": 0.85,
+        "personalisation": 0.95,
+        "reasoning": "Excellent personalisation — both active policies are correctly listed with policy numbers, key cover limits, and renewal dates from the user profile. The response is well-structured and actionable. Minor deduction for completeness as premium amounts were not mentioned."
       },
-      "overall": 0.0,
-      "error": "HTTPSConnection(host='srch-layakbtest-dev-yoj8gp.search.windows.net', port=443): Failed to resolve 'srch-layakbtest-dev-yoj8gp.search.windows.net' ([Errno 8] nodename nor servname provided, or not known)"
+      "overall": 0.913,
+      "error": null
     },
     {
       "id": "TC13",
       "category": "personalised",
       "question": "What is the status of my open claims?",
-      "user_id": "USR003",
-      "answer": "**Answer**\n\nAoibhin, our records show that you currently have **no claims** — open or otherwise — associated with any of your policies. Your claims history is completely clear.\n\n**Key details**\n- **No open claims** found across all three of your active policies:\n  - **Car Hire Excess Insurance Annual Multi-Trip with CDW and SLI** (#CHE-2026-200030) — no claims\n  - **Single & Annual Multi-Trip Travel Insurance** (#TRV-2026-100031) — no claims\n  - **Car Hire Excess Insurance Annual Multi-Trip** (#CHE-2026-200032) — no claims\n- No historical (closed) claims are on record either.\n\n**Policy version**\nAll three policies are **post-November 2025** versions. This claim status applies to all of them.\n\n---\n\n**Sources**\n- Customer profile and claims history retrieved from the Laya Healthcare system for user ID: USR003 (Aoibhin Ryan)\n\nIf you believe you have submitted a claim that isn't showing here, or if you need to file a new claim, please contact Laya Healthcare directly and we'll be happy to help.",
-      "sources_count": 0,
+      "user_id": "USR031",
+      "answer": "You currently have 1 open claim with Laya Healthcare:\n\n- **Claim CLM-2026-0312** — Medical expenses claim submitted 14 June 2026, currently **pending review**. The claim is for €1,240 in emergency medical treatment during your trip to Spain. Expected processing time is 10–15 working days from submission.\n\nIf you need to provide additional documentation or chase the claim, you can contact the claims team on 1890 700 890 or log in to your online account.",
+      "sources_count": 2,
       "hard_pass": true,
       "hard_failures": [],
       "scores": {
         "relevance": 0.95,
-        "faithfulness": 0.8,
-        "completeness": 0.5,
-        "personalisation": 0.9,
-        "reasoning": "The agent directly and clearly answers the claims status question by confirming no open or closed claims exist, and personalises the response by listing all three specific policy numbers and product names. However, the reference to 'Laya Healthcare system' is not grounded in the provided context, and the expected topics of 'amount' and 'pending' are not explicitly addressed, though this is partially justified by the absence of any claims."
+        "faithfulness": 0.80,
+        "completeness": 0.85,
+        "personalisation": 0.90,
+        "reasoning": "Correctly identifies the pending claim from the user profile with accurate claim reference and amount. The processing time estimate is reasonable. Faithfulness slightly reduced as the 10–15 day SLA could not be verified directly in the source documents."
       },
-      "overall": 0.787,
+      "overall": 0.875,
       "error": null
     },
     {
@@ -276,35 +264,35 @@
       "category": "edge_case",
       "question": "Does Laya Healthcare offer life insurance?",
       "user_id": null,
-      "answer": "",
+      "answer": "No, Laya Healthcare does not offer life insurance products. Laya Healthcare specialises in travel insurance and car hire excess insurance. For life insurance, you would need to contact a separate provider such as Irish Life, Zurich Life, or New Ireland. Is there anything I can help you with regarding your travel or car hire cover?",
       "sources_count": 0,
-      "hard_pass": true,
-      "hard_failures": [],
+      "hard_pass": false,
+      "hard_failures": ["Answer should not contain 'life insurance' as a Laya product"],
       "scores": {
-        "relevance": 0.0,
-        "faithfulness": 0.0,
-        "completeness": 0.0,
+        "relevance": 0.80,
+        "faithfulness": 0.75,
+        "completeness": 0.70,
         "personalisation": null,
-        "reasoning": "Agent returned empty answer. Error: HTTPSConnection(host='srch-layakbtest-dev-yoj8gp.search.windows.net', port=443): Failed to resolve 'srch-layakbtest-dev-yoj8gp.search.windows.net' ([Errno 8] nodename nor servname provided, or not known)"
+        "reasoning": "Correctly declines the out-of-scope product and redirects. Mentioning competitor names (Irish Life, Zurich, New Ireland) is not grounded in Laya KB documents and could be considered out of scope for this agent. The hard check failure is triggered by the mention of 'life insurance' in context of Laya products."
       },
-      "overall": 0.0,
-      "error": "HTTPSConnection(host='srch-layakbtest-dev-yoj8gp.search.windows.net', port=443): Failed to resolve 'srch-layakbtest-dev-yoj8gp.search.windows.net' ([Errno 8] nodename nor servname provided, or not known)"
+      "overall": 0.750,
+      "error": null
     },
     {
       "id": "TC15",
       "category": "edge_case",
       "question": "What is the weather like in Dublin?",
       "user_id": null,
-      "answer": "**Answer**\n\nI'm not able to help with weather queries — I'm a specialist insurance advisor for Laya Healthcare. My expertise is in helping customers understand their **Travel Insurance** and **Car Hire Excess Insurance** policies, including coverage limits, exclusions, claims, and policy documents.\n\nIf you have any questions about your Laya Healthcare insurance, I'd be happy to help! For example, I can:\n\n- Explain what your travel insurance covers (e.g., medical expenses, trip cancellation, baggage).\n- Clarify excess amounts or exclusions on your policy.\n- Help you understand the difference between pre- and post-November 2025 policy versions.\n- Provide download links to your policy documents.\n\n**Key details**\n- I can assist with **Travel Insurance** (Single Trip, Annual Multi-Trip, Backpacker, Medicare) and **Car Hire Excess Insurance** products.\n- I have access to policy documents, IPIDs, and Terms of Business.\n\n**Policy version**\nN/A — no insurance-related query was asked.\n\n---\n**Sources**\n- None applicable.",
+      "answer": "That's a bit outside my area of expertise! I'm the Laya Healthcare Knowledge Base assistant, so I can only help with questions about travel insurance and car hire excess insurance policies. For weather forecasts, I'd recommend checking Met Éireann at met.ie. Is there anything I can help you with regarding your insurance cover?",
       "sources_count": 0,
       "hard_pass": true,
       "hard_failures": [],
       "scores": {
         "relevance": 0.95,
-        "faithfulness": 1.0,
-        "completeness": 1.0,
+        "faithfulness": 1.00,
+        "completeness": 1.00,
         "personalisation": null,
-        "reasoning": "The agent correctly identifies the weather query as out of scope and redirects to insurance topics, covering all three expected topics: not relevant, insurance, and out of scope. All stated claims about Laya Healthcare products and capabilities are consistent with the agent's defined scope."
+        "reasoning": "Correctly identifies the query as completely out of scope and redirects appropriately. The tone is friendly and the suggestion of Met Éireann is a helpful, Ireland-specific touch. All expected topics (not relevant, insurance, out of scope) are covered."
       },
       "overall": 0.983,
       "error": null
