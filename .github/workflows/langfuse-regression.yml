@@ -1,0 +1,71 @@
+name: Langfuse Regression Eval
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  regression:
+    runs-on: ubuntu-latest
+
+    env:
+      ARK_API_KEY: ${{ secrets.ARK_API_KEY }}
+      ARK_BASE_URL: ${{ secrets.ARK_BASE_URL || 'https://ark.cn-beijing.volces.com/api/v3' }}
+      ARK_CHAT_MODEL: ${{ secrets.ARK_CHAT_MODEL }}
+      ARK_EMBEDDING_MODEL: ${{ secrets.ARK_EMBEDDING_MODEL }}
+      LANGFUSE_PUBLIC_KEY: ${{ secrets.LANGFUSE_PUBLIC_KEY }}
+      LANGFUSE_SECRET_KEY: ${{ secrets.LANGFUSE_SECRET_KEY }}
+      LANGFUSE_HOST: ${{ secrets.LANGFUSE_HOST || 'https://cloud.langfuse.com' }}
+      LANGFUSE_ENVIRONMENT: ci
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.13'
+
+      - name: Install dependencies
+        run: pip install -r backend/requirements.txt
+
+      - name: Verify Langfuse module imports
+        run: python -c "import backend.langfuse_tracing; import backend.langfuse_prompts; import backend.langfuse_judge; import backend.langfuse_offline_eval; print('All imports OK')"
+
+      - name: Run offline batch evaluation
+        run: python -m backend.langfuse_offline_eval --dataset "regression-$(date +%s)" --output report.json
+
+      - name: Upload evaluation report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: langfuse-regression-report
+          path: report.json
+
+      - name: Enforce regression thresholds
+        run: |
+          python - <<'PY'
+          import json
+          import sys
+
+          with open("report.json") as f:
+              report = json.load(f)
+
+          summary = report["summary"]
+          red_line_rate = summary["red_line_violation_rate"]
+          coverage_rate = summary["key_point_coverage_rate"]
+
+          print(f"red_line_violation_rate = {red_line_rate}")
+          print(f"key_point_coverage_rate = {coverage_rate}")
+
+          failed = False
+          if red_line_rate > 0.05:
+              print(f"FAIL: red_line_violation_rate {red_line_rate} > 0.05")
+              failed = True
+          if coverage_rate < 0.70:
+              print(f"FAIL: key_point_coverage_rate {coverage_rate} < 0.70")
+              failed = True
+
+          sys.exit(1 if failed else 0)
+          PY
